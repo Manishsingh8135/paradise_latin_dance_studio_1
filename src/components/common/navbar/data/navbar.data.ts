@@ -7,8 +7,8 @@ export const navBrand: NavbarBrandProps = {
     width: 48,
     height: 48
   },
-  name: "R1PFITNESS",
-  tagline: "Transform Your Life"
+  name: "Paradise",
+  tagline: "Latin Dance"
 };
 
 export const navItems: NavMenuItem[] = [

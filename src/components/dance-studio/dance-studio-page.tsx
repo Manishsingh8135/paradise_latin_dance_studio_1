@@ -8,7 +8,7 @@ import { DanceSchedule } from "./sections/dance-schedule";
 import { DanceTestimonials } from "./sections/dance-testimonials";
 import { DanceEvents } from "./sections/dance-events";
 import { DancePricing } from "./sections/dance-pricing";
-
+import { DanceTransformationJourney } from "./sections/dance-transformation-journey";
 
 import { DanceFAQ } from "./sections/dance-faq";
 
@@ -32,7 +32,8 @@ export function DanceStudioPage() {
       {/* Dance Styles */}
       <DanceStyles />
 
-     
+      {/* Dance Transformation Journey */}
+      <DanceTransformationJourney />
 
       {/* Dance Instructors */}
       <DanceInstructors />

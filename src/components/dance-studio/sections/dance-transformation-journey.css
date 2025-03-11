@@ -1,0 +1,49 @@
+/* Dynamic styles for the before/after comparison slider */
+.before-image-container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  width: var(--slider-position, 50%);
+}
+
+.before-image {
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+  height: 100%;
+  width: var(--slider-inverse-scale, 200%);
+}
+
+.slider-handle {
+  position: absolute;
+  top: 50%;
+  left: var(--slider-position, 50%);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.slider-handle-inner {
+  height: 4rem;
+  width: 2rem;
+  border-radius: 9999px;
+  background-color: #FFD700;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+.slider-handle-line {
+  width: 0.25rem;
+  height: 1.25rem;
+  background-color: black;
+  border-radius: 9999px;
+}
+
+/* The container will update these CSS variables via JS */
+:root {
+  --slider-position: 50%;
+  --slider-inverse-scale: 200%;
+}
