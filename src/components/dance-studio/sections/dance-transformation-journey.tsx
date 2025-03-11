@@ -1,12 +1,10 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
 import { ChevronRight, Award, Clock, Users } from "lucide-react";
 import Link from "next/link";
-import { Slider } from "@/components/ui/slider";
-import "./dance-transformation-journey.css";
 
 // Define the journey stages with rich, visual content
 const journeyStages = [
@@ -16,9 +14,7 @@ const journeyStages = [
     description: "Where passion meets guidance. Begin your dance journey with foundational techniques in a supportive environment.",
     achievements: ["Basic movement patterns", "Rhythm foundation", "Simple partner connection"],
     timeframe: "1-3 months",
-    image: "https://res.cloudinary.com/dyop38nwj/image/upload/v1738866200/Ripfitness/Dance-studio/journey-beginner_kdlv9f.jpg",
-    beforeImage: "https://res.cloudinary.com/dyop38nwj/image/upload/v1738866300/Ripfitness/Dance-studio/before-1_zcfz5h.jpg",
-    afterImage: "https://res.cloudinary.com/dyop38nwj/image/upload/v1738866350/Ripfitness/Dance-studio/after-1_dj1tgo.jpg",
+    image: "https://res.cloudinary.com/dyop38nwj/image/upload/v1737476989/Ripfitness/Dance-studio/ParadaiseLatinDance_46of55_yz6tx4.jpg",
     testimonial: "I was so nervous on my first day, but the instructors made me feel welcome immediately. Now I look forward to every class!",
     studentName: "Michelle K.",
     badgeColor: "from-amber-400 to-amber-600",
@@ -29,9 +25,7 @@ const journeyStages = [
     description: "Develop fluid movement and expressive styling as your confidence grows and techniques become second nature.",
     achievements: ["Style variations", "Complex turn patterns", "Improved musicality"],
     timeframe: "4-8 months",
-    image: "https://res.cloudinary.com/dyop38nwj/image/upload/v1738866400/Ripfitness/Dance-studio/journey-intermediate_kxh9ve.jpg",
-    beforeImage: "https://res.cloudinary.com/dyop38nwj/image/upload/v1738866450/Ripfitness/Dance-studio/before-2_gvwuhr.jpg",
-    afterImage: "https://res.cloudinary.com/dyop38nwj/image/upload/v1738866500/Ripfitness/Dance-studio/after-2_hnwfyl.jpg",
+    image: "https://res.cloudinary.com/dyop38nwj/image/upload/v1737476987/Ripfitness/Dance-studio/2421C9C6-F076-4462-A5A2-F911CBA790FF_kjns2y.jpg",
     testimonial: "The moment everything clicked was magical. I went from counting steps to feeling the music. The journey has transformed more than just my dancing.",
     studentName: "James T.",
     badgeColor: "from-[#FDB931] to-[#DAA520]",
@@ -42,9 +36,7 @@ const journeyStages = [
     description: "Transform technical skills into artistry. Express yourself authentically through movement with nuance and personal style.",
     achievements: ["Performance readiness", "Style mastery", "Dance composition"],
     timeframe: "9+ months",
-    image: "https://res.cloudinary.com/dyop38nwj/image/upload/v1738866550/Ripfitness/Dance-studio/journey-advanced_iy79cj.jpg",
-    beforeImage: "https://res.cloudinary.com/dyop38nwj/image/upload/v1738866600/Ripfitness/Dance-studio/before-3_wzhc9f.jpg",
-    afterImage: "https://res.cloudinary.com/dyop38nwj/image/upload/v1738866650/Ripfitness/Dance-studio/after-3_dbnvua.jpg",
+    image: "https://res.cloudinary.com/dyop38nwj/image/upload/v1738826479/Ripfitness/Dance-studio/lds-4_lmrs4d.jpg",
     testimonial: "Dancing has become my passion, my joy, and my community. What started as a hobby has become an essential part of who I am.",
     studentName: "Keoni M.",
     badgeColor: "from-[#FFD700] to-[#FDB931]",
@@ -53,8 +45,6 @@ const journeyStages = [
 
 export function DanceTransformationJourney() {
   const [activeStage, setActiveStage] = useState(journeyStages[0]);
-  const [isComparing, setIsComparing] = useState(false);
-  const [comparePosition, setComparePosition] = useState([50]);
   
   const sectionRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -67,35 +57,8 @@ export function DanceTransformationJourney() {
   
   const handleStageChange = (stage: typeof journeyStages[0]) => {
     setActiveStage(stage);
-    setIsComparing(false);
   };
   
-  const handleSliderChange = (value: number[]) => {
-    setComparePosition(value);
-    
-    // Update CSS variables for the comparison slider
-    document.documentElement.style.setProperty('--slider-position', `${value[0]}%`);
-    document.documentElement.style.setProperty('--slider-inverse-scale', `${100 / (value[0]/100)}%`);
-  };
-  
-  // Set initial CSS variables and update when comparePosition changes
-  useEffect(() => {
-    const root = document.documentElement;
-    const updateCSSVars = () => {
-      root.style.setProperty('--slider-position', `${comparePosition[0]}%`);
-      root.style.setProperty('--slider-inverse-scale', `${100 / (comparePosition[0]/100)}%`);
-    };
-    
-    // Set initial values
-    updateCSSVars();
-    
-    // Clean up function to reset variables when component unmounts
-    return () => {
-      root.style.removeProperty('--slider-position');
-      root.style.removeProperty('--slider-inverse-scale');
-    };
-  }, [comparePosition]);
-
   return (
     <section 
       ref={sectionRef} 
@@ -243,126 +206,41 @@ export function DanceTransformationJourney() {
           
           {/* Right Column - Visual Transformation */}
           <div className="relative">
-            {/* Toggle Between Stage Image and Before/After Comparison */}
-            <div className="mb-6 flex justify-between items-center">
-              <motion.button
-                onClick={() => setIsComparing(false)}
-                className={`px-4 py-2 rounded-full text-lg font-medium transition-all ${!isComparing ? 'bg-gradient-to-r from-[#FFD700] to-[#FDB931] text-black' : 'bg-white/10 text-white'}`}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Journey Stage
-              </motion.button>
-              
-              <motion.button
-                onClick={() => setIsComparing(true)}
-                className={`px-4 py-2 rounded-full text-lg font-medium transition-all ${isComparing ? 'bg-gradient-to-r from-[#FFD700] to-[#FDB931] text-black' : 'bg-white/10 text-white'}`}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Before & After
-              </motion.button>
-            </div>
-            
             {/* Images Container */}
             <AnimatePresence mode="wait">
-              {!isComparing ? (
-                <motion.div
-                  key="stage-image"
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.95 }}
-                  transition={{ duration: 0.5 }}
-                  className="relative aspect-[4/3] rounded-3xl overflow-hidden ring-4 ring-[#FFD700]/20"
-                >
-                  <Image
-                    src={activeStage.image}
-                    alt={activeStage.title}
-                    fill
-                    className="object-cover"
-                  />
-                  
-                  {/* Achievement Badges */}
-                  <div className="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
-                    <h3 className="text-2xl font-bold mb-4 text-white">{activeStage.title} Achievements:</h3>
-                    <div className="flex flex-wrap gap-3">
-                      {activeStage.achievements.map((achievement, i) => (
-                        <motion.div 
-                          key={i}
-                          initial={{ opacity: 0, y: 20 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          transition={{ duration: 0.3, delay: 0.1 * i }}
-                          className="px-4 py-2 rounded-full bg-black/60 backdrop-blur-sm border border-[#FFD700]/30"
-                        >
-                          <span className="text-white">{achievement}</span>
-                        </motion.div>
-                      ))}
-                    </div>
+              <motion.div
+                key="stage-image"
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.95 }}
+                transition={{ duration: 0.5 }}
+                className="relative aspect-[4/3] rounded-3xl overflow-hidden ring-4 ring-[#FFD700]/20"
+              >
+                <Image
+                  src={activeStage.image}
+                  alt={activeStage.title}
+                  fill
+                  className="object-cover"
+                />
+                
+                {/* Achievement Badges */}
+                <div className="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
+                  <h3 className="text-2xl font-bold mb-4 text-white">{activeStage.title} Achievements:</h3>
+                  <div className="flex flex-wrap gap-3">
+                    {activeStage.achievements.map((achievement, i) => (
+                      <motion.div 
+                        key={i}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.3, delay: 0.1 * i }}
+                        className="px-4 py-2 rounded-full bg-black/60 backdrop-blur-sm border border-[#FFD700]/30"
+                      >
+                        <span className="text-white">{achievement}</span>
+                      </motion.div>
+                    ))}
                   </div>
-                </motion.div>
-              ) : (
-                <motion.div
-                  key="before-after"
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.95 }}
-                  transition={{ duration: 0.5 }}
-                  className="relative aspect-[4/3] rounded-3xl overflow-hidden ring-4 ring-[#FFD700]/20"
-                >
-                  {/* After Image (Full) */}
-                  <div className="absolute inset-0">
-                    <Image
-                      src={activeStage.afterImage}
-                      alt="After"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  
-                  {/* Before Image (Clipped) */}
-                  <div className="before-image-container">
-                    <Image
-                      src={activeStage.beforeImage}
-                      alt="Before"
-                      fill
-                      className="before-image"
-                    />
-                    
-                    {/* Vertical Divider */}
-                    <div className="absolute top-0 right-0 bottom-0 w-1 bg-[#FFD700] shadow-[0_0_10px_rgba(255,215,0,0.7)]"></div>
-                  </div>
-                  
-                  {/* Slider Overlay */}
-                  <div className="absolute inset-0 pointer-events-none">
-                    <div className="absolute left-0 right-0 bottom-16 px-8">
-                      <Slider
-                        defaultValue={[50]}
-                        value={comparePosition}
-                        onValueChange={handleSliderChange}
-                        max={100}
-                        step={1}
-                        className="z-30 pointer-events-auto"
-                      />
-                    </div>
-                    
-                    {/* Drag Handle */}
-                    <div className="slider-handle">
-                      <div className="slider-handle-inner">
-                        <div className="slider-handle-line"></div>
-                        <div className="slider-handle-line"></div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  {/* Labels */}
-                  <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-black/60 backdrop-blur-sm text-white border border-white/20">
-                    Before
-                  </div>
-                  <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-black/60 backdrop-blur-sm text-white border border-white/20">
-                    After
-                  </div>
-                </motion.div>
-              )}
+                </div>
+              </motion.div>
             </AnimatePresence>
             
             {/* Skill Level Indicators */}
