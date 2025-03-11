@@ -158,9 +158,9 @@ export function PremiumFooter() {
                 </motion.div>
                 <div className="text-center md:text-left">
                   <h3 className="text-3xl font-bold bg-gradient-to-r from-[#FFD700] to-[#FDB931] bg-clip-text text-transparent">
-                    RIP FITNESS
+                    Paradise
                   </h3>
-                  <p className="text-white/60">Elevate Your Potential</p>
+                  <p className="text-white/60">Latin Dance Studio</p>
                 </div>
               </div>
 

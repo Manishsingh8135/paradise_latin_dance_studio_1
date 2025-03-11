@@ -8,7 +8,6 @@ import { ChevronDown } from "lucide-react";
 import { RoyalBackground } from "./RoyalBackground";
 import { MajesticTitle } from "./MajesticTitle";
 import { AchievementShowcase } from "./AchievementShowcase";
-import { RoyalStatistics } from "./RoyalStatistics";
 import { ImperialDivider } from "./ImperialDivider";
 
 export function BestDanceStudioV3() {
@@ -57,19 +56,19 @@ export function BestDanceStudioV3() {
           </div>
           
           {/* Royal statistics section */}
-          <RoyalStatistics scrollYProgress={scrollYProgress} />
+          {/* <RoyalStatistics scrollYProgress={scrollYProgress} /> */}
           
           {/* Call-to-action section with royal styling */}
           <div className="mt-16">
-            <h2 className="relative mb-8 max-w-md mx-auto md:max-w-lg lg:max-w-2xl">
+            {/* <h2 className="relative mb-8 max-w-md mx-auto md:max-w-lg lg:max-w-2xl">
               <div className="absolute -left-2 md:-left-3 top-0 w-1 md:w-1.5 h-full bg-[#FFD700]"></div>
               <div className="text-lg md:text-xl text-[#FFD700] font-medium mb-1 ml-2 md:ml-3">JOIN THE ROYALTY</div>
               <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-white ml-2 md:ml-3">
                 Begin Your Journey
               </div>
-            </h2>
+            </h2> */}
             
-            <div className="text-center mt-10">
+            <div className="text-center mt-10 pb-10">
               <motion.div
                 className="inline-block"
                 initial={{ opacity: 0, y: 20 }}

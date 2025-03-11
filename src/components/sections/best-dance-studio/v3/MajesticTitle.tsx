@@ -60,40 +60,89 @@ export function MajesticTitle({
       {/* Main section header with vertical bar */}
       <h2 className="relative mb-8 max-w-md mx-auto md:max-w-lg lg:max-w-2xl">
         <div className="absolute -left-2 md:-left-3 top-0 w-1 md:w-1.5 h-full bg-[#FFD700]"></div>
-        <div className="text-lg md:text-xl text-[#FFD700] font-medium mb-1 ml-2 md:ml-3">HAWAII&apos;S PREMIER</div>
+        
+        {/* Royal badge for "HAWAII'S PREMIER" text */}
+        <div className="relative inline-block ml-2 md:ml-3 mb-3">
+          {/* Multiple layers of glow */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#B8860B]/40 via-[#FFD700]/40 to-[#B8860B]/40 rounded-full blur-md -z-10"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#B8860B]/20 via-[#FFD700]/20 to-[#B8860B]/20 rounded-full blur-xl -z-20 animate-pulse"></div>
+          <div className="absolute inset-0 scale-110 bg-gradient-to-r from-[#B8860B]/10 via-[#FFD700]/10 to-[#B8860B]/10 rounded-full blur-2xl -z-30 animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+          
+          {/* Badge with decorative elements */}
+          <div className="relative px-6 py-2 bg-gradient-to-r from-[#B8860B]/90 via-[#FFD700]/90 to-[#B8860B]/90 rounded-full border-2 border-[#FFD700] shadow-[0_0_15px_rgba(255,215,0,0.5)]">
+            {/* Decorative dots on the badge */}
+            <div className="absolute top-1/2 left-2 transform -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-black"></div>
+            <div className="absolute top-1/2 right-2 transform -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-black"></div>
+            
+            {/* Decorative lines */}
+            <div className="absolute top-0 left-0 w-full h-full overflow-hidden rounded-full opacity-30 pointer-events-none">
+              <div className="absolute top-[10%] left-0 w-full h-[1px] bg-white"></div>
+              <div className="absolute bottom-[10%] left-0 w-full h-[1px] bg-black"></div>
+            </div>
+            
+            {/* Text with subtle animation */}
+            <motion.span 
+              className="text-lg md:text-xl font-bold text-black"
+              animate={{ textShadow: ['0 0 0px rgba(0,0,0,0)', '0 0 2px rgba(0,0,0,0.3)', '0 0 0px rgba(0,0,0,0)'] }}
+              transition={{ duration: 2, repeat: Infinity }}
+            >
+              HAWAII&apos;S PREMIER
+            </motion.span>
+          </div>
+        </div>
+        
         <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-white ml-2 md:ml-3">
           {subtitle}
         </div>
       </h2>
       
-      {/* Floating Royal Crown with glowing effect */}
-      <div className="absolute top-[-60px] left-1/2 transform -translate-x-1/2 w-[80px] h-[80px] text-[#FFD700]">
+      {/* Floating Royal Crown with glowing effect - moved higher */}
+      <div className="absolute top-[-90px] left-1/2 transform -translate-x-1/2 w-[100px] h-[100px] text-[#FFD700]">
+        {/* Decorative circular background */}
+        <div className="absolute inset-0 rounded-full bg-gradient-radial from-[#FFD700]/10 to-transparent -z-30 scale-150"></div>
+        
+        {/* Decorative royal pattern */}
+        <div className="absolute inset-0 scale-[2] opacity-20 -z-20">
+          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M50 10L90 50L50 90L10 50L50 10Z" stroke="#FFD700" strokeWidth="0.5" />
+            <circle cx="50" cy="50" r="35" stroke="#FFD700" strokeWidth="0.5" strokeDasharray="3 5" />
+            <path d="M30 30L70 70M30 70L70 30" stroke="#FFD700" strokeWidth="0.5" />
+          </svg>
+        </div>
+        
         <div className="relative w-full h-full animate-pulse">
           <Crown className="w-full h-full" />
           <div className="absolute inset-0 blur-xl bg-[#FFD700]/30 rounded-full -z-10"></div>
+          <div className="absolute inset-0 scale-125 blur-2xl bg-[#FFD700]/20 rounded-full -z-20"></div>
         </div>
+        
+        {/* Small decorative gems on the crown */}
+        <div className="absolute top-1/4 left-1/4 w-2 h-2 rounded-full bg-[#FF0000] shadow-[0_0_5px_#FF0000] animate-pulse"></div>
+        <div className="absolute top-1/4 right-1/4 w-2 h-2 rounded-full bg-[#0000FF] shadow-[0_0_5px_#0000FF] animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+        <div className="absolute top-[15%] left-1/2 transform -translate-x-1/2 w-3 h-3 rounded-full bg-[#00FF00] shadow-[0_0_5px_#00FF00] animate-pulse" style={{ animationDelay: '1s' }}></div>
         
         {/* Crown rays */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full">
-          {[...Array(8)].map((_, i) => (
+          {[...Array(12)].map((_, i) => (
             <motion.div 
               key={i}
-              className="absolute top-1/2 left-1/2 h-[60px] w-[2px] bg-gradient-to-t from-[#FFD700]/0 via-[#FFD700]/20 to-[#FFD700]/0"
+              className="absolute top-1/2 left-1/2 h-[80px] w-[3px] bg-gradient-to-t from-[#FFD700]/0 via-[#FFD700]/40 to-[#FFD700]/10"
               style={{ 
-                rotate: `${i * 45}deg`,
+                rotate: `${i * 30}deg`,
                 transformOrigin: 'bottom center',
-                top: '-10px',
-                left: 'calc(50% - 1px)',
+                top: '-15px',
+                left: 'calc(50% - 1.5px)',
+                filter: 'blur(1px)'
               }}
               animate={{ 
-                scaleY: [0.6, 1, 0.6],
-                opacity: [0.3, 0.6, 0.3]
+                scaleY: [0.7, 1.2, 0.7],
+                opacity: [0.3, 0.7, 0.3]
               }}
               transition={{
-                duration: 3,
+                duration: 3 + (i % 3),
                 repeat: Infinity,
-                delay: i * 0.2,
-                ease: "easeInOut"
+                ease: "easeInOut",
+                delay: i * 0.2
               }}
             />
           ))}
