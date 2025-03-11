@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <g stroke="none" fill="none" fill-rule="evenodd">
+        <g fill="#FFFFFF" fill-opacity="0.08">
+            <path d="M100,0 C100,0 120,20 120,50 C120,70 100,100 100,100 C100,100 80,70 80,50 C80,20 100,0 100,0 Z" />
+            <path d="M100,100 C100,100 120,120 120,150 C120,170 100,200 100,200 C100,200 80,170 80,150 C80,120 100,100 100,100 Z" />
+            <path d="M0,100 C0,100 20,120 50,120 C70,120 100,100 100,100 C100,100 70,80 50,80 C20,80 0,100 0,100 Z" />
+            <path d="M100,100 C100,100 120,80 150,80 C170,80 200,100 200,100 C200,100 170,120 150,120 C120,120 100,100 100,100 Z" />
+            <circle cx="100" cy="100" r="10" />
+            <circle cx="0" cy="0" r="5" />
+            <circle cx="0" cy="200" r="5" />
+            <circle cx="200" cy="0" r="5" />
+            <circle cx="200" cy="200" r="5" />
+            <path d="M20,20 L35,35" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" />
+            <path d="M20,180 L35,165" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" />
+            <path d="M180,20 L165,35" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" />
+            <path d="M180,180 L165,165" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" />
+            <path d="M60,10 L60,25 L75,25 L75,10 L60,10 Z" />
+            <path d="M125,10 L125,25 L140,25 L140,10 L125,10 Z" />
+            <path d="M60,175 L60,190 L75,190 L75,175 L60,175 Z" />
+            <path d="M125,175 L125,190 L140,190 L140,175 L125,175 Z" />
+            <path d="M10,60 L10,75 L25,75 L25,60 L10,60 Z" />
+            <path d="M10,125 L10,140 L25,140 L25,125 L10,125 Z" />
+            <path d="M175,60 L175,75 L190,75 L190,60 L175,60 Z" />
+            <path d="M175,125 L175,140 L190,140 L190,125 L175,125 Z" />
+        </g>
+    </g>
+</svg>

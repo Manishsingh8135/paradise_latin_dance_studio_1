@@ -15,6 +15,9 @@ import { DanceFAQ } from "./sections/dance-faq";
 import { DanceHeroV2 } from "./sections/dance-hero-v2";
 import { DanceFeaturedMedia } from "./sections/dance-featured-media";
 
+// Import the new Crown of Paradise section (v3)
+import { BestDanceStudioV3 } from "@/components/sections/best-dance-studio/v3";
+
 export function DanceStudioPage() {
   return (
     <main className="relative bg-black text-white overflow-hidden">
@@ -25,6 +28,9 @@ export function DanceStudioPage() {
       {/* Hero Section */}
       {/* <DanceHero /> */}
       <DanceHeroV2 />
+
+      {/* Best Dance Studio in Hawaii Section - Now using V3 */}
+      <BestDanceStudioV3 />
 
      {/* Upcoming Events */}
      <DanceEvents />
