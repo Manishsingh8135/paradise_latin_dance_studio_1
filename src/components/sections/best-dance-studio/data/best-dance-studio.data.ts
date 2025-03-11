@@ -1,5 +1,4 @@
 import { BestDanceStudioData } from "../types/best-dance-studio.types";
-import { Award, Star, Users, Calendar, Trophy, Heart } from "lucide-react";
 
 export const bestDanceStudioData: BestDanceStudioData = {
   title: "Crown of Paradise",

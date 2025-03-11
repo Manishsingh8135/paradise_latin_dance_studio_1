@@ -11,17 +11,20 @@ export const useParallaxTransform = (
   // Scale the effect based on depth (0-100)
   const scaledDepth = depth * 0.5;
   
-  // Generate different transform effects based on direction
-  switch (direction) {
-    case "up":
-      return useTransform(scrollYProgress, [0, 1], [`${scaledDepth}%`, `-${scaledDepth}%`]);
-    case "down":
-      return useTransform(scrollYProgress, [0, 1], [`-${scaledDepth}%`, `${scaledDepth}%`]);
-    case "left":
-      return useTransform(scrollYProgress, [0, 1], [`${scaledDepth}%`, `-${scaledDepth}%`]);
-    case "right":
-      return useTransform(scrollYProgress, [0, 1], [`-${scaledDepth}%`, `${scaledDepth}%`]);
-  }
+  // Create transforms for all directions and return the appropriate one
+  const upTransform = useTransform(scrollYProgress, [0, 1], [`${scaledDepth}%`, `-${scaledDepth}%`]);
+  const downTransform = useTransform(scrollYProgress, [0, 1], [`-${scaledDepth}%`, `${scaledDepth}%`]);
+  const leftTransform = useTransform(scrollYProgress, [0, 1], [`${scaledDepth}%`, `-${scaledDepth}%`]);
+  const rightTransform = useTransform(scrollYProgress, [0, 1], [`-${scaledDepth}%`, `${scaledDepth}%`]);
+  
+  // Return the appropriate transform based on direction
+  if (direction === "up") return upTransform;
+  if (direction === "down") return downTransform;
+  if (direction === "left") return leftTransform;
+  if (direction === "right") return rightTransform;
+  
+  // Default fallback
+  return upTransform;
 };
 
 /**
@@ -31,16 +34,18 @@ export const useOpacityTransform = (
   scrollYProgress: MotionValue<number>,
   fadePoint: "early" | "middle" | "late" = "middle"
 ) => {
-  switch (fadePoint) {
-    case "early":
-      return useTransform(scrollYProgress, [0, 0.3, 0.4], [0, 1, 1]);
-    case "middle":
-      return useTransform(scrollYProgress, [0.3, 0.5, 0.7], [0, 1, 1]);
-    case "late":
-      return useTransform(scrollYProgress, [0.6, 0.8, 1], [0, 1, 1]);
-    default:
-      return useTransform(scrollYProgress, [0.3, 0.5, 0.7], [0, 1, 1]);
-  }
+  // Create transforms for all fade points
+  const earlyFade = useTransform(scrollYProgress, [0, 0.3, 0.4], [0, 1, 1]);
+  const middleFade = useTransform(scrollYProgress, [0.3, 0.5, 0.7], [0, 1, 1]);
+  const lateFade = useTransform(scrollYProgress, [0.6, 0.8, 1], [0, 1, 1]);
+  
+  // Return the appropriate transform based on fadePoint
+  if (fadePoint === "early") return earlyFade;
+  if (fadePoint === "middle") return middleFade;
+  if (fadePoint === "late") return lateFade;
+  
+  // Default fallback
+  return middleFade;
 };
 
 /**

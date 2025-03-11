@@ -57,7 +57,6 @@ export function BestDanceStudio() {
           <ParallaxLayer
             key={layer.id}
             layer={layer}
-            containerRef={sectionRef}
             scrollYProgress={scrollYProgress}
           />
         ))}
@@ -199,7 +198,7 @@ export function BestDanceStudio() {
                       </div>
                       
                       <p className="text-white/90 text-xl italic mb-6 leading-relaxed">
-                        "{testimonial.quote}"
+                        &quot;{testimonial.quote}&quot;
                       </p>
                       
                       <div className="mt-auto">

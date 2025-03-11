@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useScroll, MotionValue } from "framer-motion";
+import { motion, MotionValue } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
 import { VisualLayer } from "../types/best-dance-studio.types";
@@ -8,11 +8,10 @@ import { useParallaxTransform } from "./best-dance-studio.utils";
 
 interface ParallaxLayerProps {
   layer: VisualLayer;
-  containerRef: React.RefObject<HTMLElement>;
   scrollYProgress: MotionValue<number>;
 }
 
-export function ParallaxLayer({ layer, containerRef, scrollYProgress }: ParallaxLayerProps) {
+export function ParallaxLayer({ layer, scrollYProgress }: ParallaxLayerProps) {
   const ref = useRef(null);
   
   // Calculate parallax effect based on depth

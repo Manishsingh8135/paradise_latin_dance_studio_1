@@ -171,7 +171,7 @@ export function RegalTestimonial({ scrollYProgress }: RegalTestimonialProps) {
                 delay: Math.random() * 2,
               }}
             >
-              "
+              &quot;
             </motion.div>
           ))}
         </div>
@@ -267,7 +267,7 @@ export function RegalTestimonial({ scrollYProgress }: RegalTestimonialProps) {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.3 }}
                       >
-                        "{testimonials[currentIndex].text}"
+                        &quot;{testimonials[currentIndex].text}&quot;
                       </motion.p>
                       
                       {/* Divider with royal styling */}

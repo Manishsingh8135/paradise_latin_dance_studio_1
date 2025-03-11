@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, MotionValue, useTransform } from "framer-motion";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 
 interface RoyalBackgroundProps {

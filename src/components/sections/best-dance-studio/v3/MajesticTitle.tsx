@@ -23,27 +23,33 @@ export function MajesticTitle({
 
   // Split title into individual characters for animation
   const titleChars = title.split('');
-  const words = title.split(' ');
   
   // Creatively enhance the title display
   useEffect(() => {
     if (!titleRef.current) return;
     
-    // Add shimmer effect to title
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animate-text-shimmer');
-        }
-      });
-    }, { threshold: 0.5 });
+    // Store the ref value in a variable to use in cleanup
+    const titleElement = titleRef.current;
     
-    observer.observe(titleRef.current);
+    // Create a shimmer effect
+    const shimmerInterval = setInterval(() => {
+      if (titleElement) {
+        const chars = titleElement.querySelectorAll('.char');
+        chars.forEach((char, i) => {
+          setTimeout(() => {
+            char.classList.add('shimmer');
+            setTimeout(() => {
+              char.classList.remove('shimmer');
+            }, 500);
+          }, i * 50);
+        });
+      }
+    }, 5000);
     
     return () => {
-      if (titleRef.current) observer.unobserve(titleRef.current);
+      clearInterval(shimmerInterval);
     };
-  }, []);
+  }, [title]); // Add title as a dependency since we're using titleChars derived from it
 
   return (
     <motion.div 
@@ -54,7 +60,7 @@ export function MajesticTitle({
       {/* Main section header with vertical bar */}
       <h2 className="relative mb-8 max-w-md mx-auto md:max-w-lg lg:max-w-2xl">
         <div className="absolute -left-2 md:-left-3 top-0 w-1 md:w-1.5 h-full bg-[#FFD700]"></div>
-        <div className="text-lg md:text-xl text-[#FFD700] font-medium mb-1 ml-2 md:ml-3">HAWAII'S PREMIER</div>
+        <div className="text-lg md:text-xl text-[#FFD700] font-medium mb-1 ml-2 md:ml-3">HAWAII&apos;S PREMIER</div>
         <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-white ml-2 md:ml-3">
           {subtitle}
         </div>
@@ -157,7 +163,7 @@ export function MajesticTitle({
         transition={{ duration: 1, delay: 1.3 }}
         className="text-base md:text-lg text-white/80 mt-6 italic max-w-xl mx-auto"
       >
-        "{tagline}"
+        &quot;{tagline}&quot;
       </motion.p>
     </motion.div>
   );

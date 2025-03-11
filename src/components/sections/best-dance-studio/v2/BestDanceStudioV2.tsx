@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useState, useEffect } from "react";
-import { motion, useScroll, useTransform, AnimatePresence, MotionValue } from "framer-motion";
+import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronRight, Award, Star, Trophy, Crown, Users, Calendar, Clock, Heart } from "lucide-react";
@@ -374,7 +374,7 @@ export function BestDanceStudioV2() {
                     className="relative ml-6 mt-6"
                   >
                     <p className="text-xl md:text-2xl text-white/90 italic leading-relaxed mb-6">
-                      "{bestDanceStudioData.testimonialQuotes[0].quote}"
+                      &quot;{bestDanceStudioData.testimonialQuotes[0].quote}&quot;
                     </p>
                     
                     <div className="flex items-center">
@@ -408,7 +408,7 @@ export function BestDanceStudioV2() {
                     </h2>
                     
                     <p className="text-white/70 mb-8 text-lg">
-                      Experience why Paradise Latin Dance Studio stands as Hawaii's premier destination for authentic Latin dance instruction.
+                      Experience why Paradise Latin Dance Studio stands as Hawaii&apos;s premier destination for authentic Latin dance instruction.
                     </p>
                     
                     <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">

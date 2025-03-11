@@ -13,10 +13,16 @@ export function ImperialDivider({
   variant = "ornate",
   color = "#FFD700" 
 }: ImperialDividerProps) {
-  // Use scroll progress for parallax effect if provided
-  const offsetY = scrollYProgress 
-    ? useTransform(scrollYProgress, [0, 1], [0, -30]) 
-    : 0;
+  // Create a dummy MotionValue if scrollYProgress is not provided
+  const safeScrollYProgress = scrollYProgress || new MotionValue();
+  
+  // If we created a new MotionValue, set its initial value to 0
+  if (!scrollYProgress) {
+    safeScrollYProgress.set(0);
+  }
+  
+  // Now we can safely use the hook unconditionally
+  const offsetY = useTransform(safeScrollYProgress, [0, 1], [0, -30]);
   
   // Get the correct divider based on variant
   const renderDivider = () => {

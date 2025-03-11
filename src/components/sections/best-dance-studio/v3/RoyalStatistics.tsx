@@ -79,9 +79,9 @@ export function RoyalStatistics({ scrollYProgress }: RoyalStatisticsProps) {
       const suffix = value.includes('+') ? '+' : value.includes('%') ? '%' : '';
       const hasComma = value.includes(',');
       
-      let startValue = 0;
       const duration = 2500;
-      const step = timestamp => {
+      let start: number | null = null;
+      const step = (timestamp: number) => {
         if (!start) start = timestamp;
         const progress = Math.min((timestamp - start) / duration, 1);
         const easedProgress = easeOutQuart(progress);
@@ -100,7 +100,6 @@ export function RoyalStatistics({ scrollYProgress }: RoyalStatisticsProps) {
         }
       };
       
-      let start: number | null = null;
       requestAnimationFrame(step);
     }, [inView, value]);
     

@@ -129,7 +129,7 @@ export function BestDanceStudioV3() {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 0.8 }}
               >
-                Begin your journey to dance excellence with Hawaii's premier Latin dance studio. 
+                Begin your journey to dance excellence with Hawaii&apos;s premier Latin dance studio. 
                 First class is complimentary for new students.
               </motion.p>
             </div>
