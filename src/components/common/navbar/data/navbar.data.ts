@@ -2,7 +2,7 @@ import { NavMenuItem, NavAction, NavbarBrandProps } from '../types/navbar.types'
 
 export const navBrand: NavbarBrandProps = {
   logo: {
-    src: "/logo/riplogo.png",
+    src: "/logo/logo.png",
     alt: "RipFitness Logo",
     width: 48,
     height: 48

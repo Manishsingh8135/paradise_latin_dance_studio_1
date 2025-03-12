@@ -149,8 +149,8 @@ export function PremiumFooter() {
                   />
                   <div className="relative h-16 w-16">
                     <Image
-                      src="/logo/riplogo.png"
-                      alt="RIP Fitness Logo"
+                      src="/logo/logo.png"
+                      alt="Paradise Latin Dance Studio Logo"
                       fill
                       className="object-contain"
                     />
@@ -193,7 +193,7 @@ export function PremiumFooter() {
           <div className="container mx-auto px-4">
             <div className="py-8 flex flex-col md:flex-row justify-between items-center gap-4">
               <p className="text-white/40 text-sm text-center md:text-left">
-                &copy; {new Date().getFullYear()} RIP FITNESS. All rights reserved.
+                &copy; {new Date().getFullYear()} Paradise Latin Dance Studio. All rights reserved.
               </p>
               <div className="flex flex-wrap items-center justify-center md:justify-end gap-8">
                 <Link
