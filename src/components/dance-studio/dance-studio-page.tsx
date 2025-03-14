@@ -3,7 +3,7 @@
 // Removed unused motion import
 
 import { DanceStyles } from "./sections/dance-styles";
-import { DanceInstructors } from "./sections/dance-instructors";
+// Removed unused DanceInstructors import
 import { DanceSchedule } from "./sections/dance-schedule";
 import { DanceTestimonials } from "./sections/dance-testimonials";
 import { DanceEvents } from "./sections/dance-events";
@@ -17,6 +17,7 @@ import { DanceFeaturedMedia } from "./sections/dance-featured-media";
 // Import the new Crown of Paradise section (v3)
 import { BestDanceStudioV3 } from "@/components/sections/best-dance-studio/v3";
 import { MembershipSection } from "../sections/memberships/membership/membership-section";
+import { DanceInstructorsV2 } from "./sections/dance-instructors-v2";
 
 export function DanceStudioPage() {
   return (
@@ -42,7 +43,8 @@ export function DanceStudioPage() {
       <DanceTransformationJourney />
 
       {/* Dance Instructors */}
-      <DanceInstructors />
+      <DanceInstructorsV2/>
+
 
       {/* Class Schedule */}
       <DanceSchedule />
