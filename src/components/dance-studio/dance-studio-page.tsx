@@ -7,7 +7,8 @@ import { DanceStyles } from "./sections/dance-styles";
 import { DanceSchedule } from "./sections/dance-schedule";
 import { DanceTestimonials } from "./sections/dance-testimonials";
 import { DanceEvents } from "./sections/dance-events";
-import { DanceTransformationJourney } from "./sections/dance-transformation-journey";
+// Import the new TransformationJourneySectionV2 instead
+import { TransformationJourneySectionV2 } from "@/components/sections/transformation-journey/v2/transformation-journey-section";
 
 import { DanceFAQ } from "./sections/dance-faq";
 
@@ -39,8 +40,8 @@ export function DanceStudioPage() {
       {/* Dance Styles */}
       <DanceStyles />
 
-      {/* Dance Transformation Journey */}
-      <DanceTransformationJourney />
+      {/* Dance Transformation Journey - Now using V2 */}
+      <TransformationJourneySectionV2 />
 
       {/* Dance Instructors */}
       <DanceInstructorsV2/>

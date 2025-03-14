@@ -7,25 +7,26 @@ import { Calendar, Clock, MapPin, ArrowRight, Star } from "lucide-react";
 
 const events = [
   {
-    "id": "valentines-latin-dance-social",
-    "title": "Valentines Paradise Latin Dance Social",
-    "description": "Celebrate Valentine's Day with an exciting night of Latin dance, featuring a free class, social dancing, and great music by DJ Ever.",
-    "image": "https://www.r1pfitness.com/cdn/shop/files/IMG-7055.heic?v=1738813593&width=600",
-    "date": "February 15, 2024",
+    "id": "march-paradise-latin-dance-social",
+    "title": "PARADISE LATIN DANCE SOCIAL",
+    "description": "Join us for an unforgettable night of social dancing featuring a free dance lesson from Rico & Mike, followed by social dancing with DJ EVER playing the best Salsa & Bachata. Perfect for dancers of all levels!",
+    "image": "https://res.cloudinary.com/dyop38nwj/image/upload/v1741750730/Ripfitness/Dance-studio/events/Dance_social_nxi3nh.jpg",
+    "date": "March 29, 2025",
     "time": "20:30 - 00:00",
-    "location": "Paradise Latin Dance Studio, 94-111 Leokane St, Waipahu, Hawaii 96797",
+    "location": "94-111 Leokane St, Waipahu, HI",
     "capacity": "150 people",
-    "price": "$20 online / $25 at the door",
+    "price": "$20 Online",
     "type": "Social",
     "instructors": ["Rico", "Mike"],
     "highlights": [
-        "Free dance class at 8:30 PM",
-        "Social dancing from 9:00 PM to midnight",
-        "DJ Ever playing Latin beats",
-        "Valentine's themed atmosphere with decorations"
+        "FREE dance lesson at 8:30pm",
+        "Social Dancing from 9pm - 12pm",
+        "DJ EVER playing the best Salsa & Bachata",
+        "Secure your tickets online"
     ],
-    "registrationUrl": "https://www.r1pfitness.com/products/social-ticket?fbclid=PAZXh0bgNhZW0CMTEAAaZJsEGKEJC8IKKP5kTvkzEory16qN43ZuRKyg5uf4eVmVAzB4TfNF4VdGM_aem_QGMY6F_gMLnnhTLINw_BUg"
+    "registrationUrl": "https://www.r1pfitness.com/products/social-ticket?fbclid=PAZXh0bgNhZW0CMTEAAaYrY0QWYWmDqhQyQ3GWLVXA5eeeqBvd8mpf02ophMgrKpKcsu44g4zbZiY_aem_Vf0XHYruN-S5oU3kj6pyHg"
   },
+ 
   {
     "id": "salsa-beginner-cycle-2025",
     "title": "Reborn 1n Paradise - 2025 Salsa Cycle Special",
