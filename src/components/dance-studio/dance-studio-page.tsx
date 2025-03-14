@@ -15,7 +15,8 @@ import { DanceFAQ } from "./sections/dance-faq";
 
 // Import the new HeroSection instead of DanceHeroV2
 import { HeroSection } from "@/components/sections/hero/v1/hero-section";
-import { DanceFeaturedMedia } from "./sections/dance-featured-media";
+// Import the new FeaturedMediaSection instead of DanceFeaturedMedia
+import { FeaturedMediaSection } from "@/components/sections/featured-media/v1/featured-media-section";
 
 // Import the new Crown of Paradise section (v3)
 import { BestDanceStudioV3 } from "@/components/sections/best-dance-studio/v3";
@@ -47,26 +48,20 @@ export function DanceStudioPage() {
       {/* Dance Instructors */}
       <DanceInstructorsV2/>
 
-
       {/* Class Schedule */}
       <DanceSchedule />
 
-      
-
-       {/* Featured Media */}
-       <DanceFeaturedMedia />
+      {/* Featured Media - Now using new FeaturedMediaSection */}
+      <FeaturedMediaSection />
 
       {/* Testimonials */}
       <DanceTestimonials />
 
       {/* Pricing Plans */}
-
       <MembershipSection/>
 
       {/* FAQ Section */}
       <DanceFAQ />
-
-     
     </main>
   );
 }
