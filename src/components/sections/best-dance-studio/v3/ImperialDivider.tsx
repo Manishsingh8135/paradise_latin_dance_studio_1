@@ -14,7 +14,7 @@ export function ImperialDivider({
   color = "#FFD700" 
 }: ImperialDividerProps) {
   // Create a dummy MotionValue if scrollYProgress is not provided
-  const safeScrollYProgress = scrollYProgress || new MotionValue();
+  const safeScrollYProgress = scrollYProgress || new MotionValue(0);
   
   // If we created a new MotionValue, set its initial value to 0
   if (!scrollYProgress) {
