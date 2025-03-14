@@ -66,7 +66,10 @@ export function HeroSection({
   };
 
   return (
-    <section ref={sectionRef} className={`relative min-h-screen flex items-center justify-center overflow-hidden bg-black ${className}`}>
+    <section 
+      ref={sectionRef} 
+      className={`relative min-h-screen flex items-center justify-center overflow-hidden bg-black pt-16 md:pt-20 ${className}`}
+    >
       {/* Particles Background */}
       {showParticles && (
         <div className="absolute inset-0 z-0">
@@ -118,7 +121,7 @@ export function HeroSection({
       {/* Video Container */}
       <div className="absolute inset-0">
         {/* Video Wrapper with Padding */}
-        <div className="absolute inset-0 p-6 md:p-8 lg:p-12">
+        <div className="absolute inset-0 p-2 sm:p-4 md:p-8 lg:p-12">
           <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
