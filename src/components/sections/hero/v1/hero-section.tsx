@@ -3,10 +3,16 @@
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { Volume2, VolumeX, Play, Pause } from "lucide-react";
+import { HeroParticles } from "@/components/ui/hero-particles";
+import { HeroSectionProps } from "../types/hero-types";
+import { heroMedia } from "../data/hero-data";
 
-
-export function DanceHeroV2() {
-  const [isMuted, setIsMuted] = useState(true);
+export function HeroSection({
+  media = heroMedia,
+  className = "",
+  showParticles = true,
+}: HeroSectionProps) {
+  const [isMuted, setIsMuted] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
   
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -17,9 +23,24 @@ export function DanceHeroV2() {
     if (videoRef.current) {
       const playVideo = async () => {
         try {
-          await videoRef.current?.play();
+          // Set muted to false before playing
+          if (videoRef.current) {
+            videoRef.current.muted = false;
+            await videoRef.current.play();
+          }
         } catch (error) {
           console.error('Error playing video:', error);
+          // If autoplay with sound fails (common in browsers), try with mute
+          if (videoRef.current) {
+            videoRef.current.muted = true;
+            setIsMuted(true);
+            try {
+              await videoRef.current.play();
+              console.log('Video playing with mute due to browser autoplay policy');
+            } catch (fallbackError) {
+              console.error('Failed to play video even with mute:', fallbackError);
+            }
+          }
         }
       };
       playVideo();
@@ -45,17 +66,27 @@ export function DanceHeroV2() {
   };
 
   return (
-    <section ref={sectionRef} className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
+    <section 
+      ref={sectionRef} 
+      className={`relative min-h-screen flex items-center justify-center overflow-hidden bg-black pt-16 md:pt-20 ${className}`}
+    >
+      {/* Particles Background */}
+      {showParticles && (
+        <div className="absolute inset-0 z-0">
+          <HeroParticles />
+        </div>
+      )}
+      
       {/* Animated Background Effects */}
-      <div className="absolute inset-0 overflow-hidden bg-black">
+      <div className="absolute inset-0 overflow-hidden bg-black/50 z-0">
         {/* Glowing Orbs */}
         <div className="absolute inset-0 opacity-50">
           {/* Large center glow */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-gradient-radial from-purple-500/30 via-transparent to-transparent blur-3xl" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-gradient-radial from-[#FFD700]/20 via-transparent to-transparent blur-3xl" />
           
           {/* Additional glows */}
-          <div className="absolute top-0 left-1/4 w-[600px] h-[600px] rounded-full bg-gradient-radial from-blue-500/20 via-transparent to-transparent blur-3xl animate-pulse-slow" />
-          <div className="absolute bottom-0 right-1/4 w-[700px] h-[700px] rounded-full bg-gradient-radial from-pink-500/20 via-transparent to-transparent blur-3xl animate-float-slow" />
+          <div className="absolute top-0 left-1/4 w-[600px] h-[600px] rounded-full bg-gradient-radial from-[#FDB931]/15 via-transparent to-transparent blur-3xl animate-pulse-slow" />
+          <div className="absolute bottom-0 right-1/4 w-[700px] h-[700px] rounded-full bg-gradient-radial from-[#DAA520]/15 via-transparent to-transparent blur-3xl animate-float-slow" />
         </div>
 
         {/* Floating Bubbles */}
@@ -90,7 +121,7 @@ export function DanceHeroV2() {
       {/* Video Container */}
       <div className="absolute inset-0">
         {/* Video Wrapper with Padding */}
-        <div className="absolute inset-0 p-6 md:p-8 lg:p-12">
+        <div className="absolute inset-0 p-2 sm:p-4 md:p-8 lg:p-12">
           <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -110,7 +141,7 @@ export function DanceHeroV2() {
                   filter: 'brightness(1.2) saturate(1.4) contrast(1.05)',
                 }}
               >
-                <source src="/assets/videos/paradise-intro.mp4" type="video/mp4" />
+                <source src={media.src} type="video/mp4" />
               </video>
 
               {/* Video Overlay Gradient */}
@@ -150,8 +181,6 @@ export function DanceHeroV2() {
           </motion.div>
         </div>
       </div>
-
-
     </section>
   );
-}
+} 

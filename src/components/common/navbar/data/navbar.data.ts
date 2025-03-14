@@ -84,15 +84,15 @@ export const navItems: NavMenuItem[] = [
   // },
   {
     id: 'trainers',
-    label: 'Elite Trainers',
+    label: 'Elite Instructors',
     href: '/trainers'
   },
-  {
-    id: 'schedule',
-    label: 'Class Schedule',
-    href: '/schedule',
-    isDynamic: true
-  },
+  // {
+  //   id: 'schedule',
+  //   label: 'Class Schedule',
+  //   href: '/schedule',
+  //   isDynamic: true
+  // },
   {
     id: 'contact',
     label: 'Contact Us',
@@ -102,13 +102,13 @@ export const navItems: NavMenuItem[] = [
 ];
 
 export const navActions: NavAction[] = [
-  {
-    id: 'member-login',
-    label: 'Member Login',
-    href: '/login',
-    variant: 'ghost',
-    icon: 'User'
-  },
+  // {
+  //   id: 'member-login',
+  //   label: 'Member Login',
+  //   href: '/login',
+  //   variant: 'ghost',
+  //   icon: 'User'
+  // },
   {
     id: 'free-trial',
     label: 'Start Free Trial',

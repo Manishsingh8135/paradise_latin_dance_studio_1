@@ -53,56 +53,6 @@ export const instructors: Instructor[] = [
       paradiseDance: "https://www.instagram.com/paradiselatindance",
       ripFitness: "https://www.instagram.com/r1pfitness"
     }
-  },
-  {
-    id: "sophia",
-    name: "Sophia Patel",
-    role: "Contemporary & Hip Hop Instructor",
-    bio: "With a background in multiple dance styles, Sophia brings versatility and creativity to her classes. Her contemporary fusion approach helps students express themselves through movement while developing strong technical foundations.",
-    image: "https://images.unsplash.com/photo-1595317677948-f81ba8c12224?q=80&w=1974&auto=format&fit=crop",
-    location: "Honolulu, Hawaii",
-    specialties: ["Contemporary", "Hip Hop", "Jazz"],
-    experience: "12+ years",
-    quote: "Dance is the hidden language of the soul. Let your body speak.",
-    achievements: [
-      "Former Company Dancer at Hawaii Contemporary",
-      "Choreographed for Local Theatre Productions",
-      "2x Winner at Island Dance Competition",
-      "Performed Internationally"
-    ],
-    certifications: [
-      "BFA in Dance",
-      "Youth Dance Education Specialist"
-    ],
-    social: {
-      instagram: "https://www.instagram.com/",
-      website: "https://www.example.com"
-    }
-  },
-  {
-    id: "james",
-    name: "James Chen",
-    role: "Ballet & Contemporary Instructor",
-    bio: "With classical training and contemporary flair, James helps students develop strong technical foundations while encouraging artistic expression. His classes focus on proper alignment, flow, and storytelling through movement.",
-    image: "https://images.unsplash.com/photo-1522075782449-e45a34f1ddfb?q=80&w=2000&auto=format&fit=crop",
-    location: "Hawaii",
-    specialties: ["Ballet", "Contemporary"],
-    experience: "15+ years",
-    quote: "Ballet is the foundation of all dance. Master it, and you can dance anything.",
-    achievements: [
-      "Former Principal Dancer",
-      "International Performance Career",
-      "Master Class Instructor",
-      "Choreographer for Youth Company"
-    ],
-    certifications: [
-      "Royal Academy of Dance Certification",
-      "Progressing Ballet Technique Instructor"
-    ],
-    social: {
-      instagram: "https://www.instagram.com/",
-      facebook: "https://www.facebook.com/"
-    }
   }
 ];
 
