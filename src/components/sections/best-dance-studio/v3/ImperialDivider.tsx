@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, MotionValue, useTransform } from "framer-motion";
+import { motion, MotionValue, useTransform, useMotionValue } from "framer-motion";
 
 interface ImperialDividerProps {
   scrollYProgress?: MotionValue<number>;
@@ -13,13 +13,11 @@ export function ImperialDivider({
   variant = "ornate",
   color = "#FFD700" 
 }: ImperialDividerProps) {
-  // Create a dummy MotionValue if scrollYProgress is not provided
-  const safeScrollYProgress = scrollYProgress || new MotionValue(0);
+  // Always create a motion value (React hooks must be called unconditionally)
+  const defaultMotionValue = useMotionValue(0);
   
-  // If we created a new MotionValue, set its initial value to 0
-  if (!scrollYProgress) {
-    safeScrollYProgress.set(0);
-  }
+  // Then use the provided scrollYProgress or our default
+  const safeScrollYProgress = scrollYProgress || defaultMotionValue;
   
   // Now we can safely use the hook unconditionally
   const offsetY = useTransform(safeScrollYProgress, [0, 1], [0, -30]);

@@ -13,7 +13,8 @@ import { TransformationJourneySectionV2 } from "@/components/sections/transforma
 
 import { DanceFAQ } from "./sections/dance-faq";
 
-import { DanceHeroV2 } from "./sections/dance-hero-v2";
+// Import the new HeroSection instead of DanceHeroV2
+import { HeroSection } from "@/components/sections/hero/v1/hero-section";
 import { DanceFeaturedMedia } from "./sections/dance-featured-media";
 
 // Import the new Crown of Paradise section (v3)
@@ -28,15 +29,14 @@ export function DanceStudioPage() {
       <div className="absolute -left-1/4 -top-1/4 w-1/2 h-1/2 bg-[radial-gradient(circle,rgba(255,215,0,0.1),transparent_50%)] blur-3xl pointer-events-none" />
       <div className="absolute -right-1/4 -bottom-1/4 w-1/2 h-1/2 bg-[radial-gradient(circle,rgba(218,165,32,0.1),transparent_50%)] blur-3xl pointer-events-none" />
 
-      {/* Hero Section */}
-      {/* <DanceHero /> */}
-      <DanceHeroV2 />
+      {/* Hero Section - Now using new HeroSection */}
+      <HeroSection />
 
       {/* Best Dance Studio in Hawaii Section - Now using V3 */}
       <BestDanceStudioV3 />
 
-     {/* Upcoming Events - Now using new EventsSection */}
-     <EventsSection />
+      {/* Upcoming Events - Now using new EventsSection */}
+      <EventsSection />
 
       {/* Dance Styles */}
       <DanceStyles />
