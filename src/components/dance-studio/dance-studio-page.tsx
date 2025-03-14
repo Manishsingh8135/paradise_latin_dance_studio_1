@@ -7,7 +7,6 @@ import { DanceInstructors } from "./sections/dance-instructors";
 import { DanceSchedule } from "./sections/dance-schedule";
 import { DanceTestimonials } from "./sections/dance-testimonials";
 import { DanceEvents } from "./sections/dance-events";
-import { DancePricing } from "./sections/dance-pricing";
 import { DanceTransformationJourney } from "./sections/dance-transformation-journey";
 
 import { DanceFAQ } from "./sections/dance-faq";
@@ -17,6 +16,7 @@ import { DanceFeaturedMedia } from "./sections/dance-featured-media";
 
 // Import the new Crown of Paradise section (v3)
 import { BestDanceStudioV3 } from "@/components/sections/best-dance-studio/v3";
+import { MembershipSection } from "../sections/memberships/membership/membership-section";
 
 export function DanceStudioPage() {
   return (
@@ -52,13 +52,12 @@ export function DanceStudioPage() {
        {/* Featured Media */}
        <DanceFeaturedMedia />
 
-      
-
       {/* Testimonials */}
       <DanceTestimonials />
 
       {/* Pricing Plans */}
-      <DancePricing />
+
+      <MembershipSection/>
 
       {/* FAQ Section */}
       <DanceFAQ />

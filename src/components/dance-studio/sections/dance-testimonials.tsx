@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { Play, Pause, Quote } from "lucide-react";
+import { HeroParticles } from "@/components/ui/hero-particles";
 
 const testimonials = [
   {
@@ -73,11 +74,16 @@ export function DanceTestimonials() {
 
   return (
     <section className="relative py-32 overflow-hidden bg-black">
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-black/95 to-black" />
-      <div className="absolute inset-0 bg-[url('/pattern.svg')] bg-repeat opacity-5 animate-pulse" />
+      {/* Background Effects */}
+      <div className="absolute inset-0 bg-black">
+        <HeroParticles />
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black" />
+      </div>
+      
+      {/* Animated Pattern */}
+      <div className="absolute inset-0 bg-[url('/pattern.svg')] bg-repeat opacity-5 animate-pulse z-[1]" />
 
-      <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 z-10">
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center mb-24">
           <motion.div
