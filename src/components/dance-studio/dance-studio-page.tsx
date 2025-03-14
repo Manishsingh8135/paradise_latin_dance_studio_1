@@ -6,8 +6,9 @@ import { DanceStyles } from "./sections/dance-styles";
 // Removed unused DanceInstructors import
 import { DanceSchedule } from "./sections/dance-schedule";
 import { DanceTestimonials } from "./sections/dance-testimonials";
-import { DanceEvents } from "./sections/dance-events";
-// Import the new TransformationJourneySectionV2 instead
+// Import the new EventsSection instead of DanceEvents
+import { EventsSection } from "@/components/sections/events/v1/events-section";
+
 import { TransformationJourneySectionV2 } from "@/components/sections/transformation-journey/v2/transformation-journey-section";
 
 import { DanceFAQ } from "./sections/dance-faq";
@@ -34,8 +35,8 @@ export function DanceStudioPage() {
       {/* Best Dance Studio in Hawaii Section - Now using V3 */}
       <BestDanceStudioV3 />
 
-     {/* Upcoming Events */}
-     <DanceEvents />
+     {/* Upcoming Events - Now using new EventsSection */}
+     <EventsSection />
 
       {/* Dance Styles */}
       <DanceStyles />
