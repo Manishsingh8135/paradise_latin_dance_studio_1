@@ -8,14 +8,14 @@ export const footerLinks = {
     
   ],
   services: [
-    { label: "Paradise Latin Dance", href: "/dance-studio" },
+    { label: "R1P FITNESS", href: "https://www.r1pohana.com/" },
     { label: "R1P Store", href: "#merchandise" },
-    { label: "Trainers", href: "/trainers" },
-    { label: "Training Programs", href: "#training-programs" }
+    { label: "Elite Instructors", href: "/instructors" },
+    // { label: "Training Programs", href: "#training-programs" }
   ],
   resources: [
     { label: "Success Stories", href: "#stories" },
-    { label: "Workout Plans", href: "#workouts" },
+    // { label: "Workout Plans", href: "#workouts" },
     { label: "FAQ", href: "#faq" },
     { label: "Community", href: "#community" }
   ],

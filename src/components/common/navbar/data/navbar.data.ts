@@ -85,7 +85,7 @@ export const navItems: NavMenuItem[] = [
   {
     id: 'trainers',
     label: 'Elite Instructors',
-    href: '/trainers'
+    href: '/instructors'
   },
   // {
   //   id: 'schedule',
