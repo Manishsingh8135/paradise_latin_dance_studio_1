@@ -11,15 +11,14 @@ import { ArrowRight, Dumbbell } from "lucide-react";
 export function HeroContent() {
   const slideUpVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: (delay: number) => ({
-      opacity: 1,
+    visible: { 
+      opacity: 1, 
       y: 0,
       transition: {
         duration: 0.8,
-        delay,
-        ease: [0.16, 1, 0.3, 1],
+        ease: [0.16, 1, 0.3, 1] as const,
       },
-    }),
+    },
   };
 
   return (
@@ -29,7 +28,7 @@ export function HeroContent() {
         variants={slideUpVariants}
         initial="hidden"
         animate="visible"
-        custom={0.2}
+        transition={{ delay: 0.2 }}
         className="flex items-center gap-3 justify-center md:justify-start"
       >
         <div className="h-px w-12 bg-gradient-to-r from-[#FFD700] to-transparent" />
@@ -44,7 +43,7 @@ export function HeroContent() {
           variants={slideUpVariants}
           initial="hidden"
           animate="visible"
-          custom={0.3}
+          transition={{ delay: 0.3 }}
           className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight"
         >
           <span className="block text-white">
@@ -68,7 +67,7 @@ export function HeroContent() {
           variants={slideUpVariants}
           initial="hidden"
           animate="visible"
-          custom={0.4}
+          transition={{ delay: 0.4 }}
           className="hidden md:block text-lg md:text-xl text-neutral-300 max-w-xl md:mx-0 mx-auto"
         >
           {heroData.description}
@@ -80,7 +79,7 @@ export function HeroContent() {
         variants={slideUpVariants}
         initial="hidden"
         animate="visible"
-        custom={0.5}
+        transition={{ delay: 0.5 }}
         className="flex flex-col sm:flex-row gap-4 pt-4 justify-center md:justify-start"
       >
         <PremiumButton href={heroData.actions[0].href} variant="primary">
@@ -98,7 +97,7 @@ export function HeroContent() {
         variants={slideUpVariants}
         initial="hidden"
         animate="visible"
-        custom={0.6}
+        transition={{ delay: 0.6 }}
         className="pt-8"
       >
         <HeroStatsGrid stats={heroData.stats} />
