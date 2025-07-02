@@ -92,38 +92,18 @@ export function AchievementShowcase({ scrollYProgress }: AchievementShowcaseProp
     setCurrentIndex((prev) => (prev + 1) % achievements.length);
   };
   
-  // Variants for card animations
-  const cardVariants = {
-    enter: (direction: number) => ({
-      x: direction > 0 ? 300 : -300,
-      opacity: 0,
-      scale: 0.8,
-      rotateY: direction > 0 ? 45 : -45,
-    }),
-    center: {
-      x: 0,
-      opacity: 1,
-      scale: 1,
-      rotateY: 0,
-      transition: {
-        x: { type: "spring", stiffness: 300, damping: 30 },
-        opacity: { duration: 0.5 },
-        scale: { duration: 0.5 },
-        rotateY: { duration: 0.8 }
-      }
-    },
-    exit: (direction: number) => ({
-      x: direction < 0 ? 300 : -300,
-      opacity: 0,
-      scale: 0.8,
-      rotateY: direction < 0 ? 45 : -45,
-      transition: {
-        x: { type: "spring", stiffness: 300, damping: 30 },
-        opacity: { duration: 0.5 },
-        scale: { duration: 0.5 },
-        rotateY: { duration: 0.8 }
-      }
-    })
+  // Animation values for card transitions
+  const centerAnimation = {
+    x: 0,
+    opacity: 1,
+    scale: 1,
+    rotateY: 0,
+    transition: {
+      x: { type: "spring" as const, stiffness: 300, damping: 30 },
+      opacity: { duration: 0.5 },
+      scale: { duration: 0.5 },
+      rotateY: { duration: 0.8 }
+    }
   };
 
   return (
@@ -175,14 +155,28 @@ export function AchievementShowcase({ scrollYProgress }: AchievementShowcaseProp
         
         {/* Main carousel - Increased top padding for mobile */}
         <div className="relative h-full w-full overflow-visible py-10 md:py-12">
-          <AnimatePresence initial={false} custom={direction} mode="wait">
+          <AnimatePresence initial={false} mode="wait">
             <motion.div
               key={currentIndex}
-              custom={direction}
-              variants={cardVariants}
-              initial="enter"
-              animate="center"
-              exit="exit"
+              initial={{
+                x: direction > 0 ? 300 : -300,
+                opacity: 0,
+                scale: 0.8,
+                rotateY: direction > 0 ? 45 : -45,
+              }}
+              animate={centerAnimation}
+              exit={{
+                x: direction < 0 ? 300 : -300,
+                opacity: 0,
+                scale: 0.8,
+                rotateY: direction < 0 ? 45 : -45,
+                transition: {
+                  x: { type: "spring" as const, stiffness: 300, damping: 30 },
+                  opacity: { duration: 0.5 },
+                  scale: { duration: 0.5 },
+                  rotateY: { duration: 0.8 }
+                }
+              }}
               className="absolute inset-0 flex items-center justify-center mt-8 sm:mt-0"
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.5 }}
