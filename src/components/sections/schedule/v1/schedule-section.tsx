@@ -121,7 +121,7 @@ export function ScheduleSection({
                     <ScheduleCard 
                       danceClass={danceClass} 
                       featured={isFeatured(danceClass.id)}
-                      onClick={() => console.log(`Booking class: ${danceClass.id}`)}
+                      onClick={() => window.open('https://www.r1pfitness.com/products/social-ticket', '_blank')}
                     />
                   </motion.div>
                 ))

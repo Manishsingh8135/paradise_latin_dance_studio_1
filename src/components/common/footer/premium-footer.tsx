@@ -197,19 +197,19 @@ export function PremiumFooter() {
               </p>
               <div className="flex flex-wrap items-center justify-center md:justify-end gap-8">
                 <Link
-                  href="#privacy"
+                  href="/privacy-policy"
                   className="text-sm text-white/40 hover:text-[#FFD700] transition-colors duration-300"
                 >
                   Privacy Policy
                 </Link>
                 <Link
-                  href="#terms"
+                  href="/terms-of-service"
                   className="text-sm text-white/40 hover:text-[#FFD700] transition-colors duration-300"
                 >
                   Terms of Service
                 </Link>
                 <Link
-                  href="#cookies"
+                  href="/privacy-policy"
                   className="text-sm text-white/40 hover:text-[#FFD700] transition-colors duration-300"
                 >
                   Cookie Policy

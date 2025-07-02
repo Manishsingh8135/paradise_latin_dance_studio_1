@@ -54,6 +54,15 @@ module.exports = {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
+  		},
+  		animation: {
+  			shimmer: 'shimmer 2s ease-in-out infinite',
+  		},
+  		keyframes: {
+  			shimmer: {
+  				'0%': { transform: 'translateX(-200%)' },
+  				'100%': { transform: 'translateX(200%)' },
+  			},
   		}
   	}
   },

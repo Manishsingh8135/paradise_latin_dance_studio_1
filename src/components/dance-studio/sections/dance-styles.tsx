@@ -4,8 +4,9 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { ArrowRight, Star } from "lucide-react";
+import Script from "next/script";
 
-const danceStyles = [
+export const danceStyles = [
   {
     id: "salsa",
     name: "Salsa",
@@ -34,7 +35,51 @@ export function DanceStyles() {
   const [hoveredStyle, setHoveredStyle] = useState<string | null>(null);
 
   return (
-    <section className="relative py-32 overflow-hidden">
+    <section id="dance-styles" className="relative py-32 overflow-hidden">
+      {/* Structured Data for Dance Courses */}
+      {danceStyles.map((style) => (
+        <Script 
+          key={`course-schema-${style.id}`} 
+          id={`course-schema-${style.id}`} 
+          type="application/ld+json"
+        >
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Course",
+            "name": `${style.name} Dance Classes`,
+            "description": style.description,
+            "provider": {
+              "@type": "Organization",
+              "name": "Paradise Latin Dance Studio",
+              "sameAs": "https://paradiselatindance.com"
+            },
+            "coursePrerequisites": "No prerequisites required for beginner classes",
+            "hasCourseInstance": {
+              "@type": "CourseInstance",
+              "name": `${style.name} ${style.level} Classes`,
+              "courseMode": "ONSITE",
+              "location": {
+                "@type": "Place",
+                "name": "Paradise Latin Dance Studio",
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "94-111 Leokane St",
+                  "addressLocality": "Waipahu",
+                  "addressRegion": "HI",
+                  "postalCode": "96797",
+                  "addressCountry": "US"
+                }
+              },
+              "offers": {
+                "@type": "Offer",
+                "price": "25.00",
+                "priceCurrency": "USD"
+              }
+            }
+          })}
+        </Script>
+      ))}
+      
       {/* Background */}
       <div className="absolute inset-0">
         <AnimatePresence mode="wait">

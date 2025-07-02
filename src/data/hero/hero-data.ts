@@ -72,13 +72,13 @@ export const heroData: HeroSection = {
   ],
   actions: [
     {
-      title: "Start Free 3-Day Trial",
-      href: "https://www.r1pfitness.com/pages/copy-of-3-day-pass",
+      title: "Start Free Trial Class",
+      href: "/trial",
       variant: "primary"
     },
     {
-      title: "Join Our Ohana",
-      href: "/join",
+      title: "Learn More",
+      href: "/about",
       variant: "secondary"
     }
   ],

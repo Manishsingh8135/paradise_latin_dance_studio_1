@@ -43,14 +43,14 @@ export const contactInfo = [
   {
     icon: Phone,
     label: "Phone",
-    text: "(808) 208-1066",
-    href: "tel:+18082081066"
+    text: "(808) 840-9926",
+    href: "tel:+18088409926"
   },
   {
     icon: Mail,
     label: "Email",
-    text: "r1pfitnesspr@gmail.com",
-    href: "mailto:r1pfitnesspr@gmail.com"
+    text: "paradiselatindance@gmail.com",
+    href: "mailto:paradiselatindance@gmail.com"
   },
   {
     icon: Clock,

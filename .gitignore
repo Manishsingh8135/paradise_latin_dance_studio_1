@@ -31,6 +31,7 @@ yarn-error.log*
 .pnpm-debug.log*
 
 # env files (can opt-in for committing if needed)
+.env.local
 .env*
 
 # vercel
@@ -48,3 +49,4 @@ llm
 /.llm
 llm/
 llm/*
+project-docs/

@@ -110,8 +110,8 @@ export const navActions: NavAction[] = [
   //   icon: 'User'
   // },
   {
-    id: 'free-trial',
-    label: 'Start Free Trial',
+    id: 'book-class',
+    label: 'Free Trial',
     href: '/trial',
     variant: 'primary',
     icon: 'Sparkles'
