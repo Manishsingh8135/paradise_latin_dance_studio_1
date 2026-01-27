@@ -19,8 +19,8 @@ export const heroContent: HeroContent = {
 
 export const heroMedia: HeroMedia = {
   type: "video",
-  src: "/assets/videos/paradise-intro.mp4",
-  poster: "/assets/images/dance-hero-poster.jpg"
+  src: "https://res.cloudinary.com/dyop38nwj/video/upload/v1738827537/Ripfitness/Dance-studio/master_qfajr3.mp4",
+  poster: "https://res.cloudinary.com/dyop38nwj/image/upload/v1738826472/Ripfitness/Dance-studio/lds-1_licbfa.jpg"
 };
 
 export const heroSection = {
