@@ -1,3 +1,5 @@
+import { OPTIMIZED_URLS } from "@/lib/cloudinary";
+
 export type FacilityType = 'Premium' | 'Elite' | 'Standard' | 'Retail' | 'Community';
 export type FacilityCategory = 'Strength' | 'Cardio' | 'Combat' | 'Recovery' | 'Functional' | 'Wellness' | 'Merchandise' | 'Events & Activities';
 interface Facility {
@@ -23,245 +25,123 @@ interface Facility {
 
 export const facilities: Facility[] = [
   {
-    id: 'reborn-1n-paradise-gym',
-    title: 'Reborn 1n Paradise Gym',
-    description: 'Experience the transformative power of fitness at Reborn 1n Paradise (R1PFitness). Our gym is more than just a place to work out; it\'s a community built on physical, mental, and spiritual health. Join us and rise from challenges stronger than before.',
-    image: 'https://res.cloudinary.com/dyop38nwj/image/upload/v1738914820/Ripfitness/Gym/gym13.jpg',
+    id: 'main-dance-studio',
+    title: 'Main Dance Studio',
+    description: 'Experience the transformative power of dance at Paradise Latin Dance Studio. Our main studio is more than just a place to dance; it\'s a community built on passion, connection, and joy. Join us and discover the rhythm within.',
+    image: OPTIMIZED_URLS.salsa,
     size: 'large',
-    type: 'Standard',
+    type: 'Premium',
     category: 'Cardio',
-    features: ['Community Focused', 'Holistic Fitness', 'State-of-the-Art Equipment'],
+    features: ['Professional Sound System', 'Mirror Walls', 'Sprung Dance Floor'],
     stats: [
-      { label: 'Cardio Machines', value: '15' },
-      { label: 'Weight Stations', value: '10' }
+      { label: 'Studio Space', value: '2000 sq ft' },
+      { label: 'Dance Capacity', value: '40+' }
     ],
     availability: {
       weekdays: '6:00 AM - 10:00 PM',
       weekends: '7:00 AM - 9:00 PM'
     },
     capacity: 50,
-    area: '5000 sq ft'
+    area: '2000 sq ft'
   },
   {
-    id: 'functional-zone',
-    title: 'Functional Zone',
-    description: 'Dynamic training space equipped for CrossFit, HIIT, and functional fitness workouts.',
-    image: 'https://res.cloudinary.com/dyop38nwj/image/upload/v1738914821/Ripfitness/Gym/gym17.jpg',
+    id: 'practice-room',
+    title: 'Practice Room',
+    description: 'Dedicated practice space for perfecting your dance moves and private lessons.',
+    image: OPTIMIZED_URLS.bachata,
     size: 'medium',
-    type: 'Premium',
+    type: 'Standard',
     category: 'Functional',
-    features: ['Rigs', 'Kettlebells', 'Plyo Boxes', 'Turf Track'],
+    features: ['Private Space', 'Music System', 'Video Recording'],
     stats: [
-      { label: 'Training Area', value: '1500 sq ft' },
-      { label: 'Equipment Sets', value: '25+' }
+      { label: 'Practice Area', value: '800 sq ft' },
+      { label: 'Private Lessons', value: 'Available' }
     ],
     availability: {
       weekdays: '5:00 AM - 11:00 PM',
       weekends: '6:00 AM - 10:00 PM'
     },
-    capacity: 20,
+    capacity: 10,
+    area: '800 sq ft'
+  },
+  {
+    id: 'social-dance-floor',
+    title: 'Social Dance Floor',
+    description: 'Our vibrant social dance floor where the community comes together for practice parties and social dancing.',
+    image: OPTIMIZED_URLS.lds3,
+    size: 'large',
+    type: 'Elite',
+    category: 'Events & Activities',
+    features: ['DJ Setup', 'Ambient Lighting', 'Seating Areas'],
+    stats: [
+      { label: 'Dance Floor', value: '1500 sq ft' },
+      { label: 'Events/Week', value: '3+' }
+    ],
+    availability: {
+      weekdays: '5:00 PM - 11:00 PM',
+      weekends: '7:00 PM - 12:00 AM'
+    },
+    capacity: 60,
     area: '1500 sq ft'
   },
   {
-    id: 'cardio-deck',
-    title: 'Cardio Deck',
-    description: 'Elevated cardio experience with premium treadmills, bikes, and ellipticals overlooking the city.',
-    image: 'https://res.cloudinary.com/dyop38nwj/image/upload/v1738914817/Ripfitness/Gym/gym15.jpg',
-    size: 'medium',
-    type: 'Elite',
+    id: 'group-class-studio',
+    title: 'Group Class Studio',
+    description: 'Spacious studio designed for group dance classes with professional instruction.',
+    image: OPTIMIZED_URLS.lds4,
+    size: 'large',
+    type: 'Premium',
     category: 'Cardio',
-    features: ['Smart Equipment', 'Entertainment Systems', 'Heart Rate Monitoring'],
+    features: ['Professional Instructors', 'Group Classes', 'All Levels Welcome'],
     stats: [
-      { label: 'Machines', value: '30+' },
-      { label: 'TV Screens', value: '12' }
+      { label: 'Class Size', value: '20-30' },
+      { label: 'Classes/Day', value: '5+' }
     ],
     availability: {
       weekdays: '5:00 AM - 11:00 PM',
       weekends: '6:00 AM - 10:00 PM'
     },
     capacity: 30,
-    area: '1500 sq ft'
+    area: '1800 sq ft'
   },
   {
-    id: 'strength-zone',
-    title: 'Strength Zone',
-    description: 'State-of-the-art strength training area featuring premium equipment for both powerlifting and bodybuilding.',
-    image: 'https://res.cloudinary.com/dyop38nwj/image/upload/v1738914872/Ripfitness/Gym/gym29.jpg',
-    size: 'large',
-    type: 'Premium',
-    category: 'Strength',
-    features: ['Power Racks', 'Olympic Platforms', 'Free Weights', 'Machines'],
-    stats: [
-      { label: 'Equipment', value: '50+' },
-      { label: 'Stations', value: '20' },
-      { label: 'Max Load', value: '500kg' }
-    ],
-    availability: {
-      weekdays: '5:00 AM - 11:00 PM',
-      weekends: '6:00 AM - 10:00 PM'
-    },
-    capacity: 40,
-    area: '2000 sq ft'
-  },
-  {
-    id: 'wellness-studio',
-    title: 'Wellness Studio',
-    description: 'Tranquil space for yoga, meditation, and mindfulness practices with ambient lighting and sound system.',
-    image: 'https://res.cloudinary.com/dyop38nwj/image/upload/v1738914513/Ripfitness/Gym/gym12.jpg',
+    id: 'wellness-lounge',
+    title: 'Wellness Lounge',
+    description: 'Relaxing space for warming up, cooling down, and connecting with fellow dancers.',
+    image: OPTIMIZED_URLS.lds5,
     size: 'medium',
     type: 'Premium',
     category: 'Wellness',
-    features: ['Yoga Equipment', 'Meditation Space', 'Sound System'],
+    features: ['Stretching Area', 'Refreshments', 'Comfortable Seating'],
     stats: [
-      { label: 'Class Size', value: '20' },
-      { label: 'Props Sets', value: '15' }
+      { label: 'Lounge Area', value: '500 sq ft' },
+      { label: 'Amenities', value: '10+' }
     ],
     availability: {
       weekdays: '6:00 AM - 9:00 PM',
       weekends: '7:00 AM - 8:00 PM'
     },
     capacity: 20,
-    area: '1000 sq ft'
+    area: '500 sq ft'
   },
   {
-    id: 'recovery-suite',
-    title: 'Recovery Suite',
-    description: 'Dedicated recovery area featuring advanced therapeutic equipment and relaxation spaces.',
-    image: 'https://res.cloudinary.com/dyop38nwj/image/upload/v1738914451/Ripfitness/Gym/gym4.jpg',
-    size: 'small',
-    type: 'Elite',
-    category: 'Recovery',
-    features: ['Massage Therapy', 'Compression Therapy', 'Stretching Area'],
-    stats: [
-      { label: 'Therapy Rooms', value: '4' },
-      { label: 'Recovery Tools', value: '10+' }
-    ],
-    availability: {
-      weekdays: '7:00 AM - 9:00 PM',
-      weekends: '8:00 AM - 8:00 PM'
-    },
-    capacity: 10,
-    area: '800 sq ft'
-  },
-  {
-    id: 'hiit-studio',
-    title: 'HIIT Studio',
-    description: 'High-intensity interval training space with advanced performance tracking and group fitness capabilities.',
-    image: 'https://res.cloudinary.com/dyop38nwj/image/upload/v1738914819/Ripfitness/Gym/gym16.jpg',
-    size: 'medium',
-    type: 'Elite',
-    category: 'Functional',
-    features: ['Performance Tracking', 'LED Timers', 'Circuit Equipment', 'Group Training'],
-    stats: [
-      { label: 'Stations', value: '15' },
-      { label: 'Max Class', value: '25' },
-      { label: 'Screens', value: '6' }
-    ],
-    availability: {
-      weekdays: '5:00 AM - 10:00 PM',
-      weekends: '6:00 AM - 9:00 PM'
-    },
-    capacity: 25,
-    area: '1200 sq ft'
-  },
-  {
-    id: 'team-photo',
-    title: 'R1PFitness Team & Community',
-    description: 'Join the R1PFitness Ohana! This photo captures our amazing team and gym members together after an exhilarating outdoor activity. Experience the camaraderie and support that defines our community.',
-    image: 'https://res.cloudinary.com/dyop38nwj/image/upload/v1738914500/Ripfitness/Gym/gym8.jpg',
+    id: 'community-space',
+    title: 'Dance Community Space',
+    description: 'Join the Paradise Latin Dance Ohana! This space captures the spirit of our amazing community coming together for special events and celebrations.',
+    image: OPTIMIZED_URLS.paradiseDance,
     size: 'large',
     type: 'Community',
     category: 'Events & Activities',
-    features: ['Outdoor Activities', 'Team Building', 'Community Support', 'Group Fitness'],
+    features: ['Community Events', 'Dance Socials', 'Special Celebrations'],
     stats: [
-      { label: 'Members in Photo', value: '40+' },
-      { label: 'Outdoor Events/Month', value: '2' }
+      { label: 'Community Size', value: '500+' },
+      { label: 'Events/Month', value: '4+' }
     ],
     availability: {
       weekdays: 'N/A',
       weekends: 'See Schedule'
     },
-    capacity: 40,
-    area: 'Outdoor'
-  },
-  {
-    id: 'abs-zone',
-    title: 'Abs & Core Zone',
-    description: 'Sculpt your core in our dedicated Abs & Core Zone. Featuring specialized equipment like dip machines for leg raises and a variety of tools to target every angle of your abs.',
-    image: 'https://res.cloudinary.com/dyop38nwj/image/upload/v1738914822/Ripfitness/Gym/gym21.jpg',
-    size: 'small',
-    type: 'Standard',
-    category: 'Functional',
-    features: ['Dip Machines', 'Ab Rollers', 'Stability Balls', 'Core Training'],
-    stats: [
-      { label: 'Dip Machines', value: '3' },
-      { label: 'Ab Rollers', value: '5' }
-    ],
-    availability: {
-      weekdays: '6:00 AM - 10:00 PM',
-      weekends: '7:00 AM - 9:00 PM'
-    },
-    capacity: 10,
-    area: '600 sq ft'
-  },
-  {
-    id: 'squat-rack-zone',
-    title: 'Squat Rack Zone',
-    description: 'Build strength and power in our Squat Rack Zone. This area is fully equipped with multiple squat racks and safety features for effective and safe lower body training.',
-    image: 'https://res.cloudinary.com/dyop38nwj/image/upload/v1738914820/Ripfitness/Gym/gym18.jpg',
-    size: 'small',
-    type: 'Standard',
-    category: 'Strength',
-    features: ['Squat Racks', 'Safety Catches', 'Weightlifting Platforms'],
-    stats: [
-      { label: 'Squat Racks', value: '6' },
-      { label: 'Weight Capacity', value: '800 lbs' }
-    ],
-    availability: {
-      weekdays: '6:00 AM - 10:00 PM',
-      weekends: '7:00 AM - 9:00 PM'
-    },
-    capacity: 12,
-    area: '700 sq ft'
-  },
-  {
-    id: 'mobility-lab',
-    title: 'Mobility Lab',
-    description: 'Cutting-edge mobility and rehabilitation space with advanced assessment and training tools.',
-    image: 'https://res.cloudinary.com/dyop38nwj/image/upload/v1738914820/Ripfitness/Gym/gym7.jpg',
-    size: 'medium',
-    type: 'Elite',
-    category: 'Recovery',
-    features: ['3D Movement Analysis', 'Mobility Tools', 'Rehab Equipment'],
-    stats: [
-      { label: 'Assessment Pods', value: '4' },
-      { label: 'Specialists', value: '3' }
-    ],
-    availability: {
-      weekdays: '7:00 AM - 9:00 PM',
-      weekends: '8:00 AM - 6:00 PM'
-    },
-    capacity: 8,
-    area: '600 sq ft'
-  },
-  {
-    id: 'r1p-merch-shop',
-    title: 'R1p Fitness Shop',
-    description: 'Your one-stop destination for top-quality, premium, and stylish R1p Fitness merchandise. Our merch is so popular, it\'s often out of stock as soon as new items arrive!',
-    image: 'https://res.cloudinary.com/dyop38nwj/image/upload/v1738914868/Ripfitness/Gym/gym28.jpg',
-    size: 'large',
-    type: 'Retail',
-    category: 'Merchandise',
-    features: ['Premium Quality', 'Stylish Designs', 'Limited Edition Items'],
-    stats: [
-      { label: 'Items Sold Daily', value: '50+' },
-      { label: 'Restock Frequency', value: 'Weekly' }
-    ],
-    availability: {
-      weekdays: '9:00 AM - 8:00 PM',
-      weekends: '10:00 AM - 6:00 PM'
-    },
-    capacity: 20,
-    area: '300 sq ft'
+    capacity: 100,
+    area: 'Variable'
   }
 ];

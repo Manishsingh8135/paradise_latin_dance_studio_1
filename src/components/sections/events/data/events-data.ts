@@ -1,4 +1,5 @@
 import { DanceEvent, EventType } from "../types/events-types";
+import { OPTIMIZED_URLS } from "@/lib/cloudinary";
 
 export const eventTypes: Array<"All" | EventType> = ["All", "Social", "Workshop", "Performance", "Camp", "Package"];
 
@@ -7,7 +8,7 @@ export const danceEvents: DanceEvent[] = [
     id: "july-paradise-latin-dance-social",
     title: "PARADISE LATIN DANCE SOCIAL",
     description: "Join us for an unforgettable summer night of social dancing featuring a complimentary dance lesson from Rico & Mike, followed by social dancing with DJ EVER playing the hottest Salsa & Bachata tracks. Experience the vibrant Paradise dance community!",
-    image: "https://res.cloudinary.com/dyop38nwj/image/upload/v1741750730/Ripfitness/Dance-studio/events/Dance_social_nxi3nh.jpg",
+    image: OPTIMIZED_URLS.paradiseDance,
     date: "July 5, 2025",
     time: "20:30 - 00:00",
     location: "Paradise Latin Dance Studio, 94-111 Leokane St, Waipahu, HI",
@@ -52,7 +53,7 @@ export const danceEvents: DanceEvent[] = [
     id: "salsa-beginner-cycle-2025",
     title: "Reborn 1n Paradise - 2025 Salsa Cycle Special",
     description: "Start your salsa journey with our special 12-credit dance class package. Perfect for beginners and those looking to establish a regular practice. Credits never expire!",
-    image: "https://res.cloudinary.com/dyop38nwj/image/upload/v1738826480/Ripfitness/Dance-studio/lds-3_jlnuvb.jpg",
+    image: OPTIMIZED_URLS.lds3,
     date: "February 10, 2025",
     time: "Flexible Schedule",
     location: "Paradise Latin Dance Studio, 94-111 Leokane St, Waipahu, Hawaii 96797",

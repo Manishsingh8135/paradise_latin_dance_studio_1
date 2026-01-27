@@ -1,4 +1,5 @@
 import { BestDanceStudioData } from "../types/best-dance-studio.types";
+import { OPTIMIZED_URLS } from "@/lib/cloudinary";
 
 export const bestDanceStudioData: BestDanceStudioData = {
   title: "Crown of Paradise",
@@ -99,7 +100,7 @@ export const bestDanceStudioData: BestDanceStudioData = {
   visualLayers: [
     {
       id: "bg-island",
-      imageUrl: "https://res.cloudinary.com/dyop38nwj/image/upload/v1738826481/Ripfitness/Dance-studio/lds-2_rgxwi8.jpg",
+      imageUrl: OPTIMIZED_URLS.bachata,
       depth: 90,
       opacity: 0.1,
       blur: 0,
@@ -107,28 +108,28 @@ export const bestDanceStudioData: BestDanceStudioData = {
     },
     {
       id: "bg-pattern",
-      imageUrl: "https://res.cloudinary.com/dyop38nwj/image/upload/v1738826480/Ripfitness/Dance-studio/lds-3_jlnuvb.jpg",
+      imageUrl: OPTIMIZED_URLS.lds3,
       depth: 70,
       opacity: 0.08,
       animation: "pulse",
     },
     {
       id: "dancers-silhouette",
-      imageUrl: "https://res.cloudinary.com/dyop38nwj/image/upload/v1737477080/Ripfitness/Dance-studio/481ED18E-99CB-445B-8ADF-CB8291395D88_morepr.jpg",
+      imageUrl: OPTIMIZED_URLS.dancePhoto2,
       depth: 40,
       opacity: 0.6,
       animation: "float",
     },
     {
       id: "crown-accent",
-      imageUrl: "https://res.cloudinary.com/dyop38nwj/image/upload/v1739866250/Ripfitness/Dance-studio/gold-crown_ahgvxf.png",
+      imageUrl: OPTIMIZED_URLS.lds5,
       depth: 20,
       opacity: 0.9,
       animation: "pulse",
     },
     {
       id: "tropical-overlay",
-      imageUrl: "https://res.cloudinary.com/dyop38nwj/image/upload/v1737476989/Ripfitness/Dance-studio/ParadaiseLatinDance_46of55_yz6tx4.jpg",
+      imageUrl: OPTIMIZED_URLS.paradiseDance,
       depth: 10,
       opacity: 0.15,
       animation: "float",

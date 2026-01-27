@@ -1,3 +1,5 @@
+import { OPTIMIZED_URLS } from "@/lib/cloudinary";
+
 export async function GET() {
   try {
     // In a real implementation, this data could come from your CMS or database
@@ -5,9 +7,9 @@ export async function GET() {
       {
         title: "Salsa Dance Performance",
         description: "Watch our instructors perform authentic Salsa at Paradise Latin Dance Studio",
-        thumbnail: "https://res.cloudinary.com/dyop38nwj/image/upload/v1738826472/Ripfitness/Dance-studio/lds-1_licbfa.jpg",
-        contentUrl: "https://res.cloudinary.com/dyop38nwj/video/upload/v1234567890/Ripfitness/Dance-studio/salsa-performance.mp4",
-        embedUrl: "https://res.cloudinary.com/dyop38nwj/video/upload/v1234567890/Ripfitness/Dance-studio/salsa-performance.mp4",
+        thumbnail: OPTIMIZED_URLS.salsa,
+        contentUrl: OPTIMIZED_URLS.featuredVideo1,
+        embedUrl: OPTIMIZED_URLS.featuredVideo1,
         duration: "PT2M15S", // ISO 8601 format: 2 minutes 15 seconds
         uploadDate: "2023-06-15",
         pageUrl: "https://paradiselatindance.com/performances/salsa"
@@ -15,9 +17,9 @@ export async function GET() {
       {
         title: "Bachata Dance Class Preview",
         description: "Get a sneak peek at our beginner Bachata classes with instructor Rico",
-        thumbnail: "https://res.cloudinary.com/dyop38nwj/image/upload/v1738826481/Ripfitness/Dance-studio/lds-2_rgxwi8.jpg",
-        contentUrl: "https://res.cloudinary.com/dyop38nwj/video/upload/v1234567890/Ripfitness/Dance-studio/bachata-class.mp4",
-        embedUrl: "https://res.cloudinary.com/dyop38nwj/video/upload/v1234567890/Ripfitness/Dance-studio/bachata-class.mp4",
+        thumbnail: OPTIMIZED_URLS.bachata,
+        contentUrl: OPTIMIZED_URLS.featuredVideo2,
+        embedUrl: OPTIMIZED_URLS.featuredVideo2,
         duration: "PT1M45S", // 1 minute 45 seconds
         uploadDate: "2023-07-20",
         pageUrl: "https://paradiselatindance.com/classes/bachata"
@@ -25,9 +27,9 @@ export async function GET() {
       {
         title: "Meet Our Instructors",
         description: "Paradise Latin Dance Studio's talented team of professional dance instructors",
-        thumbnail: "https://res.cloudinary.com/dyop38nwj/image/upload/v1738822187/Ripfitness/Dance-studio/Rico-1_iieiwy.jpg",
-        contentUrl: "https://res.cloudinary.com/dyop38nwj/video/upload/v1234567890/Ripfitness/Dance-studio/meet-instructors.mp4",
-        embedUrl: "https://res.cloudinary.com/dyop38nwj/video/upload/v1234567890/Ripfitness/Dance-studio/meet-instructors.mp4",
+        thumbnail: OPTIMIZED_URLS.rico,
+        contentUrl: OPTIMIZED_URLS.heroVideo,
+        embedUrl: OPTIMIZED_URLS.heroVideo,
         duration: "PT3M20S", // 3 minutes 20 seconds
         uploadDate: "2023-08-10",
         pageUrl: "https://paradiselatindance.com/instructors"

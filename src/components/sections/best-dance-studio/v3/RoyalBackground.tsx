@@ -3,6 +3,7 @@
 import { motion, MotionValue, useTransform } from "framer-motion";
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { OPTIMIZED_URLS } from "@/lib/cloudinary";
 
 interface RoyalBackgroundProps {
   scrollYProgress: MotionValue<number>;
@@ -42,11 +43,11 @@ export function RoyalBackground({ scrollYProgress }: RoyalBackgroundProps) {
         {/* Subtle royal pattern overlay */}
         <div className="absolute inset-0 bg-[url('/pattern.svg')] bg-repeat opacity-5"></div>
         
-        {/* Hawaiian silhouette with blend effect */}
+        {/* Dance silhouette with blend effect */}
         <div className="absolute inset-0 overflow-hidden mix-blend-soft-light opacity-20">
-          <Image 
-            src="https://res.cloudinary.com/dyop38nwj/image/upload/v1739866050/Ripfitness/Dance-studio/hawaii-silhouette_nmpvkq.png"
-            alt="Hawaii Silhouette"
+          <Image
+            src={OPTIMIZED_URLS.paradiseDance}
+            alt="Dance Silhouette"
             fill
             className="object-cover"
           />

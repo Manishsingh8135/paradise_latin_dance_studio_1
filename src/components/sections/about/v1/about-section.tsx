@@ -9,6 +9,7 @@ import { MilestoneCard } from "./milestone-card";
 import { FounderCard } from "./founder-card";
 import { PhoenixIcon } from "./phoenix-icon"; // Import the PhoenixIcon component
 import { coreValues, milestones, founderInfo } from "../data/about-data";
+import { OPTIMIZED_URLS } from "@/lib/cloudinary";
 
 export function AboutSection() {
   return (
@@ -26,8 +27,8 @@ export function AboutSection() {
           className="absolute inset-0"
         >
           <Image
-            src="https://res.cloudinary.com/dyop38nwj/image/upload/v1738339648/Ripfitness/Gym/Gym5.jpg"
-            alt="RIP Fitness Community"
+            src={OPTIMIZED_URLS.paradiseDance}
+            alt="Paradise Latin Dance Community"
             className="object-cover"
             fill
             priority

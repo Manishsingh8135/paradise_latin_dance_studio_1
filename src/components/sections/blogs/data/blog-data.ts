@@ -1,5 +1,6 @@
 import { Blog } from "../types/blog-types";
 import { blogAuthors } from "./blog-authors";
+import { OPTIMIZED_URLS } from "@/lib/cloudinary";
 
 export const blogData: Blog[] = [
   // {
@@ -521,7 +522,7 @@ export const blogData: Blog[] = [
     featured: true,
     premium: false,
     mainImage: {
-      url: "https://res.cloudinary.com/dyop38nwj/image/upload/v1738826480/Ripfitness/Dance-studio/lds-3_jlnuvb.jpg",
+      url: OPTIMIZED_URLS.lds3,
       alt: "Dance fitness class in action"
     },
     content: [

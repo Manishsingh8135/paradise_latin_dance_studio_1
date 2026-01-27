@@ -5,13 +5,14 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { ArrowRight, Star } from "lucide-react";
 import Script from "next/script";
+import { OPTIMIZED_URLS } from "@/lib/cloudinary";
 
 export const danceStyles = [
   {
     id: "salsa",
     name: "Salsa",
     description: "Feel the rhythm of Cuba flow through your body with our dynamic salsa classes. Perfect for beginners and advanced dancers alike.",
-    image: "https://res.cloudinary.com/dyop38nwj/image/upload/v1738826472/Ripfitness/Dance-studio/lds-1_licbfa.jpg",
+    image: OPTIMIZED_URLS.salsa,
     features: ["Social Dancing", "Partner Work", "Body Movement", "Timing & Rhythm"],
     level: "All Levels",
     duration: "60 mins",
@@ -21,13 +22,13 @@ export const danceStyles = [
     id: "bachata",
     name: "Bachata",
     description: "Experience the sensual Dominican dance style that's taking the world by storm. Learn authentic moves and styling.",
-    image: "https://res.cloudinary.com/dyop38nwj/image/upload/v1738826481/Ripfitness/Dance-studio/lds-2_rgxwi8.jpg",
+    image: OPTIMIZED_URLS.bachata,
     features: ["Body Isolation", "Hip Movement", "Footwork", "Partner Connection"],
     level: "All Levels",
     duration: "60 mins",
     color: "from-[#DAA520]/20 to-transparent"
   },
- 
+
 ];
 
 export function DanceStyles() {

@@ -1,4 +1,5 @@
 import { HeroContent, HeroMedia } from "../types/hero-types";
+import { OPTIMIZED_URLS } from "@/lib/cloudinary";
 
 export const heroContent: HeroContent = {
   title: "Paradise Latin Dance Studio",
@@ -19,8 +20,8 @@ export const heroContent: HeroContent = {
 
 export const heroMedia: HeroMedia = {
   type: "video",
-  src: "https://res.cloudinary.com/dyop38nwj/video/upload/v1738827537/Ripfitness/Dance-studio/master_qfajr3.mp4",
-  poster: "https://res.cloudinary.com/dyop38nwj/image/upload/v1738826472/Ripfitness/Dance-studio/lds-1_licbfa.jpg"
+  src: OPTIMIZED_URLS.heroVideo,
+  poster: OPTIMIZED_URLS.heroPoster
 };
 
 export const heroSection = {

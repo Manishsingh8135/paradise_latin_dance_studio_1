@@ -1,89 +1,90 @@
 import {
   Heart,
   Brain,
-  Dumbbell,
+  Music,
   Users,
-  Target,
+  Star,
   Sparkles,
 } from "lucide-react";
 import { CoreValue, Milestone } from "../types/about-types";
+import { OPTIMIZED_URLS } from "@/lib/cloudinary";
 
 export const coreValues: CoreValue[] = [
   {
     icon: Heart,
-    title: "Physical Health",
-    description: "Building strength, endurance, and vitality through expert-led training programs and state-of-the-art facilities.",
+    title: "Passion for Dance",
+    description: "Experience the joy of Latin dance through expert instruction and a love for movement.",
   },
   {
     icon: Brain,
-    title: "Mental Health",
-    description: "Supporting emotional well-being and resilience through community support and professional guidance.",
+    title: "Mental Wellness",
+    description: "Dancing releases stress and boosts happiness through movement and music.",
   },
   {
     icon: Sparkles,
-    title: "Spiritual Health",
-    description: "Nurturing inner peace and personal growth through holistic wellness practices and mindful training.",
+    title: "Creative Expression",
+    description: "Find your unique style and express yourself through the art of Latin dance.",
   },
   {
     icon: Users,
     title: "Community First",
-    description: "Creating a supportive family where everyone belongs, grows, and thrives together.",
+    description: "Join our dance ohana where everyone belongs, grows, and thrives together.",
   },
   {
-    icon: Target,
-    title: "Military Focus",
-    description: "Specialized support and understanding for military members, addressing their unique challenges.",
+    icon: Star,
+    title: "Excellence",
+    description: "Learn from Hawaii's top Latin dance instructors in a supportive environment.",
   },
   {
-    icon: Dumbbell,
-    title: "Expert Training",
-    description: "Professional guidance from experienced trainers with military and athletic backgrounds.",
+    icon: Music,
+    title: "Expert Instruction",
+    description: "Professional guidance from experienced instructors passionate about Latin dance.",
   },
 ];
 
 export const milestones: Milestone[] = [
   {
     year: "2019",
-    title: "The Birth of a Vision",
-    description: "Founded in Hawaii as a support group for military members dealing with stress and mental health challenges.",
-    image: "https://res.cloudinary.com/dyop38nwj/image/upload/v1738557459/Ripfitness/Gym/about/about-1.jpg",
+    title: "The Birth of Paradise",
+    description: "Founded in Hawaii with a vision to bring authentic Latin dance to the islands.",
+    image: OPTIMIZED_URLS.salsa,
   },
   {
     year: "2020",
     title: "Growing Community",
-    description: "Launched our first merchandise line, symbolizing unity and strength within our growing family.",
-    image: "https://res.cloudinary.com/dyop38nwj/image/upload/v1738557461/Ripfitness/Gym/about/about-3.jpg",
+    description: "Our dance family grew as more people discovered the joy of Latin dance.",
+    image: OPTIMIZED_URLS.bachata,
   },
   {
     year: "2021",
-    title: "Physical Home",
-    description: "Opened our flagship gym in Waipahu, creating a sanctuary for physical and mental transformation.",
-    image: "https://res.cloudinary.com/dyop38nwj/image/upload/v1738558029/Ripfitness/Gym/about/R1P_Gym-4_iaw3s5.jpg",
+    title: "New Studio Home",
+    description: "Opened our dance studio in Waipahu, creating a sanctuary for Latin dance lovers.",
+    image: OPTIMIZED_URLS.lds3,
   },
   {
     year: "2023",
-    title: "Digital Evolution",
-    description: "Embarked on a digital transformation to reach and support more people worldwide.",
-    image: "https://res.cloudinary.com/dyop38nwj/image/upload/v1736184972/Ripfitness/Trainers/Hip/DSC01422_vf8tnz.jpg",
+    title: "Community Events",
+    description: "Launched regular social dances and community events bringing dancers together.",
+    image: OPTIMIZED_URLS.lds4,
   },
   {
     year: "2024",
-    title: "Global Impact",
-    description: "Expanding our reach and impact through innovative programs and digital solutions.",
-    image: "https://res.cloudinary.com/dyop38nwj/image/upload/v1738558161/Ripfitness/Gym/about/about-6.png",
+    title: "Hawaii's Premier Studio",
+    description: "Recognized as one of Hawaii's top Latin dance studios with a thriving community.",
+    image: OPTIMIZED_URLS.paradiseDance,
   },
 ];
 
 export const founderInfo = {
-  name: "Hipolito Rivera",
-  role: "Founder & CEO",
-  image: "https://res.cloudinary.com/dyop38nwj/image/upload/v1736156346/Ripfitness/Trainers/Hip/IMG_0417_xha3br.jpg",
-  description: "With 13 years of experience and a background as an All-American high school athlete and 8 years of service in the United States Navy, Hipolito brings expertise in strength & conditioning, bodybuilding, and holistic fitness training.",
+  name: "Rico",
+  role: "Lead Dance Instructor",
+  image: OPTIMIZED_URLS.rico,
+  description: "A passionate Latin dance instructor dedicated to sharing the joy of Salsa, Bachata, and more with the Hawaii community. Rico brings expertise and enthusiasm to every class.",
   achievements: [
-    "Former All-American High School Athlete",
-    "8 Years U.S. Navy Service",
-    "Command Fitness Leader",
-    "Expert in Military-Style Training",
-    "Holistic Fitness Specialist",
+    "Professional Latin Dance Instructor",
+    "Expert in Salsa & Bachata",
+    "Community Dance Event Organizer",
+    "Passionate About Dance Education",
+    "Building Hawaii's Dance Community",
   ],
 };

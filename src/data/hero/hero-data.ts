@@ -1,4 +1,5 @@
 import { HeroSection } from '@/types/hero/hero-types';
+import { OPTIMIZED_URLS } from '@/lib/cloudinary';
 
 export const heroData: HeroSection = {
   mainTitle: {
@@ -55,19 +56,19 @@ export const heroData: HeroSection = {
   testimonials: [
     {
       id: "1",
-      name: "Hipolito Rivera",
-      role: "Founder & Master Trainer",
-      image: "https://res.cloudinary.com/dyop38nwj/image/upload/v1739171300/Ripfitness/Trainers/Hip/hip9.jpg",
-      quote: "Transforming you mentally, physically, and emotionally. High School All-American Athlete and 8 years US Navy Command Fitness Leader.",
-      achievement: "13+ years of expert training experience"
+      name: "Rico",
+      role: "Lead Dance Instructor",
+      image: OPTIMIZED_URLS.rico,
+      quote: "Dance is about expressing yourself and connecting with others. Join us and discover the joy of Latin dance.",
+      achievement: "Professional Latin Dance Instructor"
     },
     {
       id: "2",
-      name: "Jonathan Diaz",
-      role: "Elite Trainer & Champion",
-      image: "https://res.cloudinary.com/dyop38nwj/image/upload/v1736184236/Ripfitness/Trainers/Jonathan/Jonathan-1.jpg",
-      quote: "NASM Certified Personal Trainer with 9 years of experience specializing in strength & conditioning, bodybuilding, and weight loss transformations",
-      achievement: "2-Time Hawaiian Physique Bodybuilding Champion (2019 & 2020)"
+      name: "Mike",
+      role: "Senior Dance Instructor",
+      image: OPTIMIZED_URLS.mike,
+      quote: "Every step you take is a step towards becoming the best dancer you can be. We're here to guide you on that journey.",
+      achievement: "Expert in Salsa & Bachata"
     }
   ],
   actions: [
@@ -84,7 +85,7 @@ export const heroData: HeroSection = {
   ],
   backgroundVideo: {
     url: "",
-    poster: "https://res.cloudinary.com/dyop38nwj/image/upload/v1738339648/Ripfitness/Gym/Gym5.jpg"
+    poster: OPTIMIZED_URLS.salsa
   }
 };
 

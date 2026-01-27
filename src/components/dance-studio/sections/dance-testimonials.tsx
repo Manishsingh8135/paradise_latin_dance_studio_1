@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { Play, Pause, Quote } from "lucide-react";
 import { HeroParticles } from "@/components/ui/hero-particles";
+import { OPTIMIZED_URLS } from "@/lib/cloudinary";
 
 const testimonials = [
   {
@@ -13,9 +14,9 @@ const testimonials = [
     role: "Student",
     quote: "The instructors here are amazing! I went from having two left feet to confidently dancing salsa in just a few months. The supportive community makes learning so much fun.",
     longQuote: "I was always hesitant to try dance classes, thinking I'd never be able to keep up. But from day one, the instructors made me feel welcome and confident. Their step-by-step approach and positive energy made learning fun and natural. Now, I can't imagine my life without dancing!",
-    image: "https://res.cloudinary.com/dyop38nwj/image/upload/v1738865409/Ripfitness/Dance-studio/testmonial-thumb-1_lionkd.png",
-    video: "https://res.cloudinary.com/dyop38nwj/video/upload/v1738864745/Ripfitness/Dance-studio/12._Student_Tesitmonial_kv4sbn.mov",
-    thumbnail: "https://res.cloudinary.com/dyop38nwj/image/upload/v1738865409/Ripfitness/Dance-studio/testmonial-thumb-1_lionkd.png",
+    image: OPTIMIZED_URLS.testimonialThumb1,
+    video: OPTIMIZED_URLS.testimonialVideo1,
+    thumbnail: OPTIMIZED_URLS.testimonialThumb1,
     rating: 5,
     featured: true
   },
@@ -25,9 +26,9 @@ const testimonials = [
     role: "Professional Dancer",
     quote: "Paradise Latin Dance Studio has become my second home. The energy, the people, and the instruction are unmatched anywhere else in Hawaii.",
     longQuote: "As someone who's danced professionally for years, I can truly say that Paradise Latin Dance Studio stands out. The attention to technique, the welcoming atmosphere, and the quality of instruction are exceptional. Whether you're a beginner or an advanced dancer, this is the place to grow.",
-    image: "https://res.cloudinary.com/dyop38nwj/image/upload/v1738865545/Ripfitness/Dance-studio/testimonial-thumb-2_fqsjvb.png",
-    video: "https://res.cloudinary.com/dyop38nwj/video/upload/v1738864743/Ripfitness/Dance-studio/15._Student_Testimonial_Nalani_mflwcw.mov",
-    thumbnail: "https://res.cloudinary.com/dyop38nwj/image/upload/v1738865545/Ripfitness/Dance-studio/testimonial-thumb-2_fqsjvb.png",
+    image: OPTIMIZED_URLS.testimonialThumb2,
+    video: OPTIMIZED_URLS.testimonialVideo3,
+    thumbnail: OPTIMIZED_URLS.testimonialThumb2,
     rating: 5,
     featured: true
   },
@@ -37,9 +38,9 @@ const testimonials = [
     role: "Dance Enthusiast",
     quote: "The passion for dance here is contagious. Every class feels like a celebration, and the progress I've made is incredible.",
     longQuote: "What sets Paradise Latin Dance apart is how they make every student feel special. The instructors remember your name, your goals, and your challenges. They adapt their teaching style to help you succeed. I've made amazing friends here, and my confidence has grown both on and off the dance floor.",
-    image: "https://res.cloudinary.com/dyop38nwj/image/upload/v1738865639/Ripfitness/Dance-studio/testimonial-thumb-3_ug0kgj.png",
-    video: "https://res.cloudinary.com/dyop38nwj/video/upload/v1738864741/Ripfitness/Dance-studio/13._Student_Testimonial_p0abao.mov",
-    thumbnail: "https://res.cloudinary.com/dyop38nwj/image/upload/v1738865639/Ripfitness/Dance-studio/testimonial-thumb-3_ug0kgj.png",
+    image: OPTIMIZED_URLS.testimonialThumb3,
+    video: OPTIMIZED_URLS.testimonialVideo2,
+    thumbnail: OPTIMIZED_URLS.testimonialThumb3,
     rating: 5,
     featured: false
   }
