@@ -3,21 +3,16 @@ import { Facebook, Instagram, Youtube, MapPin, Phone, Mail, Clock } from 'lucide
 export const footerLinks = {
   company: [
     { label: "About Us", href: "/about" },
-    { label: "Careers", href: "#careers" },
     { label: "Blog", href: "/blogs" },
-    
   ],
   services: [
     { label: "R1P FITNESS", href: "https://www.r1pohana.com/" },
-    { label: "R1P Store", href: "#merchandise" },
     { label: "Elite Instructors", href: "/instructors" },
-    // { label: "Training Programs", href: "#training-programs" }
+    { label: "Class Schedule", href: "/schedule" },
   ],
   resources: [
-    { label: "Success Stories", href: "#stories" },
-    // { label: "Workout Plans", href: "#workouts" },
-    { label: "FAQ", href: "#faq" },
-    { label: "Community", href: "#community" }
+    { label: "Free Trial", href: "/trial" },
+    { label: "FAQ", href: "/#faq" },
   ],
   support: [
     { label: "Contact Us", href: "/contact" },

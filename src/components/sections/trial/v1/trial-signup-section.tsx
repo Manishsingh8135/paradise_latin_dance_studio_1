@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronRight, Star, Heart, Users, Music } from "lucide-react";
-import { HeroParticles } from "@/components/hero/HeroParticles";
+import { HeroParticles } from "@/components/ui/hero-particles";
 import { TrialSignupForm } from "./trial-signup-form";
 import { TrialClassSelection } from "./trial-class-selection";
 import { TrialCelebration } from "./trial-celebration";
