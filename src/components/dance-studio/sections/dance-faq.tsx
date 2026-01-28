@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus, Minus } from "lucide-react";
+import Script from "next/script";
 
 const faqs = [
   {
@@ -67,6 +68,11 @@ const faqs = [
   }
 ];
 
+// Flatten the FAQ items for structured data
+const allFaqItems = faqs.reduce((acc, category) => {
+  return [...acc, ...category.questions];
+}, [] as { id: string; question: string; answer: string }[]);
+
 export function DanceFAQ() {
   const [openCategory, setOpenCategory] = useState<string>("Getting Started");
   const [openQuestions, setOpenQuestions] = useState<string[]>([]);
@@ -80,7 +86,22 @@ export function DanceFAQ() {
   };
 
   return (
-    <section className="relative py-32 overflow-hidden">
+    <section id="faq" className="py-32 relative">
+      <Script id="faq-schema" type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": allFaqItems.map(item => ({
+            "@type": "Question",
+            "name": item.question,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": item.answer
+            }
+          }))
+        })}
+      </Script>
+
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[url('/pattern.svg')] bg-repeat opacity-5" />
 
@@ -202,7 +223,7 @@ export function DanceFAQ() {
             Still have questions? We&apos;re here to help!
           </p>
           <a
-            href="#contact"
+                            href="/contact"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-[#FFD700] to-[#FDB931] text-black font-semibold 
               hover:shadow-[0_0_30px_rgba(255,215,0,0.3)] transition-all duration-300"
           >

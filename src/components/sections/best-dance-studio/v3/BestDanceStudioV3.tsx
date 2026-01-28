@@ -36,7 +36,7 @@ export function BestDanceStudioV3() {
         <div className="container mx-auto px-4 py-16 md:py-20">
           {/* Main title section - reduced bottom margin */}
           <MajesticTitle
-            title="Best in Hawaii"
+            title="Hawaii's Premier Latin Dance Studio"
             subtitle="Paradise Dance Studio"
             tagline="Where champions are born and legends are made"
             scrollYProgress={scrollYProgress}

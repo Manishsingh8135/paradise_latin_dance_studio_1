@@ -4,13 +4,15 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { ArrowRight, Star } from "lucide-react";
+import Script from "next/script";
+import { OPTIMIZED_URLS } from "@/lib/cloudinary";
 
-const danceStyles = [
+export const danceStyles = [
   {
     id: "salsa",
     name: "Salsa",
     description: "Feel the rhythm of Cuba flow through your body with our dynamic salsa classes. Perfect for beginners and advanced dancers alike.",
-    image: "https://res.cloudinary.com/dyop38nwj/image/upload/v1738826472/Ripfitness/Dance-studio/lds-1_licbfa.jpg",
+    image: OPTIMIZED_URLS.salsa,
     features: ["Social Dancing", "Partner Work", "Body Movement", "Timing & Rhythm"],
     level: "All Levels",
     duration: "60 mins",
@@ -20,13 +22,13 @@ const danceStyles = [
     id: "bachata",
     name: "Bachata",
     description: "Experience the sensual Dominican dance style that's taking the world by storm. Learn authentic moves and styling.",
-    image: "https://res.cloudinary.com/dyop38nwj/image/upload/v1738826481/Ripfitness/Dance-studio/lds-2_rgxwi8.jpg",
+    image: OPTIMIZED_URLS.bachata,
     features: ["Body Isolation", "Hip Movement", "Footwork", "Partner Connection"],
     level: "All Levels",
     duration: "60 mins",
     color: "from-[#DAA520]/20 to-transparent"
   },
- 
+
 ];
 
 export function DanceStyles() {
@@ -34,7 +36,51 @@ export function DanceStyles() {
   const [hoveredStyle, setHoveredStyle] = useState<string | null>(null);
 
   return (
-    <section className="relative py-32 overflow-hidden">
+    <section id="dance-styles" className="relative py-32 overflow-hidden">
+      {/* Structured Data for Dance Courses */}
+      {danceStyles.map((style) => (
+        <Script 
+          key={`course-schema-${style.id}`} 
+          id={`course-schema-${style.id}`} 
+          type="application/ld+json"
+        >
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Course",
+            "name": `${style.name} Dance Classes`,
+            "description": style.description,
+            "provider": {
+              "@type": "Organization",
+              "name": "Paradise Latin Dance Studio",
+              "sameAs": "https://paradiselatindance.com"
+            },
+            "coursePrerequisites": "No prerequisites required for beginner classes",
+            "hasCourseInstance": {
+              "@type": "CourseInstance",
+              "name": `${style.name} ${style.level} Classes`,
+              "courseMode": "ONSITE",
+              "location": {
+                "@type": "Place",
+                "name": "Paradise Latin Dance Studio",
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "94-111 Leokane St",
+                  "addressLocality": "Waipahu",
+                  "addressRegion": "HI",
+                  "postalCode": "96797",
+                  "addressCountry": "US"
+                }
+              },
+              "offers": {
+                "@type": "Offer",
+                "price": "25.00",
+                "priceCurrency": "USD"
+              }
+            }
+          })}
+        </Script>
+      ))}
+      
       {/* Background */}
       <div className="absolute inset-0">
         <AnimatePresence mode="wait">

@@ -1,3 +1,5 @@
+import { OPTIMIZED_URLS } from "@/lib/cloudinary";
+
 // Define types directly in this file to avoid any import issues
 type JourneyLevel = "beginner" | "intermediate" | "advanced";
 
@@ -26,7 +28,7 @@ export const journeyStages: JourneyStage[] = [
     description: "Where passion meets guidance. Begin your dance journey with foundational techniques in a supportive environment.",
     achievements: ["Basic movement patterns", "Rhythm foundation", "Simple partner connection"],
     timeframe: "1-3 months",
-    image: "https://res.cloudinary.com/dyop38nwj/image/upload/v1737476989/Ripfitness/Dance-studio/ParadaiseLatinDance_46of55_yz6tx4.jpg",
+    image: OPTIMIZED_URLS.paradiseDance,
     testimonial: "I was so nervous on my first day, but the instructors made me feel welcome immediately. Now I look forward to every class!",
     studentName: "Michelle K.",
     badgeColor: "from-amber-400 to-amber-600",
@@ -43,7 +45,7 @@ export const journeyStages: JourneyStage[] = [
     description: "Develop fluid movement and expressive styling as your confidence grows and techniques become second nature.",
     achievements: ["Style variations", "Complex turn patterns", "Improved musicality"],
     timeframe: "4-8 months",
-    image: "https://res.cloudinary.com/dyop38nwj/image/upload/v1737476987/Ripfitness/Dance-studio/2421C9C6-F076-4462-A5A2-F911CBA790FF_kjns2y.jpg",
+    image: OPTIMIZED_URLS.dancePhoto1,
     testimonial: "The moment everything clicked was magical. I went from counting steps to feeling the music. The journey has transformed more than just my dancing.",
     studentName: "James T.",
     badgeColor: "from-[#FDB931] to-[#DAA520]",
@@ -60,7 +62,7 @@ export const journeyStages: JourneyStage[] = [
     description: "Transform technical skills into artistry. Express yourself authentically through movement with nuance and personal style.",
     achievements: ["Performance readiness", "Style mastery", "Dance composition"],
     timeframe: "9+ months",
-    image: "https://res.cloudinary.com/dyop38nwj/image/upload/v1738826479/Ripfitness/Dance-studio/lds-4_lmrs4d.jpg",
+    image: OPTIMIZED_URLS.lds4,
     testimonial: "Dancing has become my passion, my joy, and my community. What started as a hobby has become an essential part of who I am.",
     studentName: "Keoni M.",
     badgeColor: "from-[#FFD700] to-[#FDB931]",

@@ -20,14 +20,14 @@ const contactInfo: ContactInfo[] = [
     icon: Phone,
     title: "Call Us",
     details: [
-      { text: "(808) 208-1066", link: "tel:+18082081066" }
+      { text: "(808) 840-9926", link: "tel:+18088409926" }
     ],
   },
   {
     icon: Mail,
     title: "Email Us",
     details: [
-      { text: "r1pfitnesspr@gmail.com", link: "mailto:r1pfitnesspr@gmail.com" }
+      { text: "paradiselatindance@gmail.com", link: "mailto:paradiselatindance@gmail.com" }
     ],
   },
   {

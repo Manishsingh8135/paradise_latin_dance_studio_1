@@ -1,4 +1,5 @@
 import { NavMenuItem, NavAction, NavbarBrandProps } from '../types/navbar.types';
+import { Sparkles } from "lucide-react";
 
 export const navBrand: NavbarBrandProps = {
   logo: {
@@ -110,11 +111,11 @@ export const navActions: NavAction[] = [
   //   icon: 'User'
   // },
   {
-    id: 'free-trial',
-    label: 'Start Free Trial',
+    id: 'book-class',
+    label: 'Free Trial',
     href: '/trial',
     variant: 'primary',
-    icon: 'Sparkles'
+    icon: Sparkles
   }
 ];
 

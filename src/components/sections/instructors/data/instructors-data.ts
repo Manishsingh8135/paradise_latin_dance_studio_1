@@ -1,4 +1,5 @@
 import { Instructor, DanceStyle, ColorScheme } from "../types/instructors-types";
+import { OPTIMIZED_URLS } from "@/lib/cloudinary";
 
 export const instructors: Instructor[] = [
   {
@@ -6,7 +7,7 @@ export const instructors: Instructor[] = [
     name: "Rico",
     role: "Lead Dance Instructor",
     bio: "A passionate dance instructor from the Dominican Republic 🇩🇴, Rico brings authentic Latin flavor and vibrant energy to the Reborn In Paradise family. As both a dance instructor and fitness coach at R1P Fitness, he embodies the perfect blend of dance and fitness, inspiring students with his dynamic teaching style.",
-    image: "https://res.cloudinary.com/dyop38nwj/image/upload/v1738822187/Ripfitness/Dance-studio/Rico-1_iieiwy.jpg",
+    image: OPTIMIZED_URLS.rico,
     location: "O'ahu, Hawaii",
     specialties: ["Bachata", "Salsa"],
     experience: "10+ years",
@@ -33,7 +34,7 @@ export const instructors: Instructor[] = [
     name: "Mike Lorenzo",
     role: "Latin Dance Instructor & Fitness Coach",
     bio: "A dynamic instructor bringing passion and expertise to both dance and fitness. Mike's dedication to the Reborn In Paradise community shines through in every class, creating an energetic and welcoming environment for all students.",
-    image: "https://res.cloudinary.com/dyop38nwj/image/upload/v1738822151/Ripfitness/Dance-studio/Mike-1_npyna3.jpg",
+    image: OPTIMIZED_URLS.mike,
     location: "Hawaii",
     specialties: ["Bachata", "Salsa"],
     experience: "8+ years",

@@ -57,7 +57,7 @@ export function TransformationJourneySectionV2() {
         </div>
         
         {/* Pattern overlay */}
-        <div className="absolute inset-0 bg-[url('/pattern.png')] bg-repeat opacity-5"></div>
+        <div className="absolute inset-0 bg-[url('/pattern.svg')] bg-repeat opacity-5"></div>
         
         {/* Gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black"></div>

@@ -1,0 +1,15 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+
+# Host
+Host: https://paradiselatindance.com
+
+# Sitemaps
+Sitemap: https://paradiselatindance.com/sitemap.xml
+Sitemap: https://paradiselatindance.com/sitemap-0.xml
+Sitemap: https://paradiselatindance.com/server-sitemap.xml
+Sitemap: https://paradiselatindance.com/image-sitemap.xml
+Sitemap: https://paradiselatindance.com/video-sitemap.xml

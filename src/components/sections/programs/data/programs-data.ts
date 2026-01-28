@@ -1,3 +1,5 @@
+import { OPTIMIZED_URLS } from "@/lib/cloudinary";
+
 export type DifficultyLevel = "Beginner" | "Intermediate" | "Advanced" | "Elite";
 export type ClassCategory = "Strength" | "Cardio" | "Combat" | "Recovery" | "Special Ops";
 
@@ -39,8 +41,8 @@ export const programsData: Program[] = [
     description: "Experience authentic military-style training led by our veteran trainers. Push your limits with combat-inspired workouts.",
     duration: "75 min",
     calories: "800-1000",
-    trainer: "Hipolito Rivera",
-    trainerImage: "https://res.cloudinary.com/dyop38nwj/image/upload/v1739171300/Ripfitness/Trainers/Hip/hip9.jpg",
+    trainer: "Rico",
+    trainerImage: OPTIMIZED_URLS.rico,
     classImage: "https://images.unsplash.com/photo-1511989130945-c2b632959395?q=80&w=2560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     benefits: [
       "Military-grade conditioning",
@@ -78,9 +80,9 @@ export const programsData: Program[] = [
     description: "Championship-level strength training focusing on compound movements and progressive overload.",
     duration: "90 min",
     calories: "600-800",
-    trainer: "Jonathan Diaz",
-    trainerImage: "https://res.cloudinary.com/dyop38nwj/image/upload/v1736184236/Ripfitness/Trainers/Jonathan/Jonathan-1.jpg",
-    classImage: "https://res.cloudinary.com/dyop38nwj/image/upload/v1736159597/Ripfitness/programs/elite-strength.jpg",
+    trainer: "Mike",
+    trainerImage: OPTIMIZED_URLS.mike,
+    classImage: OPTIMIZED_URLS.lds5,
     benefits: [
       "Maximum strength gains",
       "Professional technique",
@@ -117,8 +119,8 @@ export const programsData: Program[] = [
     description: "Blend of martial arts and conditioning workouts designed to build fighter's stamina and agility.",
     duration: "60 min",
     calories: "700-900",
-    trainer: "Hipolito Rivera",
-    trainerImage: "https://res.cloudinary.com/dyop38nwj/image/upload/v1739171300/Ripfitness/Trainers/Hip/hip9.jpg",
+    trainer: "Rico",
+    trainerImage: OPTIMIZED_URLS.rico,
     classImage: "https://images.unsplash.com/photo-1602827115209-0f49346b36b2?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     benefits: [
       "Combat techniques",
@@ -156,8 +158,8 @@ export const programsData: Program[] = [
     description: "Military-inspired recovery techniques combining mobility, stretching, and mindfulness.",
     duration: "45 min",
     calories: "200-300",
-    trainer: "Jonathan Diaz",
-    trainerImage: "https://res.cloudinary.com/dyop38nwj/image/upload/v1736184236/Ripfitness/Trainers/Jonathan/Jonathan-1.jpg",
+    trainer: "Mike",
+    trainerImage: OPTIMIZED_URLS.mike,
     classImage: "https://images.unsplash.com/photo-1548690312-e3b507d8c110?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     benefits: [
       "Injury prevention",

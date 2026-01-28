@@ -27,31 +27,31 @@ export function AchievementShowcase({ scrollYProgress }: AchievementShowcaseProp
   const achievements: Achievement[] = [
     {
       id: 1,
-      title: "Best Dance Studio in Hawaii",
-      description: "Voted #1 Latin dance studio in Hawaii for six consecutive years by the Hawaii Dance Association.",
-      year: "2018-2023",
+      title: "Best in Hawaii",
+      description: "Recognized as the leading destination for authentic Latin dance instruction in Hawaii, bringing Dominican expertise and aloha spirit together.",
+      year: "2024",
       icon: "trophy"
     },
     {
       id: 2,
-      title: "International Dance Competition Gold",
-      description: "Our instructors and students won gold medals at the International Latin Dance Championship.",
-      year: "2022",
-      icon: "medal"
+      title: "Community Dance Excellence Award",
+      description: "Honored for creating Hawaii's most vibrant and inclusive Latin dance community with over 500+ active dancers.",
+      year: "2023",
+      icon: "star"
     },
     {
       id: 3,
       title: "Excellence in Dance Education",
-      description: "Recognized for outstanding contribution to dance education and cultural diversity.",
-      year: "2021",
+      description: "Recognized for outstanding contribution to dance education and cultural diversity through authentic Latin instruction.",
+      year: "2022",
       icon: "award"
     },
     {
       id: 4,
-      title: "Community Impact Award",
-      description: "Honored for making dance accessible to underserved communities through scholarship programs.",
-      year: "2020",
-      icon: "star"
+      title: "R1P Fitness Integration Achievement",
+      description: "Successfully pioneered the integration of Latin dance and fitness, creating a unique wellness experience in Hawaii.",
+      year: "2023",
+      icon: "medal"
     }
   ];
 
@@ -92,38 +92,18 @@ export function AchievementShowcase({ scrollYProgress }: AchievementShowcaseProp
     setCurrentIndex((prev) => (prev + 1) % achievements.length);
   };
   
-  // Variants for card animations
-  const cardVariants = {
-    enter: (direction: number) => ({
-      x: direction > 0 ? 300 : -300,
-      opacity: 0,
-      scale: 0.8,
-      rotateY: direction > 0 ? 45 : -45,
-    }),
-    center: {
-      x: 0,
-      opacity: 1,
-      scale: 1,
-      rotateY: 0,
-      transition: {
-        x: { type: "spring", stiffness: 300, damping: 30 },
-        opacity: { duration: 0.5 },
-        scale: { duration: 0.5 },
-        rotateY: { duration: 0.8 }
-      }
-    },
-    exit: (direction: number) => ({
-      x: direction < 0 ? 300 : -300,
-      opacity: 0,
-      scale: 0.8,
-      rotateY: direction < 0 ? 45 : -45,
-      transition: {
-        x: { type: "spring", stiffness: 300, damping: 30 },
-        opacity: { duration: 0.5 },
-        scale: { duration: 0.5 },
-        rotateY: { duration: 0.8 }
-      }
-    })
+  // Animation values for card transitions
+  const centerAnimation = {
+    x: 0,
+    opacity: 1,
+    scale: 1,
+    rotateY: 0,
+    transition: {
+      x: { type: "spring" as const, stiffness: 300, damping: 30 },
+      opacity: { duration: 0.5 },
+      scale: { duration: 0.5 },
+      rotateY: { duration: 0.8 }
+    }
   };
 
   return (
@@ -175,14 +155,28 @@ export function AchievementShowcase({ scrollYProgress }: AchievementShowcaseProp
         
         {/* Main carousel - Increased top padding for mobile */}
         <div className="relative h-full w-full overflow-visible py-10 md:py-12">
-          <AnimatePresence initial={false} custom={direction} mode="wait">
+          <AnimatePresence initial={false} mode="wait">
             <motion.div
               key={currentIndex}
-              custom={direction}
-              variants={cardVariants}
-              initial="enter"
-              animate="center"
-              exit="exit"
+              initial={{
+                x: direction > 0 ? 300 : -300,
+                opacity: 0,
+                scale: 0.8,
+                rotateY: direction > 0 ? 45 : -45,
+              }}
+              animate={centerAnimation}
+              exit={{
+                x: direction < 0 ? 300 : -300,
+                opacity: 0,
+                scale: 0.8,
+                rotateY: direction < 0 ? 45 : -45,
+                transition: {
+                  x: { type: "spring" as const, stiffness: 300, damping: 30 },
+                  opacity: { duration: 0.5 },
+                  scale: { duration: 0.5 },
+                  rotateY: { duration: 0.8 }
+                }
+              }}
               className="absolute inset-0 flex items-center justify-center mt-8 sm:mt-0"
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.5 }}

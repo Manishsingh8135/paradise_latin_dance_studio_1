@@ -1,79 +1,80 @@
 import { MediaItem } from "../types/media-types";
+import { OPTIMIZED_URLS } from "@/lib/cloudinary";
 
 export const mediaItems: MediaItem[] = [
   {
     type: 'video',
-    src: 'https://res.cloudinary.com/dyop38nwj/video/upload/v1738827537/Ripfitness/Dance-studio/master_qfajr3.mp4',
+    src: OPTIMIZED_URLS.featuredVideo1,
     title: 'Dance Showcase 2024',
     description: 'Experience the magic of our annual showcase featuring top performers',
     size: 'medium'
   },
   {
     type: 'image',
-    src: 'https://res.cloudinary.com/dyop38nwj/image/upload/v1738826472/Ripfitness/Dance-studio/lds-1_licbfa.jpg',
+    src: OPTIMIZED_URLS.salsa,
     title: 'Salsa Performance',
     description: 'Where modern meets tradition in fluid motion',
     size: 'large'
   },
   {
     type: 'image',
-    src: 'https://res.cloudinary.com/dyop38nwj/image/upload/v1738826477/Ripfitness/Dance-studio/lds-6_vb557d.jpg',
+    src: OPTIMIZED_URLS.lds6,
     title: 'Ballet Excellence',
     description: 'Grace and precision in every movement',
     size: 'small'
   },
   {
     type: 'image',
-    src: 'https://res.cloudinary.com/dyop38nwj/image/upload/v1737476989/Ripfitness/Dance-studio/ParadaiseLatinDance_46of55_yz6tx4.jpg',
+    src: OPTIMIZED_URLS.paradiseDance,
     title: 'Jazz Fusion',
     description: 'Where traditional jazz meets contemporary style',
     size: 'small'
   },
   {
     type: 'video',
-    src: 'https://res.cloudinary.com/dyop38nwj/video/upload/v1738827102/Ripfitness/Dance-studio/Halloween_Dance_Social_cc_mntm7d.mov',
+    src: OPTIMIZED_URLS.halloweenVideo,
     title: 'Hip Hop Battle',
     description: 'Urban rhythm meets island vibes',
     size: 'medium'
   },
   {
     type: 'image',
-    src: 'https://res.cloudinary.com/dyop38nwj/image/upload/v1738826484/Ripfitness/Dance-studio/lds-5_bavqe8.jpg',
+    src: OPTIMIZED_URLS.lds5,
     title: 'Modern Dance',
     description: 'Pushing boundaries with innovative movements',
     size: 'large'
   },
   {
     type: 'image',
-    src: 'https://res.cloudinary.com/dyop38nwj/image/upload/v1737477080/Ripfitness/Dance-studio/481ED18E-99CB-445B-8ADF-CB8291395D88_morepr.jpg',
+    src: OPTIMIZED_URLS.dancePhoto2,
     title: 'Jazz Fusion',
     description: 'Where traditional jazz meets contemporary style',
     size: 'small'
   },
   {
     type: 'video',
-    src: 'https://res.cloudinary.com/dyop38nwj/video/upload/v1738827014/Ripfitness/Dance-studio/master_8_zpxqbi.mp4',
+    src: OPTIMIZED_URLS.featuredVideo2,
     title: 'Hip Hop Battle',
     description: 'Urban rhythm meets island vibes',
     size: 'medium'
   },
   {
     type: 'image',
-    src: 'https://res.cloudinary.com/dyop38nwj/image/upload/v1738826479/Ripfitness/Dance-studio/lds-4_lmrs4d.jpg',
+    src: OPTIMIZED_URLS.lds4,
     title: 'Modern Dance',
     description: 'Pushing boundaries with innovative movements',
     size: 'small'
   },
   {
     type: 'image',
-    src: 'https://res.cloudinary.com/dyop38nwj/image/upload/v1738829856/Ripfitness/Dance-studio/lds-8_v4wyiw.jpg',
+    src: OPTIMIZED_URLS.lds8,
     title: 'Modern Dance',
     description: 'Pushing boundaries with innovative movements',
     size: 'small'
   },
   {
     type: 'image',
-    src: 'https://res.cloudinary.com/dyop38nwj/image/upload/v1738826480/Ripfitness/Dance-studio/lds-3_jlnuvb.jpg',
+    src: OPTIMIZED_URLS.lds3,
     title: 'Modern Dance',
     description: 'Pushing boundaries with innovative movements',
     size: 'large'
