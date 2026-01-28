@@ -13,7 +13,7 @@ export function PrivacyPolicySection() {
       {/* Background Effects */}
       <div className="absolute inset-0">
         <HeroParticles />
-        <div className="absolute inset-0 bg-[url('/pattern.png')] bg-repeat opacity-5" />
+        <div className="absolute inset-0 bg-[url('/pattern.svg')] bg-repeat opacity-5" />
         <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black" />
       </div>
 

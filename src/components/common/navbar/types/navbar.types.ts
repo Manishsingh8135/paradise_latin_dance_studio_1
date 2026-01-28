@@ -14,12 +14,14 @@ export interface NavMenuItem {
     href: string;
   }
   
-  export interface NavAction {
+  import { LucideIcon } from "lucide-react";
+
+export interface NavAction {
     id: string;
     label: string;
     href: string;
     variant: 'primary' | 'secondary' | 'ghost';
-    icon?: string;
+    icon?: LucideIcon;
   }
   
   export interface NavbarBrandProps {
