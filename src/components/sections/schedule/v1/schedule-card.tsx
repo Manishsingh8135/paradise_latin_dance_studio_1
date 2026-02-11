@@ -6,9 +6,9 @@ import { ScheduleCardProps } from "../types/schedule-types";
 
 export function ScheduleCard({ danceClass, onClick, featured = false }: ScheduleCardProps) {
   const levelColorMap = {
-    "Beginner": "bg-[#4CAF50]/20 text-[#4CAF50] border-[#4CAF50]/30",
-    "Intermediate": "bg-[#FFC107]/20 text-[#FFC107] border-[#FFC107]/30",
-    "Advanced": "bg-[#F44336]/20 text-[#F44336] border-[#F44336]/30",
+    "Dance Foundations": "bg-[#4CAF50]/20 text-[#4CAF50] border-[#4CAF50]/30",
+    "Dance Rhythm": "bg-[#FFC107]/20 text-[#FFC107] border-[#FFC107]/30",
+    "Dance Dynamics": "bg-[#F44336]/20 text-[#F44336] border-[#F44336]/30",
     "All Levels": "bg-[#3F51B5]/20 text-[#3F51B5] border-[#3F51B5]/30"
   };
   

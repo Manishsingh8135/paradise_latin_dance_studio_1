@@ -1,8 +1,8 @@
 import { BlogSection } from "@/components/sections/blogs/v1/blog-section";
 
 export const metadata = {
-  title: "Blog | R1P Fitness",
-  description: "Expert insights, training tips, and success stories from the R1P Fitness community.",
+  title: "Blog | Paradise Latin Dance Studio",
+  description: "Dance tips, Latin dance culture, and inspiring stories from the Paradise Latin Dance community in Hawaii.",
 };
 
 export default function BlogsPage() {

@@ -17,11 +17,26 @@ export { ResendProvider } from './providers/resend-provider';
 export { GmailProvider } from './providers/gmail-provider';
 
 // Configuration
-export { 
+export {
   multiProviderConfig,
   getMultiProviderConfigForLogging,
-  getAvailableProviders 
+  getAvailableProviders,
+  // Recipient helpers
+  getRecipients,
+  getLeadRecipients,
+  getAdminRecipients,
+  getContactRecipients,
+  // Test mode helpers
+  shouldSendEmails,
+  isTestMode,
+  // Sender config
+  getSenderConfig,
+  // Validation
+  validateMultiProviderConfig,
+  clearConfigCache,
 } from './core/multi-provider-config';
+
+export type { RecipientType } from './core/multi-provider-config';
 
 // Types and interfaces
 export type { 

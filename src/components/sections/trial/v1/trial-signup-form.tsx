@@ -421,9 +421,9 @@ function GoalsSelection({ selectedGoals, onGoalChange }: GoalsSelectionProps) {
 
 const hearAboutOptions = [
   { value: "google", label: "Google Search" },
-  { value: "social_media", label: "Social Media" },
+  { value: "social_media", label: "Social Media (Instagram, TikTok, Facebook)" },
   { value: "friend_referral", label: "Friend/Family Referral" },
-  { value: "gym_member", label: "I'm already an R1P Fitness member" },
+  { value: "dance_social", label: "Attended a Dance Social" },
   { value: "local_event", label: "Local Event" },
   { value: "flyer", label: "Flyer/Advertisement" },
   { value: "other", label: "Other" }

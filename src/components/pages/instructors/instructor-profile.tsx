@@ -453,19 +453,19 @@ function TestimonialsSection({ instructor }: { instructor: Instructor }) {
       name: "Maria Rodriguez",
       quote: `${instructor.name.split(' ')[0]} transformed my confidence on the dance floor. Their teaching style is both professional and incredibly encouraging.`,
       rating: 5,
-      class: "Bachata Beginner"
+      class: "Dance Foundations - Bachata"
     },
     {
       name: "David Kim",
       quote: "I've been taking classes for 6 months and the progress is amazing. The atmosphere is welcoming and the instruction is top-notch.",
       rating: 5,
-      class: "Salsa Intermediate"
+      class: "Dance Rhythm - Salsa"
     },
     {
-      name: "Sarah Johnson", 
+      name: "Sarah Johnson",
       quote: "Best dance studio in Hawaii! The personalized attention and authentic techniques make all the difference.",
       rating: 5,
-      class: "Salsa & Bachata"
+      class: "Dance Dynamics"
     }
   ];
 
@@ -553,17 +553,11 @@ function ConnectSection({ instructor }: { instructor: Instructor }) {
                 icon: Instagram,
                 description: 'Daily dance inspiration & behind the scenes'
               },
-              { 
-                url: instructor.social.paradiseDance, 
-                label: 'Paradise Dance Studio', 
+              {
+                url: instructor.social.paradiseDance,
+                label: 'Paradise Latin Dance',
                 icon: Instagram,
                 description: 'Studio updates & class highlights'
-              },
-              { 
-                url: instructor.social.ripFitness, 
-                label: 'R1P Fitness', 
-                icon: Instagram,
-                description: 'Fitness & wellness content'
               }
             ].map(({ url, label, icon: Icon, description }, index) => (
               <motion.a

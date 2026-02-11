@@ -8,7 +8,14 @@ import { ResendProvider } from '../providers/resend-provider';
 import { GmailProvider } from '../providers/gmail-provider';
 import { TrialSignupData, EmailResult } from '../core/types';
 import { renderUserWelcome, renderAdminAlert } from '../templates';
-import { multiProviderConfig, getMultiProviderConfigForLogging, getAvailableProviders } from '../core/multi-provider-config';
+import {
+  multiProviderConfig,
+  getMultiProviderConfigForLogging,
+  getAvailableProviders,
+  getLeadRecipients,
+  shouldSendEmails,
+  isTestMode,
+} from '../core/multi-provider-config';
 import { sanitizeForLogging } from '../utils/validator';
 
 export class MultiProviderEmailService {
@@ -66,16 +73,28 @@ export class MultiProviderEmailService {
    */
   async sendTrialConfirmation(data: TrialSignupData): Promise<EmailResult & { provider: string }> {
     try {
-      console.log('📨 Sending trial confirmation email...');
+      // Check if emails should be suppressed
+      if (!shouldSendEmails()) {
+        console.log('📧 Email sending is suppressed - skipping user confirmation');
+        return {
+          success: true,
+          provider: 'suppressed',
+          messageId: 'suppressed',
+        };
+      }
+
+      const testModeLabel = isTestMode() ? ' (TEST MODE)' : '';
+      console.log(`📨 Sending trial confirmation email${testModeLabel}...`);
+
       const template = await renderUserWelcome(data);
       const result = await this.factory.sendEmail(data.user.email, template);
-      
+
       if (result.success) {
         console.log(`✅ Trial confirmation email sent successfully via ${result.provider}`);
       } else {
         console.error(`❌ Trial confirmation email failed via ${result.provider}:`, result.error);
       }
-      
+
       return result;
     } catch (error: unknown) {
       console.error('❌ Trial confirmation template error:', error);
@@ -88,21 +107,71 @@ export class MultiProviderEmailService {
   }
 
   /**
-   * Send admin notification email about new trial signup
+   * Send admin/lead notification email about new trial signup
+   * Sends to ALL configured lead recipients
    */
   async sendAdminNotification(data: TrialSignupData): Promise<EmailResult & { provider: string }> {
     try {
-      console.log('📨 Sending admin notification email...');
-      const template = await renderAdminAlert(data);
-      const result = await this.factory.sendEmail(this.config.adminEmail, template);
-      
-      if (result.success) {
-        console.log(`✅ Admin notification email sent successfully via ${result.provider}`);
-      } else {
-        console.error(`❌ Admin notification email failed via ${result.provider}:`, result.error);
+      // Check if emails should be suppressed
+      if (!shouldSendEmails()) {
+        console.log('📧 Email sending is suppressed - skipping admin notification');
+        return {
+          success: true,
+          provider: 'suppressed',
+          messageId: 'suppressed',
+        };
       }
-      
-      return result;
+
+      // Get all lead recipients
+      const recipients = getLeadRecipients();
+
+      if (recipients.length === 0) {
+        console.warn('⚠️ No lead recipients configured - skipping admin notification');
+        return {
+          success: false,
+          error: 'No lead recipients configured',
+          provider: 'none',
+        };
+      }
+
+      const testModeLabel = isTestMode() ? ' (TEST MODE)' : '';
+      console.log(`📨 Sending admin notification to ${recipients.length} recipient(s)${testModeLabel}...`);
+
+      const template = await renderAdminAlert(data);
+
+      // Send to all recipients
+      const results: Array<EmailResult & { provider: string; recipient: string }> = [];
+
+      for (const recipient of recipients) {
+        const result = await this.factory.sendEmail(recipient, template);
+        results.push({ ...result, recipient });
+
+        if (result.success) {
+          console.log(`  ✅ Sent to ${recipient.replace(/(.{3}).*@/, '$1***@')} via ${result.provider}`);
+        } else {
+          console.error(`  ❌ Failed for ${recipient.replace(/(.{3}).*@/, '$1***@')}: ${result.error}`);
+        }
+      }
+
+      // Aggregate results
+      const successCount = results.filter(r => r.success).length;
+      const allSuccess = successCount === recipients.length;
+      const anySuccess = successCount > 0;
+
+      if (allSuccess) {
+        console.log(`✅ Admin notification sent to all ${recipients.length} recipient(s)`);
+      } else if (anySuccess) {
+        console.warn(`⚠️ Admin notification partially delivered: ${successCount}/${recipients.length}`);
+      } else {
+        console.error(`❌ Admin notification failed for all recipients`);
+      }
+
+      return {
+        success: anySuccess,
+        provider: results[0]?.provider || 'none',
+        messageId: results.filter(r => r.messageId).map(r => r.messageId).join(','),
+        error: allSuccess ? undefined : `Delivered to ${successCount}/${recipients.length} recipients`,
+      };
     } catch (error: unknown) {
       console.error('❌ Admin notification template error:', error);
       return {

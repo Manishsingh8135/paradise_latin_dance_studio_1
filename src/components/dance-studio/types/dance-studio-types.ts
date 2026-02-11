@@ -6,11 +6,11 @@ export type DanceStyle =
   | "Reggaeton"
   | "Latin Fusion";
 
-export type DanceLevel = 
-  | "Beginner"
-  | "Intermediate"
-  | "Advanced"
-  | "Pro";
+export type DanceLevel =
+  | "Dance Foundations"
+  | "Dance Rhythm"
+  | "Dance Dynamics"
+  | "All Levels";
 
 export interface Instructor {
   id: string;

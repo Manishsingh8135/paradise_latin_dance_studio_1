@@ -169,17 +169,7 @@ export function InstructorDetails({ instructor }: InstructorDetailsProps) {
             </a>
           )}
           
-          {instructor.social.ripFitness && (
-            <a
-              href={instructor.social.ripFitness}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-4 py-2 rounded-full bg-gradient-to-r from-[#FFD700]/10 to-[#FDB931]/5 text-white/80 hover:text-white border border-[#FFD700]/30 hover:border-[#FFD700]/50 transition-colors"
-            >
-              <span className="text-sm">R1P Fitness</span>
-            </a>
-          )}
-        </div>
+                  </div>
       </div>
       
       {/* Booking Button */}

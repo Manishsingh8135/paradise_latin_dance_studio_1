@@ -11,8 +11,8 @@ export interface DanceClass {
   available?: boolean;
 }
 
-export type DanceLevel = "Beginner" | "Intermediate" | "Advanced" | "All Levels";
-export type DanceStyle = "Salsa" | "Bachata" | "Contemporary" | "Hip Hop" | "Tango" | "Ballroom" | "Ballet" | "Jazz";
+export type DanceLevel = "Dance Foundations" | "Dance Rhythm" | "Dance Dynamics" | "All Levels";
+export type DanceStyle = "Salsa" | "Bachata" | "Salsa & Bachata";
 export type DayOfWeek = "Monday" | "Tuesday" | "Wednesday" | "Thursday" | "Friday" | "Saturday" | "Sunday";
 
 export interface ScheduleFilter {

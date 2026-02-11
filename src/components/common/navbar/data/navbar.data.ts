@@ -4,7 +4,7 @@ import { Sparkles } from "lucide-react";
 export const navBrand: NavbarBrandProps = {
   logo: {
     src: "/logo/logo.png",
-    alt: "RipFitness Logo",
+    alt: "Paradise Latin Dance Logo",
     width: 48,
     height: 48
   },
@@ -121,17 +121,17 @@ export const navActions: NavAction[] = [
 
 export const mobileNavFeatures = [
   {
-    id: 'locations',
-    title: 'Find a Gym',
-    description: 'Locate our premium facilities near you',
-    icon: 'MapPin',
-    href: '/locations'
+    id: 'schedule',
+    title: 'Class Schedule',
+    description: 'View our weekly dance class schedule',
+    icon: 'Calendar',
+    href: '/schedule'
   },
   {
-    id: 'virtual',
-    title: 'Virtual Training',
-    description: 'Elite workouts from anywhere',
-    icon: 'Video',
-    href: '/virtual'
+    id: 'trial',
+    title: 'Free Trial Class',
+    description: 'Book your first class for free',
+    icon: 'Sparkles',
+    href: '/trial'
   }
 ];

@@ -6,7 +6,6 @@ export const footerLinks = {
     { label: "Blog", href: "/blogs" },
   ],
   services: [
-    { label: "R1P FITNESS", href: "https://www.r1pohana.com/" },
     { label: "Elite Instructors", href: "/instructors" },
     { label: "Class Schedule", href: "/schedule" },
   ],
@@ -19,14 +18,24 @@ export const footerLinks = {
     { label: "Help Center", href: "/help-center" },
     { label: "Privacy Policy", href: "/privacy-policy" },
     { label: "Terms of Service", href: "/terms-of-service" },
+  ],
+  brands: [
+    { label: "R1P Fitness Gym", href: "https://www.r1pfitness.com/" },
+    { label: "R1P Merch Store", href: "https://www.r1pohana.com/" },
   ]
 };
 
 export const socialLinks = [
-  { icon: Facebook, href: "https://www.facebook.com/R1PFITNESS/", label: "Facebook" },
-  { icon: Instagram, href: "https://www.instagram.com/r1pfitness/", label: "Instagram" },
-  { icon: Youtube, href: "https://www.youtube.com/@r1pfitness728", label: "Youtube" }
+  { icon: Facebook, href: "https://www.facebook.com/p/Paradise-Latin-Dance-61555017040130/", label: "Facebook" },
+  { icon: Instagram, href: "https://www.instagram.com/paradiselatindance/", label: "Instagram" },
+  { icon: Youtube, href: "https://www.youtube.com/@Paradiselatindance", label: "Youtube" }
 ];
+
+// TikTok link (icon handled separately in component)
+export const tiktokLink = {
+  href: "https://www.tiktok.com/@paradiselatindance",
+  label: "TikTok"
+};
 
 export const contactInfo = [
   {

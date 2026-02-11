@@ -130,7 +130,6 @@ function generateStructuredData(instructor: typeof instructors[0], instructorId:
     sameAs: [
       instructor.social.instagram,
       instructor.social.paradiseDance,
-      instructor.social.ripFitness,
     ].filter(Boolean),
     teaches: {
       '@type': 'Course',

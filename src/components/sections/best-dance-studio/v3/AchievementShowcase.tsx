@@ -48,7 +48,7 @@ export function AchievementShowcase({ scrollYProgress }: AchievementShowcaseProp
     },
     {
       id: 4,
-      title: "R1P Fitness Integration Achievement",
+      title: "Dance & Fitness Pioneer",
       description: "Successfully pioneered the integration of Latin dance and fitness, creating a unique wellness experience in Hawaii.",
       year: "2023",
       icon: "medal"

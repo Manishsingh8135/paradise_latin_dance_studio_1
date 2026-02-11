@@ -5,54 +5,52 @@ export const instructors: Instructor[] = [
   {
     id: "rico",
     name: "Rico",
-    role: "Lead Dance Instructor",
-    bio: "A passionate dance instructor from the Dominican Republic 🇩🇴, Rico brings authentic Latin flavor and vibrant energy to the Reborn In Paradise family. As both a dance instructor and fitness coach at R1P Fitness, he embodies the perfect blend of dance and fitness, inspiring students with his dynamic teaching style.",
+    role: "Lead Dance Instructor & Co-Founder",
+    bio: "A passionate dance instructor from the Dominican Republic 🇩🇴, Rico brings authentic Latin flavor and vibrant energy to Paradise Latin Dance Studio. His dynamic teaching style and deep connection to Latin dance culture inspire students of all levels to find joy in movement.",
     image: OPTIMIZED_URLS.rico,
     location: "O'ahu, Hawaii",
     specialties: ["Bachata", "Salsa"],
     experience: "10+ years",
     quote: "Dance is not just movement; it's a conversation with the universe through your body.",
     achievements: [
-      "Lead Instructor at Paradise Latin Dance",
-      "Expert Fitness Coach at R1P Fitness",
+      "Co-Founder of Paradise Latin Dance",
       "188+ Dance Choreographies",
-      "Inspiring the R1P Community"
+      "Master Instructor in Bachata & Salsa",
+      "Building Hawaii's Latin Dance Community"
     ],
     certifications: [
       "Certified Latin Dance Instructor",
-      "Personal Fitness Trainer"
+      "Dance Fitness Specialist"
     ],
     social: {
       instagram: "https://www.instagram.com/_ricostory/",
-      paradiseDance: "https://www.instagram.com/paradiselatindance",
-      ripFitness: "https://www.instagram.com/r1pfitness"
+      paradiseDance: "https://www.instagram.com/paradiselatindance"
     },
     featured: true
   },
   {
     id: "mike",
     name: "Mike Lorenzo",
-    role: "Latin Dance Instructor & Fitness Coach",
-    bio: "A dynamic instructor bringing passion and expertise to both dance and fitness. Mike's dedication to the Reborn In Paradise community shines through in every class, creating an energetic and welcoming environment for all students.",
+    role: "Senior Dance Instructor & Co-Founder",
+    bio: "A dynamic instructor bringing passion and expertise to Latin dance. Mike's dedication to the Paradise Latin Dance community shines through in every class, creating an energetic and welcoming environment where students of all levels can grow and thrive.",
     image: OPTIMIZED_URLS.mike,
-    location: "Hawaii",
+    location: "O'ahu, Hawaii",
     specialties: ["Bachata", "Salsa"],
     experience: "8+ years",
     quote: "Every step on the dance floor is a step toward becoming the best version of yourself.",
     achievements: [
-      "Instructor at Paradise Latin Dance",
-      "Fitness Coach at R1P Fitness",
+      "Co-Founder of Paradise Latin Dance",
+      "Expert Partner Work Instructor",
       "4,900+ Social Following",
-      "Community Builder"
+      "Community Builder & Mentor"
     ],
     certifications: [
       "Advanced Salsa Instructor",
-      "Certified Fitness Trainer"
+      "Bachata Specialist"
     ],
     social: {
       instagram: "https://www.instagram.com/mikelorenzojr/",
-      paradiseDance: "https://www.instagram.com/paradiselatindance",
-      ripFitness: "https://www.instagram.com/r1pfitness"
+      paradiseDance: "https://www.instagram.com/paradiselatindance"
     }
   }
 ];

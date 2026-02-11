@@ -528,7 +528,7 @@ export const blogData: Blog[] = [
     content: [
       {
         type: "paragraph",
-        content: "Discover the joy of fitness through dance at R1P Fitness. Our dance fitness program combines high-energy choreography with effective workout principles to create an experience that's both fun and transformative."
+        content: "Discover the joy of fitness through dance at Paradise Latin Dance Studio. Our dance programs combine high-energy choreography with effective movement principles to create an experience that's both fun and transformative."
       }
     ],
     likes: 189,

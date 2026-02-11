@@ -127,7 +127,7 @@ export function TrialCelebration({ formData, onStartOver }: TrialCelebrationProp
                 <MapPin className="w-5 h-5 text-[#FFD700] shrink-0" />
                 <div>
                   <div className="font-semibold text-sm">Location</div>
-                  <div className="text-white/70 text-xs">R1P Fitness Waipahu</div>
+                  <div className="text-white/70 text-xs">Paradise Latin Dance, Waipahu</div>
                 </div>
               </div>
             </div>

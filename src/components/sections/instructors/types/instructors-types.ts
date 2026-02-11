@@ -36,7 +36,6 @@ export interface Instructor {
     facebook?: string;
     twitter?: string;
     paradiseDance?: string;
-    ripFitness?: string;
     website?: string;
   };
   featured?: boolean;

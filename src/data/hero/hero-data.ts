@@ -3,69 +3,69 @@ import { OPTIMIZED_URLS } from '@/lib/cloudinary';
 
 export const heroData: HeroSection = {
   mainTitle: {
-    firstLine: "Reborn 1n Paradise",
-    highlightedText: "Mind, Body & Spirit",
-    lastLine: "A Home Away From Home"
+    firstLine: "Paradise Latin Dance",
+    highlightedText: "Feel the Rhythm",
+    lastLine: "Dance with Passion"
   },
-  subtitle: "From Military Struggles to a Global Community",
-  description: "Founded in 2019 in Hawaii, R1PFitness was born from military members seeking to create a sanctuary where physical strength heals mind and spirit. Join our ohana and experience a fitness community built on physical health, mental health, and spiritual well-being.",
+  subtitle: "Hawaii's Premier Latin Dance Studio",
+  description: "Experience the joy of Latin dance at Paradise Latin Dance Studio in Waipahu, Hawaii. Whether you're a complete beginner or an experienced dancer, our passionate instructors Rico and Mike will guide you through Salsa and Bachata in a welcoming, fun environment.",
   stats: [
     {
-      value: "4+",
-      label: "Years Legacy",
-      description: "Transforming lives since 2019"
-    },
-    {
-      value: "4",
-      label: "Elite Trainers",
-      description: "Military-experienced professionals"
+      value: "2",
+      label: "Expert Instructors",
+      description: "Rico & Mike Lorenzo"
     },
     {
       value: "3",
-      label: "Core Pillars",
-      description: "Physical, Mental, Spiritual Health"
+      label: "Class Levels",
+      description: "Foundations, Rhythm, Dynamics"
     },
     {
-      value: "15",
-      label: "Hours Daily",
-      description: "Mon-Fri 6AM-9PM"
+      value: "2",
+      label: "Dance Styles",
+      description: "Salsa & Bachata"
+    },
+    {
+      value: "6",
+      label: "Days a Week",
+      description: "Classes Mon-Sat"
     }
   ],
   features: [
     {
-      title: "Military Training",
-      description: "Expert military-style PT",
-      icon: "shield"
+      title: "Dance Foundations",
+      description: "Perfect for new dancers",
+      icon: "music"
     },
     {
-      title: "Personal Training",
-      description: "Customized workout plans",
+      title: "Dance Rhythm",
+      description: "For experienced dancers",
       icon: "users"
     },
     {
-      title: "Group Training",
-      description: "High-energy sessions",
-      icon: "users-group"
+      title: "Dance Dynamics",
+      description: "Advanced techniques",
+      icon: "star"
     },
     {
-      title: "Dance Experience",
-      description: "Dynamic dance classes",
-      icon: "music"
+      title: "Social Dancing",
+      description: "Friday night socials",
+      icon: "heart"
     }
   ],
   testimonials: [
     {
       id: "1",
       name: "Rico",
-      role: "Lead Dance Instructor",
+      role: "Lead Dance Instructor & Co-Founder",
       image: OPTIMIZED_URLS.rico,
       quote: "Dance is about expressing yourself and connecting with others. Join us and discover the joy of Latin dance.",
       achievement: "Professional Latin Dance Instructor"
     },
     {
       id: "2",
-      name: "Mike",
-      role: "Senior Dance Instructor",
+      name: "Mike Lorenzo",
+      role: "Senior Dance Instructor & Co-Founder",
       image: OPTIMIZED_URLS.mike,
       quote: "Every step you take is a step towards becoming the best dancer you can be. We're here to guide you on that journey.",
       achievement: "Expert in Salsa & Bachata"
@@ -78,8 +78,8 @@ export const heroData: HeroSection = {
       variant: "primary"
     },
     {
-      title: "Learn More",
-      href: "/about",
+      title: "View Schedule",
+      href: "/schedule",
       variant: "secondary"
     }
   ],
@@ -88,4 +88,3 @@ export const heroData: HeroSection = {
     poster: OPTIMIZED_URLS.salsa
   }
 };
-

@@ -3,48 +3,39 @@ import { OPTIMIZED_URLS } from "@/lib/cloudinary";
 
 export const blogAuthors: BlogAuthor[] = [
   {
-    id: "hipolito-rivera",
-    name: "Hipolito Rivera",
-    role: "Founder & Master Trainer",
-    image: OPTIMIZED_URLS.rico, // Using Rico's image as placeholder
-    bio: "High School All-American Athlete and 8 years US Navy Command Fitness Leader with 13+ years of expert training experience.",
-    specialties: ["Military Training", "Strength & Conditioning", "Leadership"],
-    social: {
-      instagram: "https://www.instagram.com/r1pfitness",
-      facebook: "https://www.facebook.com/R1PFITNESS"
-    }
-  },
-  {
-    id: "jonathan-diaz",
-    name: "Jonathan Diaz",
-    role: "Elite Trainer & Champion",
-    image: OPTIMIZED_URLS.mike, // Using Mike's image as placeholder
-    bio: "NASM Certified Personal Trainer specializing in strength & conditioning, bodybuilding, and weight loss transformations. 2-Time Hawaiian Physique Bodybuilding Champion.",
-    specialties: ["Bodybuilding", "Weight Loss", "Competition Prep"],
-    social: {
-      instagram: "https://www.instagram.com/r1pfitness"
-    }
-  },
-  {
     id: "rico-dance",
     name: "Rico",
-    role: "Lead Dance Instructor",
+    role: "Lead Dance Instructor & Co-Founder",
     image: OPTIMIZED_URLS.rico,
-    bio: "Professional dance instructor specializing in Latin dance styles. Passionate about bringing dance and fitness together.",
-    specialties: ["Latin Dance", "Choreography", "Dance Fitness"],
+    bio: "A passionate dance instructor from the Dominican Republic, Rico brings authentic Latin flavor and vibrant energy to Paradise Latin Dance. His dynamic teaching style inspires students of all levels.",
+    specialties: ["Salsa", "Bachata", "Latin Dance Culture"],
     social: {
-      instagram: "https://www.instagram.com/r1pfitness"
+      instagram: "https://www.instagram.com/_ricostory/",
+      facebook: "https://www.facebook.com/p/Paradise-Latin-Dance-61555017040130/"
     }
   },
   {
     id: "mike-dance",
-    name: "Mike",
-    role: "Senior Dance Instructor",
+    name: "Mike Lorenzo",
+    role: "Senior Dance Instructor & Co-Founder",
     image: OPTIMIZED_URLS.mike,
-    bio: "Experienced dance instructor with expertise in multiple Latin dance styles. Specializes in beginner-friendly instruction.",
-    specialties: ["Salsa", "Bachata", "Dance Instruction"],
+    bio: "Experienced dance instructor with expertise in multiple Latin dance styles. Mike specializes in breaking down complex movements into easy-to-follow steps for dancers of all levels.",
+    specialties: ["Salsa", "Bachata", "Partner Work"],
     social: {
-      instagram: "https://www.instagram.com/r1pfitness"
+      instagram: "https://www.instagram.com/mikelorenzojr/",
+      facebook: "https://www.facebook.com/p/Paradise-Latin-Dance-61555017040130/"
+    }
+  },
+  {
+    id: "paradise-team",
+    name: "Paradise Latin Dance Team",
+    role: "Studio Team",
+    image: OPTIMIZED_URLS.paradiseDance,
+    bio: "The Paradise Latin Dance team is dedicated to bringing the joy of Latin dance to Hawaii. Our community-focused approach makes learning dance fun and accessible.",
+    specialties: ["Community Events", "Dance Education", "Hawaiian Dance Scene"],
+    social: {
+      instagram: "https://www.instagram.com/paradiselatindance/",
+      facebook: "https://www.facebook.com/p/Paradise-Latin-Dance-61555017040130/"
     }
   }
-]; 
+];

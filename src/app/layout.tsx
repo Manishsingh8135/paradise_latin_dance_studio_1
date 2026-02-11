@@ -110,8 +110,10 @@ export default function RootLayout({
             "email": "paradiselatindance@gmail.com",
             "openingHours": "Mo-Fr 16:00-22:00 Sa 09:00-18:00",
             "sameAs": [
-              "https://www.instagram.com/paradiselatindance",
-              "https://www.instagram.com/r1pfitness"
+              "https://www.instagram.com/paradiselatindance/",
+              "https://www.facebook.com/p/Paradise-Latin-Dance-61555017040130/",
+              "https://www.youtube.com/@Paradiselatindance",
+              "https://www.tiktok.com/@paradiselatindance"
             ]
           })}
         </Script>

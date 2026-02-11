@@ -12,7 +12,7 @@ const faqs = [
       {
         id: "beginner",
         question: "I'm a complete beginner. Which class should I start with?",
-        answer: "We recommend starting with our Beginner Fundamentals class. This class introduces basic dance concepts, rhythm, and movement patterns in a supportive environment. You can also try our 'Dance 101' workshop, specifically designed for newcomers."
+        answer: "We recommend starting with our Dance Foundations class. This class is designed specifically for new dancers and introduces basic dance concepts, rhythm, and movement patterns in a supportive environment. It's the perfect first step on your Latin dance journey!"
       },
       {
         id: "wear",
