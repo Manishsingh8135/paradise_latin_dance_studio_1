@@ -96,10 +96,11 @@ export function ProgramCard({ program, isExpanded, onExpand }: ProgramCardProps)
             <motion.div layout className="flex items-center gap-2 mb-2">
               <span className={[
                 "px-2 py-1 rounded-full text-xs font-medium",
-                program.category === "Special Ops" && "bg-red-500/20 text-red-400",
-                program.category === "Strength" && "bg-yellow-500/20 text-yellow-400",
-                program.category === "Combat" && "bg-purple-500/20 text-purple-400",
-                program.category === "Recovery" && "bg-green-500/20 text-green-400"
+                program.category === "Salsa" && "bg-red-500/20 text-red-400",
+                program.category === "Bachata" && "bg-purple-500/20 text-purple-400",
+                program.category === "Social" && "bg-yellow-500/20 text-yellow-400",
+                program.category === "Foundations" && "bg-blue-500/20 text-blue-400",
+                program.category === "Specialty" && "bg-green-500/20 text-green-400"
               ].filter(Boolean).join(" ")}>
                 {program.category}
               </span>

@@ -59,10 +59,6 @@ export type {
 
 // Easy switching utility
 export const switchEmailProvider = async (providerName: 'resend' | 'gmail') => {
-  console.log(`🔄 Switching email provider to: ${providerName}`);
-  console.log(`💡 Update your .env file: EMAIL_PROVIDER=${providerName}`);
-  console.log('⚠️  Remember to restart your application after changing environment variables');
-  
   return {
     provider: providerName,
     envVariable: `EMAIL_PROVIDER=${providerName}`,

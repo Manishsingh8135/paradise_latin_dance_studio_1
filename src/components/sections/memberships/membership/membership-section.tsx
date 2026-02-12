@@ -54,8 +54,8 @@ export function MembershipSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-white/60 text-lg max-w-2xl mx-auto"
           >
-            Transform your body and mind with our flexible membership options.
-            Choose the plan that best fits your fitness goals and lifestyle.
+            Elevate your dance journey with our flexible membership options.
+            Choose the plan that best fits your dance goals and lifestyle.
           </motion.p>
         </div>
 

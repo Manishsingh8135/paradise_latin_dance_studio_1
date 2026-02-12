@@ -28,17 +28,15 @@ export function HeroSection({
             videoRef.current.muted = false;
             await videoRef.current.play();
           }
-        } catch (error) {
-          console.error('Error playing video:', error);
+        } catch {
           // If autoplay with sound fails (common in browsers), try with mute
           if (videoRef.current) {
             videoRef.current.muted = true;
             setIsMuted(true);
             try {
               await videoRef.current.play();
-              console.log('Video playing with mute due to browser autoplay policy');
-            } catch (fallbackError) {
-              console.error('Failed to play video even with mute:', fallbackError);
+            } catch {
+              // Video playback failed even with mute
             }
           }
         }

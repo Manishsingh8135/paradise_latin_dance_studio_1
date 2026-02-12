@@ -1,33 +1,32 @@
-export type BlogCategory = 
-  | "Fitness"
-  | "Nutrition"
-  | "Mental Health"
-  | "Training"
-  | "Recovery"
+export type BlogCategory =
+  | "Dance"
+  | "Salsa"
+  | "Bachata"
+  | "Latin Culture"
   | "Lifestyle"
   | "Success Stories"
-  | "Military Fitness"
-  | "Dance"
-  | "Community";
+  | "Community"
+  | "Tips & Technique"
+  | "Wellness"
+  | "Events";
 
-export type BlogTag = 
+export type BlogTag =
   | "Beginner"
   | "Advanced"
   | "Tips"
   | "Guide"
-  | "Workout"
-  | "Diet"
+  | "Technique"
+  | "Musicality"
   | "Motivation"
   | "Transformation"
   | "Interview"
   | "Event"
-  | "Mental Training"
-  | "Discipline"
-  | "Weight Loss"
-  | "Science"
-  | "Nutrition"
-  | "Exercise"
-  | "Psychology";
+  | "Partner Work"
+  | "Styling"
+  | "Footwork"
+  | "History"
+  | "Culture"
+  | "Performance";
 
 export interface BlogAuthor {
   id: string;
@@ -83,4 +82,4 @@ export interface Blog {
   likes: number;
   views: number;
   comments: number;
-} 
+}

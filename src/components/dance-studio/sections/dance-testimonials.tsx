@@ -10,8 +10,8 @@ import { OPTIMIZED_URLS } from "@/lib/cloudinary";
 const testimonials = [
   {
     id: "1",
-    name: "",
-    role: "Student",
+    name: "Paradise Dancer",
+    role: "Salsa Student",
     quote: "The instructors here are amazing! I went from having two left feet to confidently dancing salsa in just a few months. The supportive community makes learning so much fun.",
     longQuote: "I was always hesitant to try dance classes, thinking I'd never be able to keep up. But from day one, the instructors made me feel welcome and confident. Their step-by-step approach and positive energy made learning fun and natural. Now, I can't imagine my life without dancing!",
     image: OPTIMIZED_URLS.testimonialThumb1,
@@ -22,10 +22,10 @@ const testimonials = [
   },
   {
     id: "2",
-    name: "",
-    role: "Professional Dancer",
+    name: "Experienced Dancer",
+    role: "Bachata Enthusiast",
     quote: "Paradise Latin Dance Studio has become my second home. The energy, the people, and the instruction are unmatched anywhere else in Hawaii.",
-    longQuote: "As someone who's danced professionally for years, I can truly say that Paradise Latin Dance Studio stands out. The attention to technique, the welcoming atmosphere, and the quality of instruction are exceptional. Whether you're a beginner or an advanced dancer, this is the place to grow.",
+    longQuote: "As someone who's danced for years, I can truly say that Paradise Latin Dance Studio stands out. The attention to technique, the welcoming atmosphere, and the quality of instruction are exceptional. Whether you're a beginner or an advanced dancer, this is the place to grow.",
     image: OPTIMIZED_URLS.testimonialThumb2,
     video: OPTIMIZED_URLS.testimonialVideo3,
     thumbnail: OPTIMIZED_URLS.testimonialThumb2,
@@ -34,8 +34,8 @@ const testimonials = [
   },
   {
     id: "3",
-    name: "",
-    role: "Dance Enthusiast",
+    name: "Community Member",
+    role: "Dance Ohana",
     quote: "The passion for dance here is contagious. Every class feels like a celebration, and the progress I've made is incredible.",
     longQuote: "What sets Paradise Latin Dance apart is how they make every student feel special. The instructors remember your name, your goals, and your challenges. They adapt their teaching style to help you succeed. I've made amazing friends here, and my confidence has grown both on and off the dance floor.",
     image: OPTIMIZED_URLS.testimonialThumb3,

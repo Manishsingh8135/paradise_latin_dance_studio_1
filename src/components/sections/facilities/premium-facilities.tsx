@@ -16,9 +16,6 @@ const getBadgeStyles = (type: FacilityType) => {
       return 'bg-purple-500/20 text-purple-400 border-purple-500/30';
     case 'Standard':
       return 'bg-blue-500/20 text-blue-400 border-blue-500/30';
-    // New cases
-    case 'Retail':
-      return 'bg-gray-500/20 text-gray-400 border-gray-500/30'; // Neutral gray for retail
     case 'Community':
       return 'bg-green-500/20 text-green-400 border-green-500/30'; // Fresh green for community
   }
@@ -26,23 +23,18 @@ const getBadgeStyles = (type: FacilityType) => {
 
 const getCategoryStyles = (category: FacilityCategory) => {
   switch (category) {
-    case 'Strength':
+    case 'Dance Studio':
       return 'bg-red-500/20 text-red-400';
-    case 'Cardio':
-      return 'bg-green-500/20 text-green-400';
-    case 'Combat':
-      return 'bg-orange-500/20 text-orange-400';
-    case 'Recovery':
-      return 'bg-blue-500/20 text-blue-400';
-    case 'Functional':
+    case 'Practice':
       return 'bg-indigo-500/20 text-indigo-400';
+    case 'Social':
+      return 'bg-green-500/20 text-green-400';
     case 'Wellness':
       return 'bg-teal-500/20 text-teal-400';
-    // New cases
-    case 'Merchandise':
-      return 'bg-pink-500/20 text-pink-400'; // Vibrant pink for merchandise
     case 'Events & Activities':
-      return 'bg-lime-500/20 text-lime-400'; // Bright lime for events/activities
+      return 'bg-lime-500/20 text-lime-400';
+    default:
+      return 'bg-white/10 text-white/60';
   }
 };
 
@@ -95,7 +87,7 @@ export const PremiumFacilities = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-white/60 text-lg mb-8"
           >
-            Experience luxury and performance in every corner of our premium fitness sanctuary.
+            Experience premium dance spaces designed for every part of your Latin dance journey.
           </motion.p>
         </div>
 

@@ -11,11 +11,8 @@ import { TrialSignupData } from '@/lib/email/core/types';
 
 export async function POST(request: NextRequest) {
   try {
-    console.log('🚀 Trial signup API called');
-    
     // Parse request body
     const rawData = await request.json();
-    console.log('📥 Received trial signup data:', Object.keys(rawData));
 
     // Validate input data
     const validation = validateTrialSignupSafe(rawData);
@@ -63,29 +60,15 @@ export async function POST(request: NextRequest) {
       },
     };
 
-    console.log('✅ Trial signup data validated and prepared');
-
     // Get multi-provider email service
     const emailService = getMultiProviderEmailService();
 
     // Send emails (both user confirmation and admin notification)
-    console.log('📧 Sending trial signup emails via multi-provider service...');
     const emailResults = await emailService.sendTrialSignupEmails(trialSignupData);
 
-    // Log email results with provider information
+    // Check email results
     const userEmailSuccess = emailResults.userEmail.success;
     const adminEmailSuccess = emailResults.adminEmail.success;
-    
-    console.log('📊 Email results:', {
-      userEmail: {
-        success: userEmailSuccess,
-        provider: emailResults.userEmail.provider,
-      },
-      adminEmail: {
-        success: adminEmailSuccess,
-        provider: emailResults.adminEmail.provider,
-      },
-    });
 
     // Determine overall success
     // Trial signup is considered successful even if emails fail (graceful degradation)
@@ -121,7 +104,6 @@ export async function POST(request: NextRequest) {
 
     // Different status codes based on email delivery
     if (allEmailsSuccess) {
-      console.log(`🎉 Trial signup and all emails successful! Providers: User=${emailResults.userEmail.provider}, Admin=${emailResults.adminEmail.provider}`);
       return NextResponse.json(response, { status: 201 });
     } else if (userEmailSuccess) {
       console.warn(`⚠️ Trial signup successful, but admin email failed. User provider: ${emailResults.userEmail.provider}`);
@@ -150,8 +132,6 @@ export async function POST(request: NextRequest) {
 // Health check endpoint - now shows multi-provider status
 export async function GET() {
   try {
-    console.log('🏥 Multi-provider email service health check requested');
-    
     const emailService = getMultiProviderEmailService();
     const healthCheck = await emailService.healthCheck();
     

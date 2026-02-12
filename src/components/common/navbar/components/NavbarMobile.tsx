@@ -177,66 +177,6 @@ export function NavbarMobile({ isOpen, onClose }: NavbarMobileProps) {
                   ))}
                 </div>
 
-                {/* Additional Mobile Features */}
-                {/* <div className="mt-8 pt-8 border-t border-white/10">
-                  <h3 className="px-4 text-sm font-medium text-white/40 uppercase">
-                    Additional Features
-                  </h3>
-                  <div className="mt-4 space-y-2">
-                    {mobileNavFeatures.map((feature, idx) => (
-                      <motion.div
-                        key={feature.id}
-                        initial={{ opacity: 0, x: 20 }}
-                        animate={{ 
-                          opacity: 1, 
-                          x: 0,
-                          transition: { delay: 0.2 + idx * 0.1 }
-                        }}
-                      >
-                        <Link
-                          href={feature.href}
-                          onClick={onClose}
-                          className={cn(
-                            "flex items-center gap-3",
-                            "px-4 py-2 rounded-xl",
-                            "group",
-                            THEME_CONFIG.transitions.base
-                          )}
-                        >
-                          <div className={cn(
-                            "flex-shrink-0 w-8 h-8",
-                            "flex items-center justify-center",
-                            "rounded-lg",
-                            "bg-gradient-to-br from-[#FFD700]/10 to-[#C6930A]/10",
-                            "border border-[#FFD700]/20",
-                            "group-hover:border-[#FFD700]/40",
-                            THEME_CONFIG.transitions.base
-                          )}>
-                            <span className="w-4 h-4 text-[#FFD700]">
-                              <feature.icon />
-                            </span>
-                          </div>
-                          <div>
-                            <h4 className={cn(
-                              "font-medium",
-                              "text-white/80 group-hover:text-[#FFD700]",
-                              THEME_CONFIG.transitions.base
-                            )}>
-                              {feature.title}
-                            </h4>
-                            <p className={cn(
-                              "text-sm",
-                              "text-white/60 group-hover:text-white/80",
-                              THEME_CONFIG.transitions.base
-                            )}>
-                              {feature.description}
-                            </p>
-                          </div>
-                        </Link>
-                      </motion.div>
-                    ))}
-                  </div>
-                </div> */}
               </nav>
 
               {/* Action Buttons */}

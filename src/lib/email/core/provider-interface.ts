@@ -76,7 +76,6 @@ Timestamp: ${new Date().toISOString()}`,
    * Default test delivery implementation
    */
   async testDelivery(testEmail: string): Promise<EmailResult> {
-    console.log(`🧪 Testing ${this.name} provider with email: ${testEmail.replace(/.(?=.{4})/g, '*')}`);
     return this.sendEmail(testEmail, this.getTestTemplate());
   }
 } 

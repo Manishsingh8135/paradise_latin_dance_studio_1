@@ -31,8 +31,6 @@ export class ResendProvider extends BaseEmailProvider {
    */
   async sendEmail(to: string, template: EmailTemplate): Promise<EmailResult> {
     try {
-      console.log(`📧 Sending email to ${to.replace(/.(?=.{4})/g, '*')} via Resend`);
-      
       const fromAddress = this.config.resend.fromEmail;
       const fromName = this.config.resend.fromName;
       
@@ -53,8 +51,6 @@ export class ResendProvider extends BaseEmailProvider {
         };
       }
 
-      console.log(`✅ Email sent successfully. Message ID: ${result.data?.id}`);
-      
       return {
         success: true,
         messageId: result.data?.id,

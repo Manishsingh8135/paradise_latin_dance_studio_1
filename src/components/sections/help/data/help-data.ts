@@ -1,9 +1,9 @@
 import {
-  Book,
-  Dumbbell,
+  Music,
   CreditCard,
-  Users,
   Calendar,
+  Users,
+  Book,
   Bot,
   MessageSquare,
   Zap,
@@ -12,13 +12,13 @@ import { HelpCategory, AiFeature } from "../types/help-types";
 
 export const helpCategories: HelpCategory[] = [
   {
-    icon: Dumbbell,
-    title: "Workout Programs",
-    description: "Learn about our training programs and exercise routines",
+    icon: Music,
+    title: "Dance Classes",
+    description: "Learn about our salsa, bachata, and other Latin dance classes",
     articles: [
-      { title: "Getting Started with RIP Fitness", link: "/help/getting-started" },
-      { title: "Understanding Program Types", link: "/help/program-types" },
-      { title: "Customizing Your Workout", link: "/help/customize-workout" },
+      { title: "Getting Started at Paradise Latin Dance", link: "/schedule" },
+      { title: "Understanding Class Levels", link: "/schedule" },
+      { title: "What to Wear & Bring to Class", link: "/help-center" },
     ],
   },
   {
@@ -26,39 +26,39 @@ export const helpCategories: HelpCategory[] = [
     title: "Membership & Billing",
     description: "Information about plans, payments, and account management",
     articles: [
-      { title: "Membership Plans Explained", link: "/help/membership-plans" },
-      { title: "Billing FAQ", link: "/help/billing-faq" },
-      { title: "Cancellation Policy", link: "/help/cancellation" },
+      { title: "Membership Plans Explained", link: "/schedule" },
+      { title: "Billing & Payment Info", link: "/contact" },
+      { title: "Cancellation Policy", link: "/terms-of-service" },
     ],
   },
   {
     icon: Calendar,
-    title: "Classes & Scheduling",
+    title: "Scheduling & Booking",
     description: "Everything about booking classes and managing your schedule",
     articles: [
-      { title: "How to Book Classes", link: "/help/book-classes" },
-      { title: "Class Schedule Guide", link: "/help/class-schedule" },
-      { title: "Cancellation Policy", link: "/help/class-cancellation" },
+      { title: "How to Book Classes", link: "/schedule" },
+      { title: "Class Schedule & Calendar", link: "/schedule" },
+      { title: "Rescheduling & Cancellations", link: "/terms-of-service" },
     ],
   },
   {
     icon: Users,
-    title: "Personal Training",
-    description: "Guide to personal training sessions and trainers",
+    title: "Instructors & Styles",
+    description: "Meet our world-class instructors and explore dance styles",
     articles: [
-      { title: "Meet Our Trainers", link: "/help/our-trainers" },
-      { title: "PT Session Guide", link: "/help/pt-guide" },
-      { title: "Book a Trainer", link: "/help/book-trainer" },
+      { title: "Meet Our Instructors", link: "/instructors" },
+      { title: "Salsa vs Bachata — Which is Right for You?", link: "/blogs" },
+      { title: "Book a Free Trial Class", link: "/trial" },
     ],
   },
   {
     icon: Book,
-    title: "Policies & Guidelines",
-    description: "Important information about gym rules and policies",
+    title: "Studio Policies",
+    description: "Important information about studio rules and guidelines",
     articles: [
-      { title: "Gym Rules & Etiquette", link: "/help/gym-rules" },
-      { title: "Safety Guidelines", link: "/help/safety" },
-      { title: "COVID-19 Protocols", link: "/help/covid" },
+      { title: "Studio Rules & Etiquette", link: "/terms-of-service" },
+      { title: "Safety Guidelines", link: "/terms-of-service" },
+      { title: "Privacy Policy", link: "/privacy-policy" },
     ],
   },
 ];
@@ -66,8 +66,8 @@ export const helpCategories: HelpCategory[] = [
 export const aiFeatures: AiFeature[] = [
   {
     icon: Bot,
-    title: "AI Personal Assistant",
-    description: "Get instant answers to your fitness and wellness questions",
+    title: "AI Dance Assistant",
+    description: "Get instant answers to your questions about classes, schedules, and more",
   },
   {
     icon: MessageSquare,

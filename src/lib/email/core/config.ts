@@ -48,7 +48,6 @@ let cachedConfig: EmailConfig | null = null;
 export const emailConfig = (): EmailConfig => {
   if (!cachedConfig) {
     cachedConfig = getEmailConfig();
-    console.log('✅ Email service configuration loaded successfully');
   }
   return cachedConfig;
 };

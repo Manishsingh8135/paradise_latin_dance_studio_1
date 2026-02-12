@@ -14,9 +14,7 @@ import {
   getAvailableProviders,
   getLeadRecipients,
   shouldSendEmails,
-  isTestMode,
 } from '../core/multi-provider-config';
-import { sanitizeForLogging } from '../utils/validator';
 
 export class MultiProviderEmailService {
   private factory: ProviderFactory;
@@ -31,8 +29,6 @@ export class MultiProviderEmailService {
     
     // Register available providers
     this.registerAvailableProviders();
-    
-    console.log('📧 Multi-provider email service initialized:', getMultiProviderConfigForLogging());
   }
 
   /**
@@ -64,8 +60,6 @@ export class MultiProviderEmailService {
     if (availableProviders.length === 0) {
       throw new Error('No email providers are configured. Please check your environment variables.');
     }
-    
-    console.log(`✅ Registered ${availableProviders.length} email provider(s): ${availableProviders.join(', ')}`);
   }
 
   /**
@@ -75,7 +69,6 @@ export class MultiProviderEmailService {
     try {
       // Check if emails should be suppressed
       if (!shouldSendEmails()) {
-        console.log('📧 Email sending is suppressed - skipping user confirmation');
         return {
           success: true,
           provider: 'suppressed',
@@ -83,15 +76,10 @@ export class MultiProviderEmailService {
         };
       }
 
-      const testModeLabel = isTestMode() ? ' (TEST MODE)' : '';
-      console.log(`📨 Sending trial confirmation email${testModeLabel}...`);
-
       const template = await renderUserWelcome(data);
       const result = await this.factory.sendEmail(data.user.email, template);
 
-      if (result.success) {
-        console.log(`✅ Trial confirmation email sent successfully via ${result.provider}`);
-      } else {
+      if (!result.success) {
         console.error(`❌ Trial confirmation email failed via ${result.provider}:`, result.error);
       }
 
@@ -114,7 +102,6 @@ export class MultiProviderEmailService {
     try {
       // Check if emails should be suppressed
       if (!shouldSendEmails()) {
-        console.log('📧 Email sending is suppressed - skipping admin notification');
         return {
           success: true,
           provider: 'suppressed',
@@ -134,9 +121,6 @@ export class MultiProviderEmailService {
         };
       }
 
-      const testModeLabel = isTestMode() ? ' (TEST MODE)' : '';
-      console.log(`📨 Sending admin notification to ${recipients.length} recipient(s)${testModeLabel}...`);
-
       const template = await renderAdminAlert(data);
 
       // Send to all recipients
@@ -146,9 +130,7 @@ export class MultiProviderEmailService {
         const result = await this.factory.sendEmail(recipient, template);
         results.push({ ...result, recipient });
 
-        if (result.success) {
-          console.log(`  ✅ Sent to ${recipient.replace(/(.{3}).*@/, '$1***@')} via ${result.provider}`);
-        } else {
+        if (!result.success) {
           console.error(`  ❌ Failed for ${recipient.replace(/(.{3}).*@/, '$1***@')}: ${result.error}`);
         }
       }
@@ -159,7 +141,7 @@ export class MultiProviderEmailService {
       const anySuccess = successCount > 0;
 
       if (allSuccess) {
-        console.log(`✅ Admin notification sent to all ${recipients.length} recipient(s)`);
+        // All recipients received successfully
       } else if (anySuccess) {
         console.warn(`⚠️ Admin notification partially delivered: ${successCount}/${recipients.length}`);
       } else {
@@ -190,23 +172,18 @@ export class MultiProviderEmailService {
     userEmail: EmailResult & { provider: string };
     adminEmail: EmailResult & { provider: string };
   }> {
-    console.log('🚀 Starting multi-provider trial signup email flow for:', sanitizeForLogging(data.user));
-    
     // Send both emails in parallel for better performance
     const [userEmail, adminEmail] = await Promise.all([
       this.sendTrialConfirmation(data),
       this.sendAdminNotification(data),
     ]);
 
-    // Log results for monitoring
+    // Check results for monitoring
     const successCount = [userEmail, adminEmail].filter(r => r.success).length;
     const totalCount = 2;
-    
-    console.log(`📊 Email batch complete: ${successCount}/${totalCount} successful`);
-    console.log(`📊 Providers used: User=${userEmail.provider}, Admin=${adminEmail.provider}`);
-    
+
     if (successCount === totalCount) {
-      console.log('🎉 All trial signup emails sent successfully!');
+      // All emails sent successfully
     } else if (successCount > 0) {
       console.warn('⚠️ Partial email delivery success');
     } else {
@@ -220,8 +197,6 @@ export class MultiProviderEmailService {
    * Send test email using current provider configuration
    */
   async sendTestEmail(testEmail: string): Promise<EmailResult & { provider: string }> {
-    console.log(`🧪 Sending test email to ${testEmail.replace(/.(?=.{4})/g, '*')}`);
-    
     const provider = await this.factory.getPrimaryProvider();
     if (!provider) {
       return {
@@ -278,12 +253,6 @@ export class MultiProviderEmailService {
           : 'No healthy providers available',
       };
       
-      if (healthy) {
-        console.log('✅ Multi-provider email service health check passed');
-      } else {
-        console.warn('⚠️ Multi-provider email service health check failed:', result);
-      }
-      
       return result;
     } catch (error: unknown) {
       console.error('❌ Multi-provider email service health check error:', error);
@@ -324,9 +293,7 @@ export class MultiProviderEmailService {
       // Update the factory configuration
       this.factory.updateConfig({ primaryProvider: providerName });
       this.config.provider.primaryProvider = providerName;
-      
-      console.log(`🔄 Switched primary email provider: ${previousProvider} → ${providerName}`);
-      
+
       return {
         success: true,
         message: `Successfully switched primary provider to ${providerName}`,

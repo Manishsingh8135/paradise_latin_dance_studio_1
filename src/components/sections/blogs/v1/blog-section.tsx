@@ -170,7 +170,7 @@ export function BlogSection() {
             className="text-4xl md:text-6xl font-bold mt-6 mb-6"
           >
             <span className="bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">
-              Fitness & Wellness
+              Dance & Lifestyle
             </span>{" "}
             <span className="bg-gradient-to-r from-[#FFD700] to-[#FDB931] bg-clip-text text-transparent">
               Blog
@@ -184,7 +184,7 @@ export function BlogSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-white/60 text-lg mb-8"
           >
-            Expert insights, training tips, and success stories to help you on your fitness journey
+            Expert insights, dance tips, and success stories from the Paradise Latin Dance community
           </motion.p>
 
           <motion.div

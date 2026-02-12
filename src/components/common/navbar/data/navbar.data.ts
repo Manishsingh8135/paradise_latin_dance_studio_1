@@ -13,103 +13,24 @@ export const navBrand: NavbarBrandProps = {
 };
 
 export const navItems: NavMenuItem[] = [
-  // {
-  //   id: 'programs',
-  //   label: 'Programs',
-  //   href: '/programs',
-  //   features: [
-  //     {
-  //       id: 'strength',
-  //       title: 'Strength Training',
-  //       description: 'Build muscle and increase power',
-  //       icon: 'Dumbbell',
-  //       href: '/programs/strength'
-  //     },
-  //     {
-  //       id: 'cardio',
-  //       title: 'Cardio Excellence',
-  //       description: 'Enhance endurance and stamina',
-  //       icon: 'Running',
-  //       href: '/programs/cardio'
-  //     },
-  //     {
-  //       id: 'hiit',
-  //       title: 'HIIT Sessions',
-  //       description: 'Maximum results in minimum time',
-  //       icon: 'Timer',
-  //       href: '/programs/hiit'
-  //     },
-  //     {
-  //       id: 'yoga',
-  //       title: 'Elite Yoga',
-  //       description: 'Flexibility and mindfulness',
-  //       icon: 'Yoga',
-  //       href: '/programs/yoga'
-  //     }
-  //   ]
-  // },
-  // {
-  //   id: 'amenities',
-  //   label: 'Amenities',
-  //   href: '/amenities',
-  //   features: [
-  //     {
-  //       id: 'equipment',
-  //       title: 'Premium Equipment',
-  //       description: 'State-of-the-art fitness machines',
-  //       icon: 'Gym',
-  //       href: '/amenities/equipment'
-  //     },
-  //     {
-  //       id: 'spa',
-  //       title: 'Luxury Spa',
-  //       description: 'Recovery and relaxation',
-  //       icon: 'Spa',
-  //       href: '/amenities/spa'
-  //     },
-  //     {
-  //       id: 'pool',
-  //       title: 'Olympic Pool',
-  //       description: 'Indoor heated swimming',
-  //       icon: 'Pool',
-  //       href: '/amenities/pool'
-  //     },
-  //     {
-  //       id: 'cafe',
-  //       title: 'Nutrition Bar',
-  //       description: 'Healthy meals and supplements',
-  //       icon: 'Coffee',
-  //       href: '/amenities/cafe'
-  //     }
-  //   ]
-  // },
   {
     id: 'trainers',
     label: 'Elite Instructors',
     href: '/instructors'
   },
-  // {
-  //   id: 'schedule',
-  //   label: 'Class Schedule',
-  //   href: '/schedule',
-  //   isDynamic: true
-  // },
+  {
+    id: 'schedule',
+    label: 'Class Schedule',
+    href: '/schedule',
+  },
   {
     id: 'contact',
     label: 'Contact Us',
     href: '/contact',
   }
-
 ];
 
 export const navActions: NavAction[] = [
-  // {
-  //   id: 'member-login',
-  //   label: 'Member Login',
-  //   href: '/login',
-  //   variant: 'ghost',
-  //   icon: 'User'
-  // },
   {
     id: 'book-class',
     label: 'Free Trial',

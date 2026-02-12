@@ -55,7 +55,7 @@ export function AboutSection() {
 
               <h1 className="text-7xl md:text-9xl font-bold mb-6 relative">
                 <span className="bg-gradient-to-r from-[#FFD700] via-[#FFDF40] to-[#FFD700] text-transparent bg-clip-text relative inline-block">
-                  Reborn
+                  Paradise
                   {/* Floating Particles */}
                   <motion.div
                     initial={{ scale: 0 }}
@@ -67,7 +67,7 @@ export function AboutSection() {
                     <div className="w-2 h-2 bg-[#FFDF40] rounded-full absolute -top-2 -right-2 animate-float-delayed" />
                   </motion.div>
                 </span>
-                <span className="text-white drop-shadow-gold">1n Paradise</span>
+                <span className="text-white drop-shadow-gold">Latin Dance</span>
               </h1>
               
               {/* Animated Phoenix Emblem */}
@@ -89,7 +89,7 @@ export function AboutSection() {
               transition={{ duration: 1, delay: 0.8 }}
               className="text-3xl md:text-4xl text-white/80 mb-12 font-light tracking-wide"
             >
-              Where <span className="text-[#FFD700] font-medium">Strength</span> Meets {' '}
+              Where <span className="text-[#FFD700] font-medium">Rhythm</span> Meets {' '}
               <span className="text-[#FFD700] font-medium">Soul</span>
             </motion.p>
             
@@ -142,14 +142,15 @@ export function AboutSection() {
             className="max-w-3xl mx-auto text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Born from Purpose
+              Born from Passion
             </h2>
             <p className="text-lg text-white/60">
-              In 2019, amidst the serene landscapes of Hawaii, RIP FITNESS emerged
-              from a profound need to support military members struggling with
-              stress, anxiety, and mental health challenges. What began as a
-              support group has evolved into a comprehensive fitness ecosystem,
-              built on the foundation of holistic wellness.
+              In 2019, amidst the beautiful landscapes of Hawaii, Paradise Latin
+              Dance Studio was born from a deep love for Latin dance and a vision
+              to bring authentic salsa and bachata culture to the islands. What
+              began as a small community of passionate dancers has grown into
+              Hawaii&apos;s premier Latin dance studio — a place where rhythm,
+              connection, and the Aloha spirit come together on the dance floor.
             </p>
           </motion.div>
 

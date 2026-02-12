@@ -4,8 +4,8 @@ export const privacyHighlights: PrivacyHighlight[] = [
   {
     id: "data-security",
     icon: "Shield",
-    title: "Military-Grade Security",
-    description: "Your data is protected with the same level of security we provide to our military members.",
+    title: "Industry-Leading Security",
+    description: "Your data is protected with robust encryption and security protocols to keep your information safe.",
     isPrimary: true
   },
   {
@@ -32,7 +32,7 @@ export const privacySections: PrivacySection[] = [
   {
     id: "information-collection",
     title: "Information We Collect",
-    description: "We collect various types of information to provide you with the best possible fitness experience while ensuring your privacy.",
+    description: "We collect various types of information to provide you with the best possible dance studio experience while ensuring your privacy.",
     icon: "UserCheck",
     subsections: [
       {
@@ -42,20 +42,20 @@ export const privacySections: PrivacySection[] = [
           "Name, email address, and contact details",
           "Date of birth and gender",
           "Emergency contact information",
-          "Military status and service details (if applicable)",
+          "Dance experience level and preferences",
           "Payment information (processed securely through our payment providers)"
         ],
         isImportant: true
       },
       {
-        id: "fitness-info",
-        title: "Fitness & Health Information",
+        id: "dance-info",
+        title: "Dance & Class Information",
         content: [
-          "Physical fitness assessments and measurements",
-          "Exercise preferences and history",
-          "Health conditions and limitations",
-          "Fitness goals and progress tracking",
-          "Workout and attendance history"
+          "Dance skill level and assessments",
+          "Class preferences and style interests",
+          "Health conditions and physical limitations",
+          "Dance goals and progress tracking",
+          "Class attendance and booking history"
         ]
       },
       {
@@ -80,8 +80,8 @@ export const privacySections: PrivacySection[] = [
         id: "service-provision",
         title: "Service Provision",
         content: [
-          "Personalize your fitness experience",
-          "Track your progress and achievements",
+          "Personalize your dance class experience",
+          "Track your dance progress and achievements",
           "Process payments and manage memberships",
           "Provide customer support and assistance",
           "Send important updates about our services"
@@ -91,8 +91,8 @@ export const privacySections: PrivacySection[] = [
         id: "communication",
         title: "Communication",
         content: [
-          "Send workout schedules and reminders",
-          "Provide important facility updates",
+          "Send class schedules and reminders",
+          "Provide important studio updates",
           "Share promotional offers and events",
           "Respond to your inquiries and feedback"
         ]
@@ -152,8 +152,8 @@ export const privacySections: PrivacySection[] = [
 
 export const privacyContact: PrivacyContact = {
   title: "Privacy Inquiries",
-  email: "privacy@ripfitness.com",
-  phone: "(808) 123-4567",
+  email: "paradiselatindance@gmail.com",
+  phone: "(808) 840-9926",
   address: "94-111 Leokane St #150A, Waipahu, HI 96797",
   hours: [
     "Monday-Friday: 6 AM - 9 PM",

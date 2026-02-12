@@ -211,7 +211,7 @@ export function TransformationJourneySectionV2() {
               viewport={{ once: true }}
             >
               <Link 
-                href="/classes"
+                href="/schedule"
                 className="group inline-flex items-center justify-center gap-2 px-8 py-4 text-lg font-medium text-black bg-gradient-to-r from-[#FFD700] to-[#FDB931] rounded-full shadow-lg shadow-[#FFD700]/20 hover:shadow-xl hover:shadow-[#FFD700]/30 transition-all duration-300 transform hover:translate-y-[-2px]"
               >
                 {journeySection.ctaText}

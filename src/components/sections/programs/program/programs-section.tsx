@@ -33,8 +33,8 @@ export function ProgramsSection() {
     return categoryMatch && difficultyMatch;
   });
 
-  const categories: (ClassCategory | "All")[] = ["All", "Special Ops", "Strength", "Combat", "Recovery"];
-  const difficulties: (DifficultyLevel | "All")[] = ["All", "Beginner", "Intermediate", "Advanced", "Elite"];
+  const categories: (ClassCategory | "All")[] = ["All", "Salsa", "Bachata", "Social", "Foundations", "Specialty"];
+  const difficulties: (DifficultyLevel | "All")[] = ["All", "Beginner", "Intermediate", "Advanced", "All Levels"];
 
   const handleCategoryChange = (category: FilterOption) => {
     if (category === selectedCategory) {
@@ -81,7 +81,7 @@ export function ProgramsSection() {
           >
             <div className="bg-white/5 backdrop-blur-sm px-6 py-2 rounded-full border border-white/10">
               <span className="bg-gradient-to-r from-[#FFD700] to-[#FDB931] bg-clip-text text-transparent font-medium">
-                Training Programs
+                Dance Programs
               </span>
             </div>
           </motion.div>
@@ -93,7 +93,7 @@ export function ProgramsSection() {
             className="text-4xl md:text-6xl font-bold mt-6 mb-6"
           >
             <span className="bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">
-              Elite Training
+              Dance Class
             </span>{" "}
             <span className="bg-gradient-to-r from-[#FFD700] to-[#FDB931] bg-clip-text text-transparent">
               Programs
@@ -106,8 +106,8 @@ export function ProgramsSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-white/60 text-lg mb-8"
           >
-            Experience military-grade fitness programs designed to transform your body and mind.
-            Choose from our diverse range of specialized training sessions.
+            Discover our Latin dance programs designed to inspire your rhythm and ignite your passion.
+            Choose from our range of classes for every level.
           </motion.p>
 
           <motion.div

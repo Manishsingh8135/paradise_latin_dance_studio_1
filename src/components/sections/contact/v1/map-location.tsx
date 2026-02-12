@@ -31,7 +31,7 @@ export function MapLocation() {
               className="mb-8"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Visit Our Gym
+                Visit Our Studio
               </h2>
               <div className="h-1 w-24 bg-[#FFD700]" />
             </motion.div>

@@ -19,9 +19,9 @@ export const footerLinks = {
     { label: "Privacy Policy", href: "/privacy-policy" },
     { label: "Terms of Service", href: "/terms-of-service" },
   ],
-  brands: [
-    { label: "R1P Fitness Gym", href: "https://www.r1pfitness.com/" },
-    { label: "R1P Merch Store", href: "https://www.r1pohana.com/" },
+  family: [
+    { label: "R1P Fitness", href: "https://www.r1pfitness.com/" },
+    { label: "R1P Ohana Store", href: "https://www.r1pohana.com/" },
   ]
 };
 

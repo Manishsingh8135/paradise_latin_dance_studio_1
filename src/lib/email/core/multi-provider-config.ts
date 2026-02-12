@@ -222,10 +222,6 @@ let cachedMultiConfig: MultiProviderConfig | null = null;
 export const multiProviderConfig = (): MultiProviderConfig => {
   if (!cachedMultiConfig) {
     cachedMultiConfig = getMultiProviderConfig();
-    const provider = cachedMultiConfig.provider.primaryProvider;
-    const testMode = cachedMultiConfig.testMode.enabled ? ' (TEST MODE)' : '';
-    const suppressed = cachedMultiConfig.testMode.suppressEmails ? ' (SUPPRESSED)' : '';
-    console.log(`✅ Email config loaded - Provider: ${provider}${testMode}${suppressed}`);
   }
   return cachedMultiConfig;
 };

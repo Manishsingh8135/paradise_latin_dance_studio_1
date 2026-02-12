@@ -37,7 +37,6 @@ export class GmailProvider extends BaseEmailProvider {
       rateLimit: 5, // 5 emails per minute to stay within Gmail limits
     });
 
-    console.log(`📧 Gmail provider initialized for: ${this.config.gmail.user?.replace(/.(?=.{4})/g, '*')}`);
   }
 
   /**
@@ -45,8 +44,6 @@ export class GmailProvider extends BaseEmailProvider {
    */
   async sendEmail(to: string, template: EmailTemplate): Promise<EmailResult> {
     try {
-      console.log(`📧 Sending email to ${to.replace(/.(?=.{4})/g, '*')} via Gmail SMTP`);
-      
       const fromAddress = this.config.gmail.fromEmail || this.config.gmail.user;
       const fromName = this.config.gmail.fromName || 'Paradise Latin Dance Studio';
       
@@ -65,8 +62,6 @@ export class GmailProvider extends BaseEmailProvider {
 
       const result = await this.transporter.sendMail(mailOptions);
 
-      console.log(`✅ Email sent successfully via Gmail. Message ID: ${result.messageId}`);
-      
       return {
         success: true,
         messageId: result.messageId,
@@ -148,7 +143,6 @@ Test Details:
 🎉 Gmail provider is operational!`,
     };
 
-    console.log(`🧪 Testing Gmail provider with email: ${testEmail.replace(/.(?=.{4})/g, '*')}`);
     return this.sendEmail(testEmail, testTemplate);
   }
 
@@ -228,7 +222,6 @@ Test Details:
   async close(): Promise<void> {
     try {
       this.transporter.close();
-      console.log('📧 Gmail provider connection pool closed');
     } catch (error) {
       console.warn('⚠️ Error closing Gmail provider connection:', error);
     }

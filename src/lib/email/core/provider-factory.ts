@@ -51,7 +51,6 @@ export class ProviderFactory {
       throw new Error('Provider must have a name');
     }
 
-    console.log(`📧 Registering email provider: ${provider.name} (priority: ${provider.priority})`);
     this.providers.set(provider.name, provider);
     
     // Perform initial health check
@@ -127,8 +126,6 @@ export class ProviderFactory {
       };
     }
 
-    console.log(`📨 Sending email via ${provider.name} provider`);
-    
     try {
       const result = await provider.sendEmail(to, template);
       return {
@@ -172,11 +169,7 @@ export class ProviderFactory {
       }
     });
 
-    const results = await Promise.all(healthChecks);
-    
-    console.log('🏥 Provider health check results:', 
-      results.map(r => `${r.name}: ${r.isHealthy ? '✅' : '❌'}`).join(', ')
-    );
+    await Promise.all(healthChecks);
 
     this.lastHealthCheck = Date.now();
     return healthResults;
@@ -242,6 +235,5 @@ export class ProviderFactory {
    */
   updateConfig(newConfig: Partial<ProviderFactoryConfig>): void {
     this.config = { ...this.config, ...newConfig };
-    console.log('🔧 Provider factory configuration updated:', this.config);
   }
 } 

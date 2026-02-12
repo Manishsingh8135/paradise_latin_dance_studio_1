@@ -7,7 +7,6 @@ import { ResendProvider } from '../providers/resend-provider';
 import { TrialSignupData, EmailResult, EmailBatchResult } from '../core/types';
 import { renderUserWelcome, renderAdminAlert } from '../templates';
 import { emailConfig, getConfigForLogging } from '../core/config';
-import { sanitizeForLogging } from '../utils/validator';
 
 export class EmailService {
   private provider: ResendProvider;
@@ -16,8 +15,6 @@ export class EmailService {
   constructor() {
     this.config = emailConfig();
     this.provider = new ResendProvider();
-    
-    console.log('📧 Email service initialized with config:', getConfigForLogging());
   }
 
   /**
@@ -25,16 +22,13 @@ export class EmailService {
    */
   async sendTrialConfirmation(data: TrialSignupData): Promise<EmailResult> {
     try {
-      console.log('📨 Sending beautiful user welcome email...');
       const template = await renderUserWelcome(data);
       const result = await this.provider.sendEmail(data.user.email, template);
-      
-      if (result.success) {
-        console.log('✅ Beautiful user welcome email sent successfully');
-      } else {
+
+      if (!result.success) {
         console.error('❌ User welcome email failed:', result.error);
       }
-      
+
       return result;
     } catch (error: unknown) {
       console.error('❌ User welcome template error:', error);
@@ -50,16 +44,13 @@ export class EmailService {
    */
   async sendAdminNotification(data: TrialSignupData): Promise<EmailResult> {
     try {
-      console.log('📨 Sending beautiful admin alert email...');
       const template = await renderAdminAlert(data);
       const result = await this.provider.sendEmail(this.config.adminEmail, template);
-      
-      if (result.success) {
-        console.log('✅ Beautiful admin alert email sent successfully');
-      } else {
+
+      if (!result.success) {
         console.error('❌ Admin alert email failed:', result.error);
       }
-      
+
       return result;
     } catch (error: unknown) {
       console.error('❌ Admin alert template error:', error);
@@ -78,22 +69,18 @@ export class EmailService {
     userEmail: EmailResult;
     adminEmail: EmailResult;
   }> {
-    console.log('🚀 Starting trial signup email flow for:', sanitizeForLogging(data.user));
-    
     // Send both emails in parallel for better performance
     const [userEmail, adminEmail] = await Promise.all([
       this.sendTrialConfirmation(data),
       this.sendAdminNotification(data),
     ]);
 
-    // Log results for monitoring
+    // Check results for monitoring
     const successCount = [userEmail, adminEmail].filter(r => r.success).length;
     const totalCount = 2;
-    
-    console.log(`📊 Email batch complete: ${successCount}/${totalCount} successful`);
-    
+
     if (successCount === totalCount) {
-      console.log('🎉 All trial signup emails sent successfully!');
+      // All emails sent successfully
     } else if (successCount > 0) {
       console.warn('⚠️ Partial email delivery success');
     } else {
@@ -111,8 +98,6 @@ export class EmailService {
     templateId: string;
     data: TrialSignupData;
   }>): Promise<EmailBatchResult> {
-    console.log(`📫 Sending bulk emails: ${emails.length} recipients`);
-    
     const results: EmailResult[] = [];
     
     // Process emails sequentially to respect rate limits
@@ -140,9 +125,7 @@ export class EmailService {
     
     const successful = results.filter(r => r.success).length;
     const failed = results.length - successful;
-    
-    console.log(`📊 Bulk email complete: ${successful} successful, ${failed} failed`);
-    
+
     return {
       total: results.length,
       successful,
@@ -173,12 +156,6 @@ export class EmailService {
         details: healthy ? 'All systems operational' : 'Service degraded',
       };
       
-      if (healthy) {
-        console.log('✅ Email service health check passed');
-      } else {
-        console.warn('⚠️ Email service health check failed:', result);
-      }
-      
       return result;
     } catch (error: unknown) {
       const errorMessage = error instanceof Error ? error.message : 'Health check failed';
@@ -196,8 +173,6 @@ export class EmailService {
    * Test email delivery (for development/testing)
    */
   async sendTestEmail(testEmail: string): Promise<EmailResult> {
-    console.log(`🧪 Sending test email to ${testEmail.replace(/.(?=.{4})/g, '*')}`);
-    
     const testData: TrialSignupData = {
       user: {
         firstName: 'Test',

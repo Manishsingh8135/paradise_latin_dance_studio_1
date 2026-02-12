@@ -17,18 +17,18 @@ export const termsContent: TermsContent[] = [
         },
         {
           id: "orientation",
-          title: "Fitness Assessment",
-          description: "Schedule your complimentary fitness assessment with our certified trainers.",
+          title: "Welcome Session",
+          description: "Attend your complimentary intro class and meet our instructors.",
           date: "Day 2-3",
           icon: "Clipboard",
           status: "active"
         },
         {
           id: "training",
-          title: "Start Training",
-          description: "Begin your fitness journey with full access to our premium facilities.",
+          title: "Start Dancing",
+          description: "Begin your dance journey with full access to all classes and studio facilities.",
           date: "Day 4+",
-          icon: "Dumbbell",
+          icon: "Music",
           status: "upcoming"
         }
       ]
@@ -42,59 +42,58 @@ export const termsContent: TermsContent[] = [
       title: "Membership Plans",
       data: [
         {
-          id: "basic",
-          name: "Basic",
-          price: 49.99,
-          duration: "month",
+          id: "drop-in",
+          name: "Drop-In",
+          price: 35,
+          duration: "class",
           features: [
-            "Access to main workout area",
-            "Basic equipment usage",
-            "Locker room access",
-            "Online workout tracking"
+            "Single class access",
+            "All dance styles available",
+            "No commitment required",
+            "Great for trying us out"
           ],
           restrictions: [
-            "No group classes",
-            "No personal training",
-            "Limited hours access"
+            "One class per purchase",
+            "No social event access"
           ],
-          cancellationPolicy: "30-day notice required for cancellation"
+          cancellationPolicy: "No cancellation needed — pay per class"
         },
         {
-          id: "premium",
-          name: "Premium",
-          price: 79.99,
-          duration: "month",
+          id: "class-package",
+          name: "12 Class Package",
+          price: 250,
+          duration: "package",
           features: [
-            "24/7 gym access",
-            "All equipment access",
-            "Group classes included",
-            "Sauna & spa access",
-            "Guest passes (2/month)",
-            "Advanced workout tracking"
+            "12 classes at a discounted rate",
+            "Credits never expire",
+            "All dance styles included",
+            "Social event access",
+            "Flexible scheduling",
+            "Best value per class"
           ],
           restrictions: [
-            "Personal training not included",
-            "Premium classes extra"
+            "Non-transferable",
+            "Private lessons not included"
           ],
-          cancellationPolicy: "14-day notice required for cancellation"
+          cancellationPolicy: "Non-refundable, credits never expire"
         },
         {
-          id: "elite",
-          name: "Elite",
-          price: 129.99,
+          id: "unlimited",
+          name: "Unlimited Monthly",
+          price: 225,
           duration: "month",
           features: [
-            "All Premium features",
-            "Personal training sessions (2/month)",
-            "Nutrition consultation",
+            "Unlimited classes per month",
+            "All dance styles and levels",
             "Priority class booking",
-            "Unlimited guest passes",
-            "Exclusive events access"
+            "Social event access",
+            "Practice session access",
+            "Exclusive member events"
           ],
           restrictions: [
-            "Additional PT sessions at member rate"
+            "Private lessons at member rate"
           ],
-          cancellationPolicy: "No minimum commitment required"
+          cancellationPolicy: "Cancel anytime with 14-day notice"
         }
       ]
     }
@@ -110,10 +109,10 @@ export const termsContent: TermsContent[] = [
           id: "general",
           category: "General Conduct",
           rules: [
-            "Respectful behavior towards staff and members",
-            "Proper gym attire required",
+            "Respectful behavior towards staff, instructors, and fellow dancers",
+            "Proper dance attire and clean footwear required",
             "No offensive language or behavior",
-            "Follow all posted safety guidelines"
+            "Follow all posted studio guidelines"
           ],
           consequences: [
             "Verbal warning",
@@ -123,28 +122,28 @@ export const termsContent: TermsContent[] = [
           ]
         },
         {
-          id: "equipment",
-          category: "Equipment Usage",
+          id: "studio-care",
+          category: "Studio Care",
           rules: [
-            "Re-rack weights after use",
-            "Wipe down equipment",
-            "No equipment monopolization",
-            "Report damaged equipment"
+            "No street shoes on the dance floor",
+            "Keep personal belongings in designated areas",
+            "No food or colored drinks in the studio",
+            "Report any floor damage or safety concerns"
           ],
           consequences: [
             "Verbal warning",
             "Written warning",
-            "Usage restriction"
+            "Cleaning fee if applicable"
           ]
         },
         {
           id: "safety",
-          category: "Safety Protocols",
+          category: "Safety & Etiquette",
           rules: [
-            "Use spotters when necessary",
-            "Follow proper form",
-            "No unauthorized instruction",
-            "Report accidents immediately"
+            "Warm up before class — arrive on time",
+            "Respect your partner and maintain appropriate contact",
+            "No unauthorized instruction during classes",
+            "Report injuries or accidents immediately"
           ],
           consequences: [
             "Immediate intervention",
@@ -161,7 +160,7 @@ export const termsContent: TermsContent[] = [
     style: "warning",
     content: {
       title: "Important Notice",
-      message: "By using our facilities, you acknowledge and accept the inherent risks of exercise and agree to follow all safety protocols. RIP FITNESS is not liable for injuries resulting from improper equipment use or failure to follow guidelines."
+      message: "By using our facilities, you acknowledge and accept the inherent risks associated with dance activities and agree to follow all studio safety protocols. Paradise Latin Dance Studio is not liable for injuries resulting from failure to follow instructor guidelines or studio rules."
     }
   }
 ];

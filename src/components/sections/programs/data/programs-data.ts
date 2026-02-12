@@ -1,7 +1,7 @@
 import { OPTIMIZED_URLS } from "@/lib/cloudinary";
 
-export type DifficultyLevel = "Beginner" | "Intermediate" | "Advanced" | "Elite";
-export type ClassCategory = "Strength" | "Cardio" | "Combat" | "Recovery" | "Special Ops";
+export type DifficultyLevel = "Beginner" | "Intermediate" | "Advanced" | "All Levels";
+export type ClassCategory = "Salsa" | "Bachata" | "Social" | "Foundations" | "Specialty";
 
 export interface ClassTime {
   id: string;
@@ -34,159 +34,139 @@ export interface Program {
 
 export const programsData: Program[] = [
   {
-    id: "military-bootcamp",
-    name: "Military Bootcamp",
-    category: "Special Ops",
-    difficulty: "Advanced",
-    description: "Experience authentic military-style training led by our veteran trainers. Push your limits with combat-inspired workouts.",
-    duration: "75 min",
-    calories: "800-1000",
+    id: "salsa-fundamentals",
+    name: "Salsa Fundamentals",
+    category: "Salsa",
+    difficulty: "Beginner",
+    description: "Master the essential salsa steps, timing, and partner connection. Perfect for complete beginners ready to discover the joy of Latin dance.",
+    duration: "60 min",
+    calories: "300-500",
     trainer: "Rico",
     trainerImage: OPTIMIZED_URLS.rico,
-    classImage: "https://images.unsplash.com/photo-1511989130945-c2b632959395?q=80&w=2560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    classImage: OPTIMIZED_URLS.lds3,
     benefits: [
-      "Military-grade conditioning",
-      "Mental toughness",
-      "Team building",
-      "Combat readiness"
+      "Learn core salsa rhythm and timing",
+      "Basic footwork and turn patterns",
+      "Partner connection fundamentals",
+      "Build confidence on the dance floor"
     ],
     equipment: [
-      "Battle ropes",
-      "Sandbags",
-      "Obstacle course",
-      "Tactical gear"
+      "Dance shoes (or clean sneakers)",
+      "Comfortable clothing",
+      "Water bottle",
+      "Positive attitude"
     ],
-    intensity: 5,
+    intensity: 2,
     schedule: {
       "Monday": [
-        { id: "mb-mon-1", startTime: "06:00", endTime: "07:15", availableSpots: 8, totalSpots: 20 },
-        { id: "mb-mon-2", startTime: "17:30", endTime: "18:45", availableSpots: 5, totalSpots: 20 }
+        { id: "sf-mon-1", startTime: "19:00", endTime: "20:00", availableSpots: 8, totalSpots: 20 },
       ],
       "Wednesday": [
-        { id: "mb-wed-1", startTime: "06:00", endTime: "07:15", availableSpots: 12, totalSpots: 20 },
-        { id: "mb-wed-2", startTime: "17:30", endTime: "18:45", availableSpots: 3, totalSpots: 20 }
-      ],
-      "Friday": [
-        { id: "mb-fri-1", startTime: "06:00", endTime: "07:15", availableSpots: 15, totalSpots: 20 }
+        { id: "sf-wed-1", startTime: "19:00", endTime: "20:00", availableSpots: 5, totalSpots: 20 },
       ]
     },
-    tags: ["Military", "HIIT", "Team", "Outdoor"]
+    tags: ["Salsa", "Beginner", "Partner Dance", "Foundations"]
   },
   {
-    id: "elite-strength",
-    name: "Elite Strength",
-    category: "Strength",
-    difficulty: "Elite",
-    description: "Championship-level strength training focusing on compound movements and progressive overload.",
-    duration: "90 min",
-    calories: "600-800",
+    id: "bachata-sensual",
+    name: "Bachata Sensual",
+    category: "Bachata",
+    difficulty: "Intermediate",
+    description: "Explore the sensual Dominican rhythms of bachata with advanced body movement, musicality, and expressive partner work.",
+    duration: "60 min",
+    calories: "300-450",
     trainer: "Mike",
     trainerImage: OPTIMIZED_URLS.mike,
-    classImage: OPTIMIZED_URLS.lds5,
+    classImage: OPTIMIZED_URLS.bachata,
     benefits: [
-      "Maximum strength gains",
-      "Professional technique",
-      "Competition prep",
-      "Body recomposition"
+      "Advanced body movement techniques",
+      "Musicality and interpretation",
+      "Complex turn patterns",
+      "Expressive partner connection"
     ],
     equipment: [
-      "Olympic platform",
-      "Competition bars",
-      "Premium plates",
-      "Specialty bars"
+      "Dance shoes recommended",
+      "Comfortable clothing",
+      "Water bottle"
+    ],
+    intensity: 3,
+    schedule: {
+      "Tuesday": [
+        { id: "bs-tue-1", startTime: "19:00", endTime: "20:00", availableSpots: 6, totalSpots: 15 },
+      ],
+      "Thursday": [
+        { id: "bs-thu-1", startTime: "19:00", endTime: "20:00", availableSpots: 4, totalSpots: 15 },
+      ]
+    },
+    tags: ["Bachata", "Sensual", "Partner Dance", "Intermediate"]
+  },
+  {
+    id: "salsa-advanced",
+    name: "Salsa Advanced",
+    category: "Salsa",
+    difficulty: "Advanced",
+    description: "Take your salsa to the next level with complex combinations, styling, shines, and performance-level techniques.",
+    duration: "90 min",
+    calories: "400-600",
+    trainer: "Rico",
+    trainerImage: OPTIMIZED_URLS.rico,
+    classImage: OPTIMIZED_URLS.dancePhoto2,
+    benefits: [
+      "Complex combination patterns",
+      "Advanced styling and shines",
+      "Performance-level technique",
+      "Musicality and improvisation"
+    ],
+    equipment: [
+      "Proper dance shoes required",
+      "Comfortable clothing",
+      "Water bottle"
     ],
     intensity: 4,
     schedule: {
-      "Tuesday": [
-        { id: "es-tue-1", startTime: "07:00", endTime: "08:30", availableSpots: 6, totalSpots: 12 },
-        { id: "es-tue-2", startTime: "18:00", endTime: "19:30", availableSpots: 4, totalSpots: 12 }
+      "Monday": [
+        { id: "sa-mon-1", startTime: "20:00", endTime: "21:30", availableSpots: 10, totalSpots: 15 },
       ],
-      "Thursday": [
-        { id: "es-thu-1", startTime: "07:00", endTime: "08:30", availableSpots: 8, totalSpots: 12 },
-        { id: "es-thu-2", startTime: "18:00", endTime: "19:30", availableSpots: 2, totalSpots: 12 }
+      "Wednesday": [
+        { id: "sa-wed-1", startTime: "20:00", endTime: "21:30", availableSpots: 7, totalSpots: 15 },
+      ],
+      "Friday": [
+        { id: "sa-fri-1", startTime: "19:00", endTime: "20:30", availableSpots: 12, totalSpots: 15 }
+      ]
+    },
+    tags: ["Salsa", "Advanced", "Performance", "Styling"]
+  },
+  {
+    id: "social-dance-practice",
+    name: "Social Dance Practice",
+    category: "Social",
+    difficulty: "All Levels",
+    description: "Open floor social dancing for all levels. Practice what you've learned, meet fellow dancers, and enjoy the music in a relaxed atmosphere.",
+    duration: "120 min",
+    calories: "300-500",
+    trainer: "Rico",
+    trainerImage: OPTIMIZED_URLS.rico,
+    classImage: OPTIMIZED_URLS.paradiseDance,
+    benefits: [
+      "Practice in a social setting",
+      "Dance with different partners",
+      "Build community connections",
+      "Improve lead/follow skills naturally"
+    ],
+    equipment: [
+      "Dance shoes recommended",
+      "Comfortable clothing",
+      "Water bottle"
+    ],
+    intensity: 2,
+    schedule: {
+      "Friday": [
+        { id: "sdp-fri-1", startTime: "20:30", endTime: "22:30", availableSpots: 30, totalSpots: 40 }
       ],
       "Saturday": [
-        { id: "es-sat-1", startTime: "09:00", endTime: "10:30", availableSpots: 7, totalSpots: 12 }
+        { id: "sdp-sat-1", startTime: "19:00", endTime: "21:00", availableSpots: 25, totalSpots: 40 }
       ]
     },
-    tags: ["Strength", "Competition", "Technique", "Elite"]
-  },
-  {
-    id: "combat-conditioning",
-    name: "Combat Conditioning",
-    category: "Combat",
-    difficulty: "Intermediate",
-    description: "Blend of martial arts and conditioning workouts designed to build fighter's stamina and agility.",
-    duration: "60 min",
-    calories: "700-900",
-    trainer: "Rico",
-    trainerImage: OPTIMIZED_URLS.rico,
-    classImage: "https://images.unsplash.com/photo-1602827115209-0f49346b36b2?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    benefits: [
-      "Combat techniques",
-      "Explosive power",
-      "Quick reflexes",
-      "Core strength"
-    ],
-    equipment: [
-      "Boxing bags",
-      "Speed bags",
-      "Focus mitts",
-      "Jump ropes"
-    ],
-    intensity: 4,
-    schedule: {
-      "Monday": [
-        { id: "cc-mon-1", startTime: "08:00", endTime: "09:00", availableSpots: 10, totalSpots: 15 },
-        { id: "cc-mon-2", startTime: "19:00", endTime: "20:00", availableSpots: 7, totalSpots: 15 }
-      ],
-      "Wednesday": [
-        { id: "cc-wed-1", startTime: "08:00", endTime: "09:00", availableSpots: 9, totalSpots: 15 },
-        { id: "cc-wed-2", startTime: "19:00", endTime: "20:00", availableSpots: 5, totalSpots: 15 }
-      ],
-      "Friday": [
-        { id: "cc-fri-1", startTime: "08:00", endTime: "09:00", availableSpots: 12, totalSpots: 15 }
-      ]
-    },
-    tags: ["Combat", "Boxing", "MMA", "Conditioning"]
-  },
-  {
-    id: "tactical-recovery",
-    name: "Tactical Recovery",
-    category: "Recovery",
-    difficulty: "Beginner",
-    description: "Military-inspired recovery techniques combining mobility, stretching, and mindfulness.",
-    duration: "45 min",
-    calories: "200-300",
-    trainer: "Mike",
-    trainerImage: OPTIMIZED_URLS.mike,
-    classImage: "https://images.unsplash.com/photo-1548690312-e3b507d8c110?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    benefits: [
-      "Injury prevention",
-      "Flexibility",
-      "Stress relief",
-      "Better sleep"
-    ],
-    equipment: [
-      "Foam rollers",
-      "Resistance bands",
-      "Yoga mats",
-      "Recovery tools"
-    ],
-    intensity: 1,
-    schedule: {
-      "Tuesday": [
-        { id: "tr-tue-1", startTime: "09:00", endTime: "09:45", availableSpots: 15, totalSpots: 20 },
-        { id: "tr-tue-2", startTime: "20:00", endTime: "20:45", availableSpots: 12, totalSpots: 20 }
-      ],
-      "Thursday": [
-        { id: "tr-thu-1", startTime: "09:00", endTime: "09:45", availableSpots: 18, totalSpots: 20 },
-        { id: "tr-thu-2", startTime: "20:00", endTime: "20:45", availableSpots: 14, totalSpots: 20 }
-      ],
-      "Sunday": [
-        { id: "tr-sun-1", startTime: "10:00", endTime: "10:45", availableSpots: 16, totalSpots: 20 }
-      ]
-    },
-    tags: ["Recovery", "Mobility", "Mindfulness", "Flexibility"]
+    tags: ["Social", "All Levels", "Practice", "Community"]
   }
 ];

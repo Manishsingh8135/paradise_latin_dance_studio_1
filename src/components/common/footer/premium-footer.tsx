@@ -46,7 +46,7 @@ export function PremiumFooter() {
               </span>
             </h2>
             <p className="text-white/60 mb-6 md:mb-8 max-w-2xl mx-auto text-sm md:text-base px-2">
-              Get exclusive workout tips, nutrition advice, and special offers delivered straight to your inbox
+              Get exclusive dance tips, event invites, and special offers delivered straight to your inbox
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-xl mx-auto px-2">
               <div className="relative w-full">
@@ -235,10 +235,10 @@ export function PremiumFooter() {
                   Terms of Service
                 </Link>
                 <Link
-                  href="/privacy-policy"
+                  href="/help-center"
                   className="text-sm text-white/40 hover:text-[#FFD700] transition-colors duration-300"
                 >
-                  Cookie Policy
+                  Help Center
                 </Link>
               </div>
             </div>

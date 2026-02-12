@@ -95,7 +95,7 @@ export default function RootLayout({
             "description": "Premier Latin dance instruction in Hawaii, offering classes in Salsa, Bachata, and more.",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "94-111 Leokane St",
+              "streetAddress": "94-111 Leokane St #150A",
               "addressLocality": "Waipahu",
               "addressRegion": "HI",
               "postalCode": "96797",
@@ -108,7 +108,7 @@ export default function RootLayout({
             },
             "telephone": "+18088409926", 
             "email": "paradiselatindance@gmail.com",
-            "openingHours": "Mo-Fr 16:00-22:00 Sa 09:00-18:00",
+            "openingHours": ["Mo-Fr 06:00-21:00", "Sa 07:00-16:00", "Su 07:00-13:00"],
             "sameAs": [
               "https://www.instagram.com/paradiselatindance/",
               "https://www.facebook.com/p/Paradise-Latin-Dance-61555017040130/",

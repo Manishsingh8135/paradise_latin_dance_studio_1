@@ -48,8 +48,8 @@ export function AchievementShowcase({ scrollYProgress }: AchievementShowcaseProp
     },
     {
       id: 4,
-      title: "Dance & Fitness Pioneer",
-      description: "Successfully pioneered the integration of Latin dance and fitness, creating a unique wellness experience in Hawaii.",
+      title: "Latin Dance Culture Pioneer",
+      description: "Successfully brought authentic Latin dance culture to Hawaii, creating a vibrant community and unique cultural experience on the islands.",
       year: "2023",
       icon: "medal"
     }

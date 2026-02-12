@@ -24,9 +24,9 @@ export function AiTeaser() {
             AI-Powered Help Center
           </h2>
           <p className="text-white/60">
-            We&apos;re bringing the future of fitness support to you. Our
+            We&apos;re bringing the future of dance studio support to you. Our
             AI-powered help center will provide instant, personalized assistance
-            for all your fitness needs.
+            for all your dance class needs.
           </p>
         </div>
 

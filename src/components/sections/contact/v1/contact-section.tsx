@@ -38,7 +38,7 @@ export function ContactSection() {
                 <div className="h-1 w-full bg-gradient-to-r from-transparent via-[#FFD700] to-transparent" />
               </div>
               <p className="text-lg md:text-xl text-white/60 mt-6 max-w-2xl mx-auto">
-                Your fitness journey begins with a conversation. Let&apos;s make it happen together.
+                Your dance journey begins with a conversation. Let&apos;s make it happen together.
               </p>
             </motion.div>
           </div>

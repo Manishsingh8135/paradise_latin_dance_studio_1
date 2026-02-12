@@ -57,7 +57,7 @@ export function PrivacyPolicySection() {
             className="text-white/60 max-w-2xl mx-auto text-lg"
           >
             We take your privacy seriously and are committed to protecting your personal information
-            with the same dedication we bring to your fitness journey.
+            with the same dedication we bring to your dance experience.
           </motion.p>
         </div>
 

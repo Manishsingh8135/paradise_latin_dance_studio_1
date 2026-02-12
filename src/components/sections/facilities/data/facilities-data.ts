@@ -1,7 +1,7 @@
 import { OPTIMIZED_URLS } from "@/lib/cloudinary";
 
-export type FacilityType = 'Premium' | 'Elite' | 'Standard' | 'Retail' | 'Community';
-export type FacilityCategory = 'Strength' | 'Cardio' | 'Combat' | 'Recovery' | 'Functional' | 'Wellness' | 'Merchandise' | 'Events & Activities';
+export type FacilityType = 'Premium' | 'Elite' | 'Standard' | 'Community';
+export type FacilityCategory = 'Dance Studio' | 'Practice' | 'Social' | 'Wellness' | 'Events & Activities';
 interface Facility {
   id: string;
   title: string;
@@ -31,15 +31,15 @@ export const facilities: Facility[] = [
     image: OPTIMIZED_URLS.salsa,
     size: 'large',
     type: 'Premium',
-    category: 'Cardio',
+    category: 'Dance Studio',
     features: ['Professional Sound System', 'Mirror Walls', 'Sprung Dance Floor'],
     stats: [
       { label: 'Studio Space', value: '2000 sq ft' },
       { label: 'Dance Capacity', value: '40+' }
     ],
     availability: {
-      weekdays: '6:00 AM - 10:00 PM',
-      weekends: '7:00 AM - 9:00 PM'
+      weekdays: '6:00 AM - 9:00 PM',
+      weekends: '7:00 AM - 4:00 PM'
     },
     capacity: 50,
     area: '2000 sq ft'
@@ -51,15 +51,15 @@ export const facilities: Facility[] = [
     image: OPTIMIZED_URLS.bachata,
     size: 'medium',
     type: 'Standard',
-    category: 'Functional',
+    category: 'Practice',
     features: ['Private Space', 'Music System', 'Video Recording'],
     stats: [
       { label: 'Practice Area', value: '800 sq ft' },
       { label: 'Private Lessons', value: 'Available' }
     ],
     availability: {
-      weekdays: '5:00 AM - 11:00 PM',
-      weekends: '6:00 AM - 10:00 PM'
+      weekdays: '6:00 AM - 9:00 PM',
+      weekends: '7:00 AM - 4:00 PM'
     },
     capacity: 10,
     area: '800 sq ft'
@@ -71,15 +71,15 @@ export const facilities: Facility[] = [
     image: OPTIMIZED_URLS.lds3,
     size: 'large',
     type: 'Elite',
-    category: 'Events & Activities',
+    category: 'Social',
     features: ['DJ Setup', 'Ambient Lighting', 'Seating Areas'],
     stats: [
       { label: 'Dance Floor', value: '1500 sq ft' },
       { label: 'Events/Week', value: '3+' }
     ],
     availability: {
-      weekdays: '5:00 PM - 11:00 PM',
-      weekends: '7:00 PM - 12:00 AM'
+      weekdays: '5:00 PM - 9:00 PM',
+      weekends: '7:00 PM - 11:00 PM'
     },
     capacity: 60,
     area: '1500 sq ft'
@@ -91,15 +91,15 @@ export const facilities: Facility[] = [
     image: OPTIMIZED_URLS.lds4,
     size: 'large',
     type: 'Premium',
-    category: 'Cardio',
+    category: 'Dance Studio',
     features: ['Professional Instructors', 'Group Classes', 'All Levels Welcome'],
     stats: [
-      { label: 'Class Size', value: '20-30' },
-      { label: 'Classes/Day', value: '5+' }
+      { label: 'Class Size', value: '15-20' },
+      { label: 'Classes/Day', value: '2+' }
     ],
     availability: {
-      weekdays: '5:00 AM - 11:00 PM',
-      weekends: '6:00 AM - 10:00 PM'
+      weekdays: '6:00 AM - 9:00 PM',
+      weekends: '7:00 AM - 4:00 PM'
     },
     capacity: 30,
     area: '1800 sq ft'
@@ -119,7 +119,7 @@ export const facilities: Facility[] = [
     ],
     availability: {
       weekdays: '6:00 AM - 9:00 PM',
-      weekends: '7:00 AM - 8:00 PM'
+      weekends: '7:00 AM - 4:00 PM'
     },
     capacity: 20,
     area: '500 sq ft'
